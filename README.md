@@ -1,40 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
 
-## Getting Started
+git clone develop후 시작하시면 됩니다.
+next.js가 설치되어야 nextjs 가 가능합니다. 미리 설치해주세요
+리액트 18버전을 사용합니다. 19버전은 아직 안전하지 않은 걸로 알고있어서 아래 명령어 한번씩 쳐주세요
+yarn uninstall react react-dom
+yarn install react@18 react-dom@18
 
-First, run the development server:
+yarn run dev로 개발모드 실행
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+src/pages에 폴더를 만들어놓았습니다. 본인 폴더 안에서 작업하시고, 공용 파일 쓰시면 저한테 말해주세용
+폴더 이름 제가 대충 붙였는데, 이게 곧 주소가 되어서, 좀 구리다 싶으면  말만 해주세요!
+메인페이지는 따로 만들지 않고 index.tsx에서 작업해도 될 듯 합니다
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브랜치는 따로 파서 작업해주세요. 본인 기능대로 파면 됩니다.
+브랜치 이름은 feature/본인 기능 형태로 부탁드립니다.
+본인 브랜치에 부쉬 후 develop 브랜치에 pr 날리고 카톡 주세용 확인후 Merge하겠지만,, 저도 제대로 검토가 될지 몰라, 두번 세번 검토 후 올려주시길 바랍니다.
+ develop에서 pull 해주세요
+main 브랜치는 저만 사용하겠습니다. 안정적으로 작동 되면 종종 main에 병합하겠습니다.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+아직 폰트라던가 이미지 파일 넣는 app폴더는 작업 안했는데, 다른 분들 빨리 시작하는게 좋을 듯 하여 일단 올렸습니다. 작업하다가 중간중간 넣게 될 듯 합니다. 필요하신 게 있으시면 얼른 저한테 독촉해주세요! 
+우선 제일 많이 쓰는 버튼컴포넌트는 만들었는데 미완성입니다. 컴포넌트 작업이에만 의의 두시고 추후에 수정하겠습니다.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+저도 개발이 너무 오랜만이라 기억도 안나고 모르는 것도 너무 많네요 ㅎㅎ..
+아주 많이 부족하니 도움 많이 부탁드립니다. 제가 틀리거나 이상한 게 있으면, 또 좋은 아이디어 제안할 것이 있으면 언제든지 말씀주세요! 새벽세시에 갑자기 연락주셔도 저는 전혀 상관없습니다. 보는대로 바로 답 드릴게요
+모르는 것이 있으시면 사소하고 별거 아니더라도 물어봐주세요! 톡방이 부담스러우시면 갠톡하셔도 돼용(저도 모를 확률이 80퍼센트지만 같이 고민하면 더 좋잖아요?)
+다들 파이팅 합시다!
