@@ -1,17 +1,13 @@
 import React from "react";
-
+import "tailwindcss/tailwind.css";
 interface ButtonProps {
   label: string;
   onClick: () => void;
-  className?: string;
 }
 
-const Button: React.FC<ButtonProps> = ({ label, onClick, className }) => {
+const Button: React.FC<ButtonProps> = ({ label, onClick }) => {
   return (
-    <button
-      onClick={onClick}
-      className={`bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${className}`}
-    >
+    <button className="btn btn-primary" onClick={onClick}>
       {label}
     </button>
   );
