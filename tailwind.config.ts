@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import daisyui from "daisyui";
 
 const colors = {
   careerForMe: {
@@ -41,5 +42,7 @@ export default {
       },
     },
   },
-  plugins: [],
+  daisyui: {
+    themes: ["light"], // 다크모드 제거하고 라이트모드만 활성화
+  },
 } satisfies Config;
