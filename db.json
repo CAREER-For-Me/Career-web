@@ -1,0 +1,28 @@
+{
+  "fieldName": [{ "name": "웹 개발자" }, { "name": "모바일 개발자" }],
+
+  "postingList": [
+    {
+      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+      "imageUrl": "./images/dummyImage.png"
+    },
+    {
+      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+      "imageUrl": "./images/dummyImage.png"
+    }
+  ],
+  "detail": {
+    "title": "[카카오뱅크] 신사업 ~",
+    "corporateType": "대기업",
+    "startAct": "2024-10-10",
+    "endAct": "2024-12-12",
+    "startDate": "2024-01-01",
+    "endDate": "2024-01-10",
+    "area": "서울 강남구",
+    "related": "경영/사무",
+    "salary": "월급 200만원",
+    "homepageUrl": "www.asd.asd",
+    "imageUrl": "www.asd.asd",
+    "content": "asdasdasdasdad"
+  }
+}
