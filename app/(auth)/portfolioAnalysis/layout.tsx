@@ -3,6 +3,7 @@ import Navbar from "@/app/components/layouts/Navber";
 import { ReactNode } from "react";
 
 interface ActivityRecommendLayoutProps {
+  //속성타입 정의
   children: ReactNode;
 }
 
