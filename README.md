@@ -120,14 +120,6 @@ git branch -d <브랜치명>   # 안전 삭제
 git branch -D <브랜치명>   # 강제 삭제
 ```
 
-```shell
-# 안전하게 삭제
-git branch -d <브랜치 이름>
-
-# 강제로 삭제
-git branch -D <브랜치 이름>
-```
-
 <br>
 
 - 작업 디렉토리: `app/(route)` 폴더 내
@@ -259,6 +251,10 @@ yarn add next-auth
 
 ```shell
 yarn add @tanstack/react-query-devtools
+```
+
+```shell
+yarn add -D daisyui@latest
 ```
 
 <br>
