@@ -6,10 +6,11 @@ import axios from "axios";
 import SelectedForm from "@/app/components/activityRecommend/SelectedForm";
 import Link from "next/link";
 import Image from "next/image";
+import { ActivityDetailPosts, ActivityPosts } from "@/app/types/activity-types";
 
 const ActivityRecommendationPage = () => {
-  const [posts, setPosts] = useState([]);
-  const [postDetail, setPostDetail] = useState([]);
+  const [posts, setPosts] = useState<ActivityPosts[]>([]);
+  const [postDetail, setPostDetail] = useState<ActivityDetailPosts>();
   const [selected, setSelected] = useState("activity");
 
   useEffect(() => {
@@ -79,26 +80,28 @@ const ActivityRecommendationPage = () => {
         <ul className="flex flex-wrap -mx-2">
           {posts.map((post, index) => (
             <li key={index} className="w-1/4 px-2 mb-4">
-              <Link href={`activityRecommend/${postDetail.title}`}>
-                <figure>
-                  <img
-                    src={post.imageUrl}
-                    alt={post.title}
-                    className="rounded-3xl w-full"
-                  />
-                  <figcaption>
-                    <p className="text-wrap w-full font-bold text-lg break-keep truncate mt-5">
-                      {post.title}
-                    </p>
-                    <p>주식회사 어치브모먼트</p>
-                    <div className="flex gap-3 mb-7">
-                      <p className="text-careerForMe-red font-bold">D-1</p>
-                      <p className="text-gray-dark">조회 142</p>
-                      <p className="text-gray-dark">댓글 2</p>
-                    </div>
-                  </figcaption>
-                </figure>
-              </Link>
+              {postDetail && (
+                <Link href={`activityRecommend/${postDetail.title}`}>
+                  <figure>
+                    <img
+                      src={post.imageUrl}
+                      alt={post.title}
+                      className="rounded-3xl w-full"
+                    />
+                    <figcaption>
+                      <p className="text-wrap w-full font-bold text-lg break-keep truncate mt-5">
+                        {post.title}
+                      </p>
+                      <p>주식회사 어치브모먼트</p>
+                      <div className="flex gap-3 mb-7">
+                        <p className="text-careerForMe-red font-bold">D-1</p>
+                        <p className="text-gray-dark">조회 142</p>
+                        <p className="text-gray-dark">댓글 2</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </Link>
+              )}
             </li>
           ))}
         </ul>
