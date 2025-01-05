@@ -1,9 +1,4 @@
-export interface ActivityPosts {
-  title: string;
-  imageUrl: string;
-}
-
-export interface ActivityDetailPosts {
+export interface Posting {
   title: string;
   corporateType: string;
   startAct: string;

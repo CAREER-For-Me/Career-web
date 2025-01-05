@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import SearchBar from "../activityRecommend/SearchBar";
+import SearchBar from "../SearchBar";
 import SignInOutButton from "../common/SignInOutButton";
 
 const Header = () => {
