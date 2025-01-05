@@ -10,7 +10,7 @@ import Image from "next/image";
 const ActivityRecommendationPage = () => {
   const [posts, setPosts] = useState([]);
   const [postDetail, setPostDetail] = useState([]);
-  const [seleted, setSeleted] = useState(null);
+  const [selected, setSelected] = useState("activity");
 
   useEffect(() => {
     const getPostingList = async () => {
@@ -46,7 +46,7 @@ const ActivityRecommendationPage = () => {
           className="mr-4"
         />
         <div>
-          <p className="font-bold text-xl">
+          <p className="font-bold text-2xl">
             <b className="text-careerForMe-main">사이드나우님</b>을 위한 추천
             공고🌟
           </p>
@@ -58,34 +58,40 @@ const ActivityRecommendationPage = () => {
 
       <SelectedForm />
 
-      <div className="border-y-[0.1px] my-9 border-gray-dark"></div>
+      <div className="border-y-[0.1px] my-9 "></div>
       <section>
-        <div>
-          <p>
+        <div className="flex justify-between">
+          <p className="text-2xl font-bold">
             나를 위한
-            <select className="bodered border-x-gray-medium">
+            <select>
               <option>대외활동</option>
+              <option>인턴십</option>
             </select>
             추천이에요🌟
           </p>
-          <p>총 {posts.length}건</p>
+          <select className="text-gray-dark">
+            <option>추천순</option>
+            <option>댓글순</option>
+            <option>최신순</option>
+          </select>
         </div>
-        <ul className="flex flex-row gap-4 flex-wrap  gap-y-16">
+        <p className="py-4 text-gray-dark">총 {posts.length}건</p>
+        <ul className="flex flex-wrap -mx-2">
           {posts.map((post, index) => (
-            <li key={index}>
+            <li key={index} className="w-1/4 px-2 mb-4">
               <Link href={`activityRecommend/${postDetail.title}`}>
                 <figure>
                   <img
                     src={post.imageUrl}
                     alt={post.title}
-                    className=" rounded-3xl"
+                    className="rounded-3xl w-full"
                   />
                   <figcaption>
-                    <p className="text-wrap w-80 font-bold text-lg break-keep truncate">
+                    <p className="text-wrap w-full font-bold text-lg break-keep truncate mt-5">
                       {post.title}
                     </p>
                     <p>주식회사 어치브모먼트</p>
-                    <div className="flex gap-3">
+                    <div className="flex gap-3 mb-7">
                       <p className="text-careerForMe-red font-bold">D-1</p>
                       <p className="text-gray-dark">조회 142</p>
                       <p className="text-gray-dark">댓글 2</p>

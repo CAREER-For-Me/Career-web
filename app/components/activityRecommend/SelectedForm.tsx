@@ -10,15 +10,16 @@ const SelectedForm = () => {
     const fieldName = async () => {
       try {
         const res = await axios.get("http://localhost:4000/fieldName");
-        setfieldNames(res);
+        setfieldNames(res.data);
       } catch (error) {
         console.error(error);
       }
     };
+    fieldName();
   }, []);
   return (
     <form>
-      <div className="rounded-[12px]  h-56 shadow-md p-4">
+      <div className="rounded-[12px]  h-56 shadow-[0_0px_12px_rgba(0,0,0,0.1)] p-4 mt-7">
         <div className="flex mt-4 ml-3">
           <p className="mr-3 font-bold">직무</p>
           <select>
