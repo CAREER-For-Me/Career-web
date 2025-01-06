@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 
 const ActivityRecommendationList = () => {
   const [posting, setPosting] = useState<Posting[]>([]);
-  const [selected, setSelected] = useState("activity");
 
   useEffect(() => {
     const getPostingList = async () => {
