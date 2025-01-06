@@ -257,6 +257,10 @@ yarn add @tanstack/react-query-devtools
 yarn add -D daisyui@latest
 ```
 
+```shell
+yarn add clsx
+```
+
 <br>
 
 <!-- Top Button -->
