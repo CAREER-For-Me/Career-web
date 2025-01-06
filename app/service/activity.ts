@@ -49,3 +49,16 @@ export const getSingleAct = async (postingId: string) => {
 
   return data;
 };
+
+// jobDetails 가져오기
+export const getJobDetails = async () => {
+  const response = await fetch(`${baseURL}/jobDetails`, {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${process.env.JWT_TOKEN}`,
+    },
+  });
+  const data = await response.json();
+
+  return data;
+};

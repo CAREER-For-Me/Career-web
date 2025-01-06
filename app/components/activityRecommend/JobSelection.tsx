@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useJobDetailsQuery } from "../hooks/query/useActivityQuery";
 
 // 직무 선택 (직무 선택 드롭다운)
 const JobSelection = () => {
@@ -15,10 +16,15 @@ const JobSelection = () => {
   const handleSelectedOption2 = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setSelectedValue2(e.target.value);
   };
+  const { data: jobDetails = [], isLoading, error } = useJobDetailsQuery();
+
+  // value 추출
+  const detailedJobs: string[] = jobDetails[selectedValue1] || [];
 
   return (
     <div className="flex items-center font-bold">
       <p className="mr-5">직무</p>
+
       <select
         value={selectedValue1}
         onChange={handleSelectedOption1}
@@ -27,24 +33,19 @@ const JobSelection = () => {
         <option value="" className="text-gray-dark">
           직무를 선택하세요
         </option>
-        <option
-          value="웹개발"
-          className={`font-bold ${
-            selectedValue1 === "웹개발" ? "text-careerForMe-main" : "text-black"
-          }`}
-        >
-          웹개발
-        </option>
-        <option
-          value="백엔드 개발자"
-          className={`font-bold ${
-            selectedValue1 === "백엔드 개발자"
-              ? "text-careerForMe-main"
-              : "text-black"
-          }`}
-        >
-          백엔드 개발자
-        </option>
+        {Object.keys(jobDetails).map((jobCategory) => (
+          <option
+            key={jobCategory}
+            value={jobCategory}
+            className={`font-bold ${
+              selectedValue1 === jobCategory
+                ? "text-careerForMe-main"
+                : "text-black"
+            }`}
+          >
+            {jobCategory}
+          </option>
+        ))}
       </select>
       <select
         value={selectedValue2}
@@ -59,24 +60,19 @@ const JobSelection = () => {
         <option value="" className="text-gray-dark">
           세부 직무를 선택하세요
         </option>
-        <option
-          value="웹개발"
-          className={`font-bold ${
-            selectedValue2 === "웹개발" ? "text-careerForMe-main" : "text-black"
-          }`}
-        >
-          웹개발
-        </option>
-        <option
-          value="백엔드 개발자"
-          className={`font-bold ${
-            selectedValue2 === "백엔드 개발자"
-              ? "text-careerForMe-main"
-              : "text-black"
-          }`}
-        >
-          백엔드 개발자
-        </option>
+        {detailedJobs.map((detailedJob, index) => (
+          <option
+            key={index}
+            value={detailedJob}
+            className={`font-bold ${
+              selectedValue2 === detailedJob
+                ? "text-careerForMe-main"
+                : "text-black"
+            }`}
+          >
+            {detailedJob}
+          </option>
+        ))}
       </select>
     </div>
   );

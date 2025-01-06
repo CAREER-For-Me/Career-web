@@ -8,8 +8,8 @@ import { postingActivityStore } from "@/app/store/postingActivityStore";
 
 const ActivityRecommendationList = () => {
   const postingGubun = postingActivityStore((state) => state.postingGubun);
-  const [fieldIds, setFieldIds] = useState([1, 2]); // 예시 필드 ID
-  const [pageNum, setPageNum] = useState(0); // 예시: 페이지 번호
+  const [fieldIds, setFieldIds] = useState([1, 2]); // 임시
+  const [pageNum, setPageNum] = useState(0); // 임시
 
   const {
     data: posts = [],
@@ -21,8 +21,31 @@ const ActivityRecommendationList = () => {
     pageNum,
   });
 
-  if (isLoading) return <p>로딩 중...</p>;
-  if (error) return <p>에러 발생: {error.message}</p>;
+  if (isLoading)
+    return (
+      <div className="flex justify-center p-4">
+        <span className="loading loading-spinner text-careerForMe-main"></span>
+      </div>
+    );
+  if (error)
+    return (
+      <div role="alert" className="alert alert-error mt-4 text-white font-bold">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6 shrink-0 stroke-current"
+          fill="none"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+          />
+        </svg>
+        <span>에러 발생! {error.message}</span>
+      </div>
+    );
 
   return (
     <section>
