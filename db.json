@@ -1,42 +1,92 @@
 {
-  "field": [
-    {
-      "id": 1,
-      "fieldName": "웹 개발자"
-    },
-    {
-      "id": 2,
-      "fieldName": "모바일 개발자"
-    }
+  "fields": [
+    { "id": 1, "name": "웹 개발자" },
+    { "id": 2, "name": "모바일 개발자" }
   ],
   "postings": [
     {
       "id": 1,
       "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "imageUrl": "./images/dummyImage.png",
       "fieldIds": [1, 2],
-      "postingGubun": 1
+      "postingGubun": 0,
+      "startAct": "2024-01-01",
+      "endAct": "2024-01-10",
+      "salary": "월급 200만원",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
     },
     {
       "id": 2,
-      "title": "제 3회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "imageUrl": "./images/dummyImage.png",
-      "fieldIds": [1],
-      "postingGubun": 1
+      "title": "안녕!!!!!!!!!!",
+      "fieldIds": [1, 2],
+      "postingGubun": 0,
+      "startAct": "2024-01-01",
+      "endAct": "2024-01-10",
+      "salary": "월급 200만원",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
     },
     {
       "id": 3,
-      "title": "제 4회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "imageUrl": "./images/dummyImage.png",
-      "fieldIds": [2],
-      "postingGubun": 1
+      "title": "sjfjsdflk",
+      "fieldIds": [1, 2],
+      "postingGubun": 0,
+      "startAct": "2024-01-01",
+      "endAct": "2024-01-10",
+      "salary": "월급 200만원",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
     },
     {
       "id": 4,
-      "title": "제 4회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "imageUrl": "./images/dummyImage.png",
-      "fieldIds": [3],
-      "postingGubun": 1
+      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+      "fieldIds": [1, 2],
+      "postingGubun": 1,
+      "startAct": "2024-01-01",
+      "endAct": "2024-01-10",
+      "salary": "월급 200만원",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
+    },
+    {
+      "id": 5,
+      "title": "2024년 글로벌 해커톤 참여자 모집",
+      "fieldIds": [1],
+      "postingGubun": 2,
+      "startAct": "2024-02-01",
+      "endAct": "2024-02-10",
+      "salary": "상세 내용",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
+    },
+    {
+      "id": 6,
+      "title": "2024년 글로벌 해커톤 참여자 모집",
+      "fieldIds": [1],
+      "postingGubun": 3,
+      "startAct": "2024-02-01",
+      "endAct": "2024-02-10",
+      "salary": "상세 내용",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
+    },
+    {
+      "id": 7,
+      "title": "2024년 글로벌 해커톤 참여자 모집",
+      "fieldIds": [1],
+      "postingGubun": 3,
+      "startAct": "2024-02-01",
+      "endAct": "2024-02-10",
+      "salary": "상세 내용",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
     }
   ]
 }

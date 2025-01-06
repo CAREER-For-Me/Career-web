@@ -1,11 +1,36 @@
 "use client";
-import React, { useState } from "react";
+import { postingActivityStore } from "@/app/store/postingActivityStore";
+import { useState } from "react";
 
 const FieldSelection = () => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const setPostingGubun = postingActivityStore(
+    (state) => state.setPostingGubun
+  );
 
   const handleSelected = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setSelectedOption(e.target.value);
+    const value = e.target.value;
+    setSelectedOption(value);
+
+    switch (value) {
+      case "대외활동":
+        setPostingGubun(0);
+        break;
+      case "인턴/채용":
+        setPostingGubun(1);
+        break;
+      case "공모전":
+        setPostingGubun(2);
+        break;
+      case "동아리":
+        setPostingGubun(3);
+        break;
+      case "교육/강연":
+        setPostingGubun(4);
+        break;
+      default:
+        setPostingGubun(0);
+    }
   };
 
   return (

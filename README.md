@@ -250,7 +250,7 @@ yarn add next-auth
 ```
 
 ```shell
-yarn add @tanstack/react-query-devtools
+yarn add @tanstack/react-query
 ```
 
 ```shell
@@ -259,6 +259,10 @@ yarn add -D daisyui@latest
 
 ```shell
 yarn add clsx
+```
+
+```shell
+yarn add zustand
 ```
 
 <br>

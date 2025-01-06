@@ -1,33 +1,34 @@
 // 추천 공고
 "use client";
 
-import { Posting } from "@/app/types/posting-types";
-import axios from "axios";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useActivityQuery } from "../hooks/query/useActivityQuery";
+import { useState } from "react";
+import { postingActivityStore } from "@/app/store/postingActivityStore";
 
 const ActivityRecommendationList = () => {
-  const [posting, setPosting] = useState<Posting[]>([]);
+  const postingGubun = postingActivityStore((state) => state.postingGubun);
+  const [fieldIds, setFieldIds] = useState([1, 2]); // 예시 필드 ID
+  const [pageNum, setPageNum] = useState(0); // 예시: 페이지 번호
 
-  useEffect(() => {
-    const getPostingList = async () => {
-      try {
-        const res = await axios.get("http://localhost:4000/postings");
+  const {
+    data: posts = [],
+    isLoading,
+    error,
+  } = useActivityQuery({
+    fieldIds,
+    postingGubun,
+    pageNum,
+  });
 
-        setPosting(res.data);
-        console.log(res);
-      } catch (error) {
-        console.error(error, "에러가 발생했습니다.");
-      }
-    };
-    getPostingList();
-  }, []);
+  if (isLoading) return <p>로딩 중...</p>;
+  if (error) return <p>에러 발생: {error.message}</p>;
 
   return (
     <section>
-      <p className="py-4 text-gray-dark">총 {posting.length}건</p>
+      <p className="py-4 text-gray-dark">총 {posts.length}건</p>
       <ul className="flex flex-wrap -mx-2">
-        {posting.map((post, index) => (
+        {posts.map((post, index) => (
           <li key={index} className="w-1/4 px-2 mb-4">
             {post && (
               <Link href={`activityRecommend/${post.title}`}>

@@ -1,4 +1,4 @@
-export interface Posting {
+export interface Posts {
   title: string;
   corporateType: string;
   startAct: string;
@@ -10,4 +10,9 @@ export interface Posting {
   homepageUrl: string;
   imageUrl: string;
   content: string;
+}
+export interface GetPostingActParams {
+  fieldIds: number[];
+  postingGubun: number;
+  pageNum?: number;
 }
