@@ -1,38 +1,30 @@
-// 세부 직무 선택
+import { jobSelectionStore } from "@/app/store/jobSelectionStore";
 
 const DetailedJobSelection = () => {
+  const { selectedJobs, removeJobPair } = jobSelectionStore();
+
   return (
     <section className="mt-8">
-      <div className="inline-flex border-[1px] rounded-full border-careerForMe-main w-auto px-6 py-2 text-nowrap mr-4 mb-4">
-        <p>웹개발</p>
-        <p className="mx-2">{`>`}</p>
-        <p>백엔드 개발자</p>
-        <p className="ml-6 text-gray-medium">x</p>
-      </div>
-      <div className="inline-flex border-[1px] rounded-full border-careerForMe-main w-auto px-6 py-2 text-nowrap mr-4 mb-4">
-        <p>웹개발</p>
-        <p className="mx-2">{`>`}</p>
-        <p>백엔드 개발자</p>
-        <p className="ml-6 text-gray-medium">x</p>
-      </div>
-      <div className="inline-flex border-[1px] rounded-full border-careerForMe-main w-auto px-6 py-2 text-nowrap mr-4 mb-4">
-        <p>웹개발</p>
-        <p className="mx-2">{`>`}</p>
-        <p>백엔드 개발자</p>
-        <p className="ml-6 text-gray-medium">x</p>
-      </div>
-      <div className="inline-flex border-[1px] rounded-full border-careerForMe-main w-auto px-6 py-2 text-nowrap mr-4 mb-4">
-        <p>웹개발</p>
-        <p className="mx-2">{`>`}</p>
-        <p>백엔드 개발자</p>
-        <p className="ml-6 text-gray-medium">x</p>
-      </div>
-      <div className="inline-flex border-[1px] rounded-full border-careerForMe-main w-auto px-6 py-2 text-nowrap mr-4 mb-4">
-        <p>웹개발</p>
-        <p className="mx-2">{`>`}</p>
-        <p>백엔드 개발자</p>
-        <p className="ml-6 text-gray-medium">x</p>
-      </div>
+      {selectedJobs.length > 0 && (
+        <div>
+          {selectedJobs.map((jobPair, index) => (
+            <div
+              key={index}
+              className="inline-flex border-[1px] rounded-full border-careerForMe-main w-auto px-6 py-2 text-nowrap mr-4 mb-4"
+            >
+              <p>{jobPair.job}</p>
+              <p className="mx-2">{">"}</p>
+              <p>{jobPair.detail}</p>
+              <button
+                className="ml-6 text-gray-medium"
+                onClick={() => removeJobPair(index)}
+              >
+                x
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
     </section>
   );
 };
