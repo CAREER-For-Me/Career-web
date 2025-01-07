@@ -25,7 +25,7 @@
 
 <div align="center">
                             
-| [이정한](https://github.com/topeanut) | [박시은](https://github.com/MyNameSieun) | [박진우](https://github.com/username3) | [조지현](https://github.com/username4) |
+| [이정한](https://github.com/topeanut) | [박시은](https://github.com/MyNameSieun) | [박진우](https://github.com/Jinwoo-Park-037) | [조지현](https://github.com/username4) |
 |:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|:-------------------------------------:|
 | **FE Leader**                         | **FE**                                | **FE**                                | **FE**                                |
 | 초기 세팅<br>컴포넌트 작업 및 Global Style 적용<br>포트폴리오 분석 페이지 | 활동 추천 페이지 | 질의 응답 페이지 | 로그인 및 마이페이지<br>메인 페이지(검색 기능) |
