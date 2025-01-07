@@ -12,7 +12,6 @@ const Header = () => {
         <p>맞춤형 커리어 추천 플랫폼, 커리어포미</p>
       </header>
       <hr className = "absolute left-0 h-1 w-screen rounded h-[0.5px] border-0 bg-gray-300 shadow-[0_2px_5px_rgba(0,0,0,0.5)]" />
-
     </>
   );
 };
