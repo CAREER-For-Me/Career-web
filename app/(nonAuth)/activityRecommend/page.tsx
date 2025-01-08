@@ -1,9 +1,9 @@
 // 활동 추천 페이지
 "use client";
 
-import ActivityRecommendationList from "@/app/components/activityRecommend/ActivityRecommendationList";
+import ActivityRecommendationList from "@/app/components/RecommendationList";
 import PageNation from "@/app/components/activityRecommend/PageNation";
-import FieldSelection from "@/app/components/activityRecommend/FieldSelection";
+import FieldSelection from "@/app/components/FieldSelection";
 import JobForm from "@/app/components/activityRecommend/JobForm";
 import ActivityTopInfo from "@/app/components/activityRecommend/ActivityTopInfo";
 

@@ -2,11 +2,15 @@
 "use client";
 
 import Link from "next/link";
-import { useActivityQuery } from "../hooks/query/useActivityQuery";
+import { useActivityQuery } from "./hooks/query/useActivityQuery";
 import { useState } from "react";
 import { postingActivityStore } from "@/app/store/postingActivityStore";
 
-const ActivityRecommendationList = () => {
+const RecommendationList = ({
+  maxItem = null,
+}: {
+  maxItem?: number | null;
+}) => {
   const postingGubun = postingActivityStore((state) => state.postingGubun);
   const [fieldIds, setFieldIds] = useState([1, 2]); // 임시
   const [pageNum, setPageNum] = useState(0); // 임시
@@ -50,11 +54,13 @@ const ActivityRecommendationList = () => {
       </div>
     );
 
+  const displayPost = maxItem ? posts.slice(0, maxItem) : posts;
+
   return (
     <section>
       <p className="py-4 text-gray-dark">총 {posts.length}건</p>
       <ul className="flex flex-wrap -mx-2">
-        {posts.map((post, index) => (
+        {displayPost.map((post, index) => (
           <li key={index} className="w-1/4 px-2 mb-4">
             {post && (
               <Link href={`activityRecommend/${post.title}`}>
@@ -85,4 +91,4 @@ const ActivityRecommendationList = () => {
   );
 };
 
-export default ActivityRecommendationList;
+export default RecommendationList;

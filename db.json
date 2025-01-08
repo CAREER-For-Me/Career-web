@@ -83,6 +83,78 @@
       "area": "서울 강남구",
       "content": "프로젝트 내용",
       "imageUrl": "./images/dummyImage.png"
+    },
+    {
+      "id": 8,
+      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+      "fieldIds": [1, 2],
+      "postingGubun": 0,
+      "startAct": "2024-01-01",
+      "endAct": "2024-01-10",
+      "salary": "월급 200만원",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
+    },
+    {
+      "id": 9,
+      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+      "fieldIds": [1, 2],
+      "postingGubun": 0,
+      "startAct": "2024-01-01",
+      "endAct": "2024-01-10",
+      "salary": "월급 200만원",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
+    },
+    {
+      "id": 10,
+      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+      "fieldIds": [1, 2],
+      "postingGubun": 0,
+      "startAct": "2024-01-01",
+      "endAct": "2024-01-10",
+      "salary": "월급 200만원",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
+    },
+    {
+      "id": 11,
+      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+      "fieldIds": [1, 2],
+      "postingGubun": 0,
+      "startAct": "2024-01-01",
+      "endAct": "2024-01-10",
+      "salary": "월급 200만원",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
+    },
+    {
+      "id": 12,
+      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+      "fieldIds": [1, 2],
+      "postingGubun": 0,
+      "startAct": "2024-01-01",
+      "endAct": "2024-01-10",
+      "salary": "월급 200만원",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
+    },
+    {
+      "id": 13,
+      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+      "fieldIds": [1, 2],
+      "postingGubun": 0,
+      "startAct": "2024-01-01",
+      "endAct": "2024-01-10",
+      "salary": "월급 200만원",
+      "area": "서울 강남구",
+      "content": "프로젝트 내용",
+      "imageUrl": "./images/dummyImage.png"
     }
   ],
   "jobDetails": {
