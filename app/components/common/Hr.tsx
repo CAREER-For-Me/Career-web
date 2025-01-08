@@ -1,12 +1,12 @@
 interface Hrprops {
   mt?: number;
-  mb: number;
+  my: number;
 }
 
-const Hr = ({ mt, mb }: Hrprops) => {
+const Hr = ({ mt, my }: Hrprops) => {
   return (
     <>
-      <div className={`bg-gray-medium h-[0.5px] mt-${mt} mb-${mb}`} />
+      <div className={`bg-gray-medium h-[0.5px] mt-${mt} my-${my}`} />
     </>
   );
 };
