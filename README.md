@@ -268,6 +268,10 @@ yarn add clsx
 yarn add zustand
 ```
 
+```shell
+yarn add swiper
+```
+
 <br>
 
 <!-- Top Button -->

@@ -1,7 +1,7 @@
 "use client";
 
 import FieldSelection from "@/app/components/FieldSelection";
-import Carousel from "@/app/components/home/Carousel";
+import Carousel from "@/app/components/home/carousel/Carousel";
 import Community from "@/app/components/home/Community";
 import CompetencyStatus from "@/app/components/home/CompetencyStatus";
 import MyCompetence from "@/app/components/home/MyCompetence";
@@ -17,7 +17,7 @@ const HomePage = () => {
   console.log("====================================");
   return (
     <main>
-      <div className="flex w-full gap-5 h-64">
+      <div className="flex w-full gap-5">
         <Carousel />
         <MyCompetence />
       </div>
