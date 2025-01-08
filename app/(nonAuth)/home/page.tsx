@@ -17,15 +17,19 @@ const HomePage = () => {
   console.log("====================================");
   return (
     <main>
-      <div className="flex w-full gap-5  h-64">
+      <div className="flex w-full gap-5 h-64">
         <Carousel />
         <MyCompetence />
       </div>
-      <div>
+      <div className="mt-12">
         <CompetencyStatus />
       </div>
-      <FieldSelection />
-      <RecommendationList maxItem={8} />
+      <div className="mt-64">
+        <FieldSelection />
+
+        <RecommendationList maxItem={8} />
+      </div>
+
       <div>
         <Community />
       </div>

@@ -178,6 +178,7 @@ extend: {
       dark: "#737373",
       medium: "#B2B2B2",
       light: "#D2D2D2",
+      ExtraLight: "#F4F4F4",
     },
   },
 }
