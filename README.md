@@ -5,6 +5,8 @@
 <h1><b>Career For Me</b></h1>
 <h3><b>내 커리어의 맞춤형 로드맵</b></h3>
 
+Notion: [프로젝트 노션 링크](https://vast-ball-3e9.notion.site/11c7ca0c8d9280da8f9fdafe889ba9f6?pvs=4)
+
 </div>
 
 <br>
@@ -39,7 +41,7 @@
 
 <br>
 
-## <span id="2">2. 🛠️ 시작 가이드</span>
+## <span id="2">🛠️ 2. 시작 가이드</span>
 
 ### 2.1 Installation
 
@@ -132,7 +134,7 @@ git branch -D <브랜치명>   # 강제 삭제
 
 <br>
 
-## 3. <span id="3"> 🗂️ 브랜치 및 디렉토리 구조</span>
+## 3. <span id="3">🗂️ 3. 브랜치 및 디렉토리 구조</span>
 
 > 브랜치
 
@@ -158,7 +160,7 @@ git branch -D <브랜치명>   # 강제 삭제
 
 <br>
 
-# 4. <span id="4">🎨 4. Color 적용 방법</span>
+## 4. <span id="4">🎨 4. Color 적용 방법</span>
 
 `tailwind.config.js` 파일에 프로젝트에서 사용할 색상을 정의해 뒀습니다.
 
@@ -250,11 +252,19 @@ yarn add next-auth
 ```
 
 ```shell
-yarn add @tanstack/react-query-devtools
+yarn add @tanstack/react-query
 ```
 
 ```shell
 yarn add -D daisyui@latest
+```
+
+```shell
+yarn add clsx
+```
+
+```shell
+yarn add zustand
 ```
 
 <br>
