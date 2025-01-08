@@ -30,7 +30,7 @@ const HomePage = () => {
         <RecommendationList maxItem={8} />
       </div>
 
-      <div>
+      <div className="mt-12">
         <Community />
       </div>
     </main>

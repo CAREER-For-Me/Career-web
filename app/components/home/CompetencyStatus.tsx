@@ -1,6 +1,8 @@
+import Hr from "../common/Hr";
+
 const CompetencyStatus = () => {
   return (
-    <div className="h-52 ">
+    <div className="h-52">
       <h1 className="text-2xl font-bold mb-5">내 역량 현황이에요📈</h1>
 
       <div className="flex gap-8">
@@ -11,7 +13,7 @@ const CompetencyStatus = () => {
               <p className="ml-32">충족 상태</p>
             </div>
 
-            <div className="bg-gray-medium h-[0.5px] mt-2 mb-5" />
+            <Hr mt={2} mb={5} />
 
             <div className="flex justify-between mb-4">
               <p>학점</p>
