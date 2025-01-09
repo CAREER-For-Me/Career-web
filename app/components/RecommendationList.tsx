@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useActivityQuery } from "./hooks/query/useActivityQuery";
 import { useState } from "react";
 import { postingActivityStore } from "@/app/store/postingActivityStore";
+import { BsBookmarkFill } from "react-icons/bs";
 
 const RecommendationList = ({
   maxItem = null,
@@ -14,6 +15,7 @@ const RecommendationList = ({
   const postingGubun = postingActivityStore((state) => state.postingGubun);
   const [fieldIds, setFieldIds] = useState([1, 2]); // 임시
   const [pageNum, setPageNum] = useState(0); // 임시
+  const [cliping, setCliping] = useState<{ [key: string]: boolean }>({});
 
   const {
     data: posts = [],
@@ -31,6 +33,7 @@ const RecommendationList = ({
         <span className="loading loading-spinner text-careerForMe-main"></span>
       </div>
     );
+
   if (error)
     return (
       <div role="alert" className="alert alert-error mt-4 text-white font-bold">
@@ -56,33 +59,56 @@ const RecommendationList = ({
 
   const displayPost = maxItem ? posts.slice(0, maxItem) : posts;
 
+  const handleCliping = (postId: string) => {
+    setCliping((prev) => ({
+      ...prev,
+      [postId]: !prev[postId],
+    }));
+  };
+
   return (
     <section>
       <p className="py-4 text-gray-dark">총 {posts.length}건</p>
       <ul className="flex flex-wrap -mx-2">
-        {displayPost.map((post, index) => (
-          <li key={index} className="w-1/4 px-2 mb-4">
+        {displayPost.map((post) => (
+          <li key={post.id} className="w-1/4 px-2 mb-4">
             {post && (
-              <Link href={`activityRecommend/${post.title}`}>
-                <figure>
-                  <img
-                    src={post.imageUrl}
-                    alt={post.title}
-                    className="rounded-3xl w-full"
-                  />
-                  <figcaption>
-                    <p className="text-wrap w-full font-bold text-lg break-keep truncate mt-5">
-                      {post.title}
-                    </p>
-                    <p>주식회사 어치브모먼트</p>
-                    <div className="flex gap-3 mb-7">
-                      <p className="text-careerForMe-red font-bold">D-1</p>
-                      <p className="text-gray-dark">조회 142</p>
-                      <p className="text-gray-dark">댓글 2</p>
-                    </div>
-                  </figcaption>
-                </figure>
-              </Link>
+              <>
+                <div onClick={() => handleCliping(post.id)}>
+                  {cliping[post.id] ? (
+                    <>
+                      <BsBookmarkFill className="relative left-[16rem] top-8 text-careerForMe-red text-lg" />
+                    </>
+                  ) : (
+                    <>
+                      <BsBookmarkFill className="relative left-[16rem] top-8 text-gray-light text-lg" />
+                    </>
+                  )}
+                </div>
+                <Link href={`activityRecommend/${post.title}`}>
+                  <figure>
+                    <img
+                      src={post.imageUrl}
+                      alt={post.title}
+                      width={300}
+                      height={300}
+                      className="rounded-3xl w-full"
+                    />
+
+                    <figcaption>
+                      <p className="text-wrap w-full font-bold text-lg break-keep truncate mt-5">
+                        {post.title}
+                      </p>
+                      <p>주식회사 어치브모먼트</p>
+                      <div className="flex gap-3 mb-7">
+                        <p className="text-careerForMe-red font-bold">D-1</p>
+                        <p className="text-gray-dark">조회 142</p>
+                        <p className="text-gray-dark">댓글 2</p>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </Link>
+              </>
             )}
           </li>
         ))}

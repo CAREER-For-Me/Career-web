@@ -1,4 +1,5 @@
 export interface Posts {
+  id: string;
   title: string;
   corporateType: string;
   startAct: string;

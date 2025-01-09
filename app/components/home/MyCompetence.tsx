@@ -15,19 +15,20 @@ const MyCompetence = () => {
               PM
             </div>
           </div>
-          <div className="relative">
-            <p className="text-gray-dark mt-14">평균역량 대비</p>
-            <div className="flex font-bold text-xl gap-3">
-              <p className="text-careerForMe-main">32%</p>
-              <p>충족했어요.</p>
+          <div className="flex justify-between">
+            <div>
+              <p className="text-gray-dark mt-14">평균역량 대비</p>
+              <div className="flex font-bold text-xl gap-3">
+                <p className="text-careerForMe-main">32%</p>
+                <p>충족했어요.</p>
+              </div>
             </div>
-
-            <div className="absolute -bottom-10 right-3 w-40">
+            <div className="w-40 relative">
               <DoughnutChart />
+              <p className="absolute w-40 bottom-16 left-16 text-careerForMe-main font-bold text-xl">
+                32%
+              </p>
             </div>
-            <p className="absolute bottom-6 -right-12 w-40 text-careerForMe-main font-bold text-xl">
-              32%
-            </p>
           </div>
         </div>
       </article>
