@@ -272,6 +272,10 @@ yarn add zustand
 yarn add swiper
 ```
 
+```shell
+yarn add react-chartjs-2 chart.js
+```
+
 <br>
 
 <!-- Top Button -->

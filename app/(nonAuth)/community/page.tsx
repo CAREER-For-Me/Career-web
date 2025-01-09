@@ -1,5 +1,7 @@
-const PostPage = () => {
-  return <main>게시판</main>;
+"use client";
+
+const CommunityPage = () => {
+  return <main></main>;
 };
 
-export default PostPage;
+export default CommunityPage;
