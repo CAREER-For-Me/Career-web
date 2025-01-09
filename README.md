@@ -276,6 +276,10 @@ yarn add swiper
 yarn add react-chartjs-2 chart.js
 ```
 
+```shell
+yarn add react-icons
+```
+
 <br>
 
 <!-- Top Button -->

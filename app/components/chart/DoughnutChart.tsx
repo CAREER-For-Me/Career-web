@@ -1,4 +1,3 @@
-// Line 차트 가져오기
 import { Doughnut } from "react-chartjs-2";
 
 // 필요한 요소 불러오기

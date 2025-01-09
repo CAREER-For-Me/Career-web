@@ -1,5 +1,5 @@
 import Link from "next/link";
-import DoughnutChart from "../DoughnutChart";
+import DoughnutChart from "../chart/DoughnutChart";
 
 const MyCompetence = () => {
   return (

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Hr from "../common/Hr";
 import { useSession } from "next-auth/react";
+import { FiUser } from "react-icons/fi";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -58,7 +59,10 @@ const Navbar = () => {
                   "text-careerForMe-main font-bold": pathname === "/mypage",
                 })}
               >
-                마이페이지
+                <div className="flex items-center gap-2">
+                  마이페이지
+                  <FiUser className="text-xl" />
+                </div>
               </Link>
             </>
           ) : (
