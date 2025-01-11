@@ -178,6 +178,7 @@ extend: {
       dark: "#737373",
       medium: "#B2B2B2",
       light: "#D2D2D2",
+      ExtraLight: "#F4F4F4",
     },
   },
 }
@@ -265,6 +266,18 @@ yarn add clsx
 
 ```shell
 yarn add zustand
+```
+
+```shell
+yarn add swiper
+```
+
+```shell
+yarn add react-chartjs-2 chart.js
+```
+
+```shell
+yarn add react-icons
 ```
 
 <br>

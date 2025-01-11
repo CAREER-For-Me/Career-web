@@ -1,7 +1,7 @@
 "use client";
 
 import FieldSelection from "@/app/components/FieldSelection";
-import Carousel from "@/app/components/home/Carousel";
+import Carousel from "@/app/components/home/carousel/Carousel";
 import Community from "@/app/components/home/Community";
 import CompetencyStatus from "@/app/components/home/CompetencyStatus";
 import MyCompetence from "@/app/components/home/MyCompetence";
@@ -17,16 +17,20 @@ const HomePage = () => {
   console.log("====================================");
   return (
     <main>
-      <div className="flex w-full gap-5  h-64">
+      <div className="flex w-full gap-5">
         <Carousel />
         <MyCompetence />
       </div>
-      <div>
+      <div className="mt-12">
         <CompetencyStatus />
       </div>
-      <FieldSelection />
-      <RecommendationList maxItem={8} />
-      <div>
+      <div className="mt-64">
+        <FieldSelection main={"main"} />
+
+        <RecommendationList maxItem={8} main={"main"} />
+      </div>
+
+      <div className="mt-12">
         <Community />
       </div>
     </main>

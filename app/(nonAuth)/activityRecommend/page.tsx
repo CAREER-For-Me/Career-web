@@ -13,7 +13,7 @@ const ActivityRecommendationPage = () => {
       <ActivityTopInfo />
       <JobForm />
 
-      <div className="border-y-[0.1px] my-9 "></div>
+      <div className="border-y-[0.1px] my-9" />
       <FieldSelection />
       <ActivityRecommendationList />
 
