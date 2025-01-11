@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background-color: #f4f4f4; /* 흰색 배경색 변수 */
+  /* --background-color: #f4f4f4; 흰색 배경색 변수 */
+  --background-color: #ffffff; /* 흰색 배경색 변수 */
 }
 
 body {
