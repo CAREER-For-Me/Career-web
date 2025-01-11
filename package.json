@@ -11,32 +11,31 @@
     "serve": "json-server --watch db.json --port 4000"
   },
   "dependencies": {
-    "@mui/icons-material": "^6.3.1",
-    "@mui/material": "^6.3.1",
     "@tanstack/react-query": "^5.63.0",
     "@tanstack/react-query-devtools": "^5.62.12",
     "axios": "^1.7.9",
     "chart.js": "^4.4.7",
     "clsx": "^2.1.1",
+    "daisyui": "^4.12.23",
     "next": "15.1.3",
     "next-auth": "^4.24.11",
     "react": "^19.0.0",
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "swiper": "^11.2.0",
-    "zustand": "^5.0.2"
+    "swiper": "^11.2.1",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "daisyui": "^4.12.23",
+    "autoprefixer": "^10.4.20",
     "eslint": "^9",
     "eslint-config-next": "15.1.3",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
     "typescript": "^5"
   }
 }
