@@ -13,12 +13,11 @@ const SignInOutButton = () => {
       <button onClick={() => signOut()}>로그아웃</button>
     </>
   ) : (
-    <>
-      <button onClick={() => signIn()} className="mr-4">
-        로그인
-      </button>
+    <div className="flex text-gray-dark">
+      <button onClick={() => signIn()}>로그인</button>
+      <p className="mx-3">|</p>
       <button onClick={() => router.push("/signup")}>회원가입</button>
-    </>
+    </div>
   );
 };
 
