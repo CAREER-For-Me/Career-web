@@ -41,5 +41,8 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    themes: ["light"], // 다크모드 제거하고 라이트모드만 활성화
+  },
 } satisfies Config;

@@ -1,24 +1,19 @@
+import React, { ReactNode } from "react";
 import Header from "@/app/components/layouts/Header";
 import Navbar from "@/app/components/layouts/Navber";
-import { ReactNode } from "react";
 
-interface ActivityRecommendLayoutProps {
-  //속성타입 정의
+interface LayoutProps {
   children: ReactNode;
 }
 
-const ActivityRecommendLayout = ({
-  children,
-}: ActivityRecommendLayoutProps) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <>
-      <div>
-        <Header />
-        <Navbar />
-      </div>
-      <main>{children}</main>
-    </>
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      <Navbar />
+      <main className="flex-grow p-4">{children}</main>
+    </div>
   );
 };
 
-export default ActivityRecommendLayout;
+export default Layout;
