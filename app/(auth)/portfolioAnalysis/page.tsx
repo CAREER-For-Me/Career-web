@@ -1,5 +1,5 @@
 "use client";
-import Button from "../../components/common/Button";
+import Button from "../../components/portfolioAnalysis/portfolioButton";
 import "tailwindcss/tailwind.css"; //전역 스타일시트 import
 import React, { useState } from "react";
 const PortfolioAnalysisPage = () => {
