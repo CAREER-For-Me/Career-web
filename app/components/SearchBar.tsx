@@ -2,10 +2,10 @@ import Image from "next/image";
 
 const SearchBar = () => {
   return (
-    <form>
+    <form className="flex items-center w-full max-w-xl relative">
       <input
         placeholder="어떤 활동을 찾으시나요?"
-        className="w-3/5 p-3 mt-2 border border-gray-300 rounded-md"
+        className="flex-1  p-3 mt-2 border-[3px] border-careerForMe-main rounded-full outline-none"
       />
       <button>
         <Image
@@ -13,6 +13,7 @@ const SearchBar = () => {
           alt="search"
           width={30}
           height={30}
+          className="absolute right-5 bottom-3"
         />
       </button>
     </form>

@@ -2,14 +2,11 @@ import Header from "@/app/components/layouts/Header";
 import Navbar from "@/app/components/layouts/Navber";
 import { ReactNode } from "react";
 
-interface ActivityRecommendLayoutProps {
-  //속성타입 정의
+interface MyPageLayoutProps {
   children: ReactNode;
 }
 
-const ActivityRecommendLayout = ({
-  children,
-}: ActivityRecommendLayoutProps) => {
+const MyPageLayout = ({ children }: MyPageLayoutProps) => {
   return (
     <>
       <div>
@@ -21,4 +18,4 @@ const ActivityRecommendLayout = ({
   );
 };
 
-export default ActivityRecommendLayout;
+export default MyPageLayout;

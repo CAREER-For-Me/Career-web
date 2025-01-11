@@ -1,21 +1,20 @@
 import Image from "next/image";
 import Link from "next/link";
-import SearchBar from "../activityRecommend/SearchBar";
+import SearchBar from "../SearchBar";
 import SignInOutButton from "../common/SignInOutButton";
 
 const Header = () => {
   return (
-    <header>
-      <section>
+    <header className="flex items-center ">
+      <section className="mr-7">
         <Link href="/">
           <Image src="/images/logo.png" alt="Logo" width={150} height={150} />
         </Link>
       </section>
-      <section>
+      <SearchBar />
+      <section className="ml-auto">
         <SignInOutButton />
       </section>
-
-      <SearchBar />
     </header>
   );
 };
