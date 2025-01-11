@@ -7,11 +7,15 @@ import { useState } from "react";
 import { postingActivityStore } from "@/app/store/postingActivityStore";
 import { BsBookmarkFill } from "react-icons/bs";
 
+interface RecommendationListProps {
+  maxItem?: number | null;
+  main?: string | null;
+}
+
 const RecommendationList = ({
   maxItem = null,
-}: {
-  maxItem?: number | null;
-}) => {
+  main,
+}: RecommendationListProps) => {
   const postingGubun = postingActivityStore((state) => state.postingGubun);
   const [fieldIds, setFieldIds] = useState([1, 2]); // 임시
   const [pageNum, setPageNum] = useState(0); // 임시
@@ -68,7 +72,14 @@ const RecommendationList = ({
 
   return (
     <section>
-      <p className="py-4 text-gray-dark">총 {posts.length}건</p>
+      {main ? (
+        <></>
+      ) : (
+        <>
+          <p className="py-4 text-gray-dark">총 {posts.length}건</p>
+        </>
+      )}
+
       <ul className="flex flex-wrap -mx-2">
         {displayPost.map((post) => (
           <li key={post.id} className="w-1/4 px-2 mb-4">
@@ -99,11 +110,13 @@ const RecommendationList = ({
                       <p className="text-wrap w-full font-bold text-lg break-keep truncate mt-5">
                         {post.title}
                       </p>
-                      <p>주식회사 어치브모먼트</p>
-                      <div className="flex gap-3 mb-7">
-                        <p className="text-careerForMe-red font-bold">D-1</p>
-                        <p className="text-gray-dark">조회 142</p>
-                        <p className="text-gray-dark">댓글 2</p>
+                      <div>
+                        <p>주식회사 어치브모먼트</p>
+                        <div className="flex gap-3 mb-7">
+                          <p className="text-careerForMe-red font-bold">D-1</p>
+                          <p className="text-gray-dark">조회 142</p>
+                          <p className="text-gray-dark">댓글 2</p>
+                        </div>
                       </div>
                     </figcaption>
                   </figure>

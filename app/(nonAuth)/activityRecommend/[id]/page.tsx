@@ -1,10 +1,20 @@
+"use client";
 import Image from "next/image";
-import { BsBookmark } from "react-icons/bs";
+import { use, useState } from "react";
+import { BsBookmarkFill } from "react-icons/bs";
 
-const AtivityDetailPage = ({ params }: { params: { id: string } }) => {
+const AtivityDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
+  const [isClipped, setIsClipped] = useState(false);
+
+  const { id: postId } = use(params);
+
+  const handleCliping = () => {
+    setIsClipped(!isClipped);
+  };
+
   return (
     <main>
-      <section className="border shadow-lg rounded-2xl h-96">
+      <section className="border shadow-lg rounded-2xl">
         <div>
           <Image
             src="/images/공모전.png"
@@ -13,39 +23,41 @@ const AtivityDetailPage = ({ params }: { params: { id: string } }) => {
             height={300}
           />
           <div className="bg-careerForMe-gray01">
-            <BsBookmark />
+            <div onClick={handleCliping}>
+              {isClipped ? (
+                <>
+                  <BsBookmarkFill className="relative left-[16rem] top-8 text-careerForMe-red text-lg" />
+                </>
+              ) : (
+                <>
+                  <BsBookmarkFill className="relative left-[16rem] top-8 text-gray-light text-lg" />
+                </>
+              )}
+            </div>
           </div>
           <div>지원하기</div>
         </div>
       </section>
-      <p>상세 내용</p>
-      <section>
-        이미지
+      <p className="text-gray-dark font-bold">상세 내용</p>
+
+      <section className="border shadow-lg rounded-2xl flex justify-center flex-col w-auto items-center">
+        <Image
+          src="/images/공모전디테일.png"
+          alt="공모전디테일 이미지"
+          width={800}
+          height={800}
+        />
         <article>
           <h1>📍지원자격</h1>
-          <div>
-            <p>이공계 대학생, 대학원생, LateX를 사용하는 연구원</p>
-            <p>AI와 IT분야에 관심이 많은 분</p>
-            <p>주기적인 콘텐츠 발행이 가능한 책임감 있는 분</p>
-            <p>마케팅, 콘텐츠 제작에 관심이 많은 분</p>
-          </div>
+          <div></div>
         </article>
         <article>
           <h1>📍활동내용</h1>
-          <div>
-            <p>
-              <div className="border border-black bg-black rounded-full w-1 h-1" />
-            </p>
-            <p></p>
-          </div>
+          <div></div>
         </article>
         <article>
           <h1>📍활동 혜택</h1>
-          <div>
-            <div className="border border-black bg-black rounded-full w-1 h-1" />
-            <p>이공계 대학생, 대학원생, LateX를 사용하는 연구원</p>
-            <p>AI와 IT분야에 관심이 많은 분</p>
-          </div>
+          <div></div>
         </article>
       </section>
     </main>

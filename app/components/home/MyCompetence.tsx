@@ -1,5 +1,6 @@
 import Link from "next/link";
 import DoughnutChart from "../chart/DoughnutChart";
+import { GoChevronRight } from "react-icons/go";
 
 const MyCompetence = () => {
   return (
@@ -41,7 +42,9 @@ const MyCompetence = () => {
         >
           <article className="flex justify-between w-full items-center mx-6 my-4 ">
             <p>내 역량 수정하기</p>
-            <p>{">"}</p>
+            <div className="flex items-center">
+              더보기 <GoChevronRight />
+            </div>
           </article>
         </Link>
       </article>

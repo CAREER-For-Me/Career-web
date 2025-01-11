@@ -25,9 +25,9 @@ const HomePage = () => {
         <CompetencyStatus />
       </div>
       <div className="mt-64">
-        <FieldSelection />
+        <FieldSelection main={"main"} />
 
-        <RecommendationList maxItem={8} />
+        <RecommendationList maxItem={8} main={"main"} />
       </div>
 
       <div className="mt-12">

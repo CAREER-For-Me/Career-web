@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Hr from "../common/Hr";
+import { GoChevronRight } from "react-icons/go";
 
 const Community = () => {
   return (
@@ -9,7 +10,10 @@ const Community = () => {
         <div className="m-7">
           <div className="flex justify-between items-center mb-5">
             <h1 className="text-2xl font-bold mb-4">실시간 BEST 인기글🔥</h1>
-            <Link href="/community">더보기 {">"}</Link>
+
+            <Link href="/community" className="flex items-center">
+              더보기 <GoChevronRight />
+            </Link>
           </div>
           <>
             <div className="flex justify-between mt-4">
@@ -84,7 +88,9 @@ const Community = () => {
         <div className="m-7">
           <div className="flex justify-between items-center mb-5">
             <h1 className="text-2xl font-bold mb-4">즐겨찾는 게시판📍</h1>
-            <Link href="/community">더보기 {">"}</Link>
+            <Link href="/community" className="flex items-center">
+              더보기 <GoChevronRight />
+            </Link>
           </div>
           <>
             <div className="flex justify-between mt-4">

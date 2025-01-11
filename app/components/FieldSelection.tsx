@@ -1,8 +1,14 @@
 "use client";
 import { postingActivityStore } from "@/app/store/postingActivityStore";
+import Link from "next/link";
 import { useState } from "react";
+import { GoChevronRight } from "react-icons/go";
 
-const FieldSelection = () => {
+interface FieldSelectionProps {
+  main?: string | null;
+}
+
+const FieldSelection = ({ main }: FieldSelectionProps) => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const setPostingGubun = postingActivityStore(
     (state) => state.setPostingGubun
@@ -34,7 +40,7 @@ const FieldSelection = () => {
   };
 
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between items-center">
       <div className="flex text-nowrap font-bold text-2xl items-center">
         <p>나를 위한</p>
         <select
@@ -96,11 +102,19 @@ const FieldSelection = () => {
         <p>추천이에요🌟</p>
       </div>
 
-      <select className="text-gray-dark focus:outline-none">
-        <option value="추천순">추천순</option>
-        <option value="댓글순">댓글순</option>
-        <option value="최신순">최신순</option>
-      </select>
+      {main ? (
+        <Link href="/activityRecommend" className="flex items-center">
+          더보기 <GoChevronRight />
+        </Link>
+      ) : (
+        <>
+          <select className="text-gray-dark focus:outline-none">
+            <option value="추천순">추천순</option>
+            <option value="댓글순">댓글순</option>
+            <option value="최신순">최신순</option>
+          </select>
+        </>
+      )}
     </div>
   );
 };
