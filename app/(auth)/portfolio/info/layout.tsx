@@ -3,6 +3,7 @@ import Header from "@/app/components/layouts/Header";
 import Navbar from "@/app/components/layouts/Navber";
 import Image from "next/image";
 import { GoChevronRight } from "react-icons/go";
+import Footer from "@/app/components/layouts/Footer";
 
 interface LayoutProps {
   children: ReactNode;
@@ -43,6 +44,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </div>
         {children}
       </section>
+      <Footer />
     </div>
   );
 };

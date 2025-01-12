@@ -1,3 +1,4 @@
+import Footer from "@/app/components/layouts/Footer";
 import Header from "@/app/components/layouts/Header";
 import Navbar from "@/app/components/layouts/Navber";
 import React, { ReactNode } from "react";
@@ -12,6 +13,7 @@ const AnalysisLayout = ({ children }: AnalysisLayoutProps) => {
       <Header />
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 };
