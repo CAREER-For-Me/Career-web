@@ -12,7 +12,6 @@ export default function RootLayout({
       <body className="mx-auto max-w-screen-xl p-6 overflow-x-hidden">
         <Providers>
           {children}
-          <Footer />
         </Providers>
       </body>
     </html>
