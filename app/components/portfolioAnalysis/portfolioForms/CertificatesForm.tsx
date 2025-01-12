@@ -15,9 +15,7 @@ const CertificatesForm = () => {
       <div className="flex items-center gap-8">
         <h2 className="font-bold w-24">급수</h2>
         <select className="select select-bordered w-32">
-          <option disabled selected>
-            급수
-          </option>
+          <option disabled>급수</option>
           <option>1급</option>
           <option>2급</option>
           <option>3급</option>

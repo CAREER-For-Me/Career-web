@@ -7,9 +7,7 @@ const InternshipAndActivitiesForm = () => {
       <div className="flex items-center gap-8">
         <h2 className="font-bold w-24">활동 구분</h2>
         <select className="select select-bordered w-full max-w-xs">
-          <option disabled selected>
-            Who shot first?
-          </option>
+          <option disabled>Who shot first?</option>
           <option>Han Solo</option>
           <option>Greedo</option>
         </select>

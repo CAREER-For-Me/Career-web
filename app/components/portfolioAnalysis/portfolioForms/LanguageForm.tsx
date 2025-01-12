@@ -6,9 +6,7 @@ const LanguageForm = () => {
       <div className="flex items-center gap-8">
         <h2 className="font-bold w-24">시험종류</h2>
         <select className="select select-bordered w-48">
-          <option disabled selected>
-            시험종류
-          </option>
+          <option disabled>시험종류</option>
           <option>토익(TOEIC)</option>
         </select>
       </div>
