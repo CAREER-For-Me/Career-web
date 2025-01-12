@@ -9,14 +9,14 @@ interface PostLayoutProps {
 
 const PostLayout = ({ children }: PostLayoutProps) => {
   return (
-    <>
+    <div className="mx-auto max-w-screen-xl p-6">
       <div>
         <Header />
         <Navbar />
       </div>
       <main>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 

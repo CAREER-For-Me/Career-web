@@ -38,7 +38,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </p>
         </div>
 
-        <div className="flex justify-end text-sm text-gray-medium hover:underline">
+        <div className="flex justify-end text-sm text-gray-medium hover:underline items-center">
           <button>희망 직무 다시 선택하기</button>
           <GoChevronRight />
         </div>

@@ -1,5 +1,4 @@
 "use client";
-import BarChart from "@/app/components/chart/BarChart";
 import CompetencyChartSection from "@/app/components/CompetencyChartSection";
 import CompetencyDetail from "@/app/components/home/CompetencyDetail";
 import SkillOverview from "@/app/components/portfolioAnalysis/SkillOverview";
@@ -8,8 +7,8 @@ import SkillStatusIndicator from "@/app/components/SkillStatusIndicator";
 import { abilities, tools } from "@/app/constants/constants";
 import Link from "next/link";
 import { GoChevronRight } from "react-icons/go";
+import { credentials } from "@/app/constants/constants";
 
-const credentials = ["학점", "인턴", "수상", "대외활동", "자격증"];
 const data = ["3.6", "5", "4", "4", "4"];
 
 const PortfolioAnalysisPage = () => {
@@ -82,7 +81,7 @@ const PortfolioAnalysisPage = () => {
         <h1 className="font-bold text-xl mb-5">어학점수 비교하기📈</h1>
 
         <div className="flex">
-          <div className="min-h-36 flex items-center justify-center  w-52 text-white bg-careerForMe-main rounded-l-lg shadow-sm shadow-gray-light">
+          <div className="min-h-36 flex items-center justify-center w-52 text-white bg-careerForMe-main rounded-l-lg shadow-sm shadow-gray-light">
             <p className="">토익(TOEIC)</p>
           </div>
           <div className="flex-1 min-h-36 rounded-r-lg shadow-sm shadow-gray-light relative">
