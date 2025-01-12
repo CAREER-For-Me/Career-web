@@ -22,8 +22,8 @@ ChartJS.register(
 );
 
 // 예시 데이터
-const labels = ["학점", "인턴", "수상내역", "대외활동", "자격증"];
-const dataValues = [32, 68, 97, 23, 46];
+const labels = ["학점"];
+const dataValues = [32];
 
 export const data = {
   labels: labels,
