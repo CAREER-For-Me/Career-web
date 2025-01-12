@@ -1,4 +1,3 @@
-import Footer from "./components/layouts/Footer";
 import "./globals.css";
 import Providers from "./providers";
 

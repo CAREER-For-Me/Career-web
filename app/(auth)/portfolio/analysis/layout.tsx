@@ -9,12 +9,12 @@ interface AnalysisLayoutProps {
 
 const AnalysisLayout = ({ children }: AnalysisLayoutProps) => {
   return (
-    <>
+    <div className="mx-auto max-w-screen-xl p-6">
       <Header />
       <Navbar />
       {children}
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -2,11 +2,11 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="w-full mb-11">
-      <div className="bg-gray-light h-[0.5px] mt-44 mb-24" />
+    <footer className="w-full mb-11 mt-[4rem]">
+      <div className="w-screen shadow-md text-gray-medium shadow-gray-medium mt-4 border border-l-gray-light absolute left-0" />
       <div className="flex justify-center">
         {/* left */}
-        <div className="flex flex-col mr-56">
+        <div className="flex flex-col mr-56 mt-24">
           <div>
             <Image
               src="/images/logo/career-gray-logo.png"
@@ -24,7 +24,7 @@ const Footer = () => {
         </div>
 
         {/* right */}
-        <table className="border-separate border-spacing-y-6 w-2/4 ">
+        <table className="border-separate border-spacing-y-6 w-2/4 mt-24">
           <thead>
             <tr className="text-gray-dark">
               <th className="text-left">제작/개발</th>
