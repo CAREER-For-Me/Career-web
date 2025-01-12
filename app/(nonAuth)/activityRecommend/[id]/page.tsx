@@ -105,33 +105,23 @@ const AtivityDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
       </section>
       <p className="text-gray-dark font-bold text-xl py-9">상세 내용</p>
 
-      <section className="border shadow-lg rounded-2xl flex flex-col items-center pt-20">
-        <article>
-          <div>
-            <Image
-              src="/images/공모전디테일.png"
-              alt="공모전디테일 이미지"
-              width={600}
-              height={600}
-            />
-            <div className="mt-14 mb-36">
-              <div className="my-11">
-                <h1 className="font-bold text-xl">📍지원자격</h1>
-                <div className="ml-6">sddd</div>
-              </div>
-              <div className="my-11">
-                <h1 className="font-bold text-xl">📍활동내용</h1>
-                <div className="ml-6">sddd</div>
-              </div>
-              <div className="my-11">
-                <h1 className="font-bold text-xl">📍활동 혜택</h1>
-                <div className="ml-6">sddd</div>
-              </div>
-              <div className="my-11">
-                <h1 className="font-bold text-xl">📍상세 정보</h1>
-                <div className="ml-6">sddd</div>
-              </div>
-            </div>
+      <section className="border shadow-lg rounded-2xl flex flex-col">
+        <article className="ml-11">
+          <div className="my-11">
+            <h1 className="font-bold text-xl">📍지원자격</h1>
+            <div className="ml-6">sddd</div>
+          </div>
+          <div className="my-11">
+            <h1 className="font-bold text-xl">📍활동내용</h1>
+            <div className="ml-6">sddd</div>
+          </div>
+          <div className="my-11">
+            <h1 className="font-bold text-xl">📍활동 혜택</h1>
+            <div className="ml-6">sddd</div>
+          </div>
+          <div className="my-11">
+            <h1 className="font-bold text-xl">📍상세 정보</h1>
+            <div className="ml-6">sddd</div>
           </div>
         </article>
       </section>

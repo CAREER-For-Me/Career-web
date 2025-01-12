@@ -2,6 +2,8 @@ import React from "react";
 import BarChart from "../chart/BarChart";
 import Hr from "../common/Hr";
 
+const capabilities = ["학점", "인턴", "수상내역", "대외활동", "자격증"];
+
 const CompetencyChartSection = () => {
   return (
     <div className="bg-careerForMe-gray01 rounded-md w-3/5 relative">
@@ -16,31 +18,13 @@ const CompetencyChartSection = () => {
           <BarChart />
         </div>
 
-        <div className="flex mb-4 relative">
-          <p>학점</p>
-          <p className="absolute left-48"></p>
-          <p className="text-careerForMe-main ml-auto">4.32점</p>
-        </div>
-
-        <div className="flex mb-4 relative">
-          <p>인턴</p>
-          <p className="text-careerForMe-main ml-auto">4.32점</p>
-        </div>
-
-        <div className="flex mb-4 relative">
-          <p>수상내역</p>
-          <p className="text-careerForMe-main ml-auto">4.32점</p>
-        </div>
-
-        <div className="flex mb-4 relative">
-          <p>대외활동</p>
-          <p className="text-careerForMe-main ml-auto">4.32점</p>
-        </div>
-
-        <div className="flex mb-4 relative">
-          <p>자격증</p>
-          <p className="text-careerForMe-main ml-auto">4.32점</p>
-        </div>
+        {capabilities.map((capability, index) => (
+          <div className="flex mb-4" key={index}>
+            <p>{capability}</p>
+            <p className="absolute left-48"></p>
+            <p className="text-careerForMe-main ml-auto">4.32점</p>
+          </div>
+        ))}
       </div>
     </div>
   );
