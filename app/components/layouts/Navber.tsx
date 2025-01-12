@@ -58,7 +58,14 @@ const Navbar = () => {
             <div
               tabIndex={0}
               role="button"
-              className="hover:text-careerForMe-main transition-colors duration-300 ease-in-out cursor-pointer"
+              className={clsx(
+                "hover:text-careerForMe-main transition-colors duration-300 ease-in-out",
+                {
+                  "text-careerForMe-main font-bold":
+                    pathname === "/portfolio/analysis" ||
+                    pathname === "/portfolio/info",
+                }
+              )}
             >
               포트폴리오 분석
             </div>
@@ -73,12 +80,12 @@ const Navbar = () => {
               <ul className="py-2">
                 <li>
                   <Link
-                    href="/portfolioAnalysis"
+                    href="/portfolio/analysis"
                     className={clsx(
                       "block px-4 py-2 text-gray-700 hover:text-careerForMe-main hover:bg-gray-200 transition-colors duration-200 ease-in-out",
                       {
                         "text-careerForMe-main font-bold":
-                          pathname === "/portfolioAnalysis",
+                          pathname === "/portfolio/analysis",
                       }
                     )}
                   >
@@ -87,12 +94,12 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    href="/portfolioAnalysis"
+                    href="/portfolio/info"
                     className={clsx(
                       "block px-4 py-2 text-gray-700 hover:text-careerForMe-main hover:bg-gray-200 transition-colors duration-200 ease-in-out",
                       {
                         "text-careerForMe-main font-bold":
-                          pathname === "/portfolioAnalysis",
+                          pathname === "/portfolio/info",
                       }
                     )}
                   >

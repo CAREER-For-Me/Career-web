@@ -35,7 +35,7 @@ const SoftSkillsForm = () => {
 
   return (
     <section>
-      <div className="my-9 flex items-center justify-between">
+      <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold">보유 스킬</h1>
         <div className="flex items-center gap-1">
           <p className="bg-careerForMe-main rounded-full w-[6px] h-[6px]"></p>

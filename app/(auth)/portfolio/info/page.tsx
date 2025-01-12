@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import InternshipAndActivitiesForm from "@/app/components/portfolioAnalysis/portfolioForms/InternshipAndActivitiesForm";
 import CertificatesForm from "@/app/components/portfolioAnalysis/portfolioForms/CertificatesForm";
 import AwardsForm from "@/app/components/portfolioAnalysis/portfolioForms/AwardsForm";
@@ -10,9 +9,8 @@ import TechnicalSkillsForm from "@/app/components/portfolioAnalysis/portfolioFor
 import SoftSkillsForm from "@/app/components/portfolioAnalysis/portfolioForms/SoftSkillsForm";
 import AcademicForm from "@/app/components/portfolioAnalysis/portfolioForms/AcademicForm";
 import Sidebar from "@/app/components/portfolioAnalysis/Sidebar";
-import { GoChevronRight } from "react-icons/go";
 
-const PortfolioAnalysisPage: React.FC = () => {
+const PortfolioInfoPage: React.FC = () => {
   const [selectedSection, setSelectedSection] = useState("학력");
 
   // 초기 로드 시 localStorage에서 저장된 섹션을 가져오기
@@ -66,4 +64,4 @@ const PortfolioAnalysisPage: React.FC = () => {
   );
 };
 
-export default PortfolioAnalysisPage;
+export default PortfolioInfoPage;
