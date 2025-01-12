@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="flex justify-between mt-12 font-bold">
+      <nav className="flex justify-between mt-12 mb-20 font-bold">
         <section className="flex gap-9">
           <Link
             href="/activityRecommend"
@@ -142,7 +142,7 @@ const Navbar = () => {
           )}
         </section>
       </nav>
-      <Hr my={9} mt={4} />
+      <div className="w-screen shadow-md text-gray-medium shadow-gray-medium mt-4 border border-l-gray-light absolute top-[12rem] right-0" />
     </>
   );
 };

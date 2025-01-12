@@ -7,7 +7,8 @@ interface firstQuestionLayoutProps {
 }
 const FirstQuestionLayout = ({ children }: firstQuestionLayoutProps) => {
   return (
-    <div className="bg-careerForMe-gray01">
+    <div className="bg-careerForMe-gray01 relative">
+      <div className="w-screen shadow-md text-gray-medium shadow-gray-medium mt-4 border border-l-gray-light absolute top-[7rem]" />
       <div className="mx-auto max-w-screen-xl min-h-screen p-6">
         <div className="flex items-center gap-3 ">
           <Link href="/">
@@ -22,7 +23,6 @@ const FirstQuestionLayout = ({ children }: firstQuestionLayoutProps) => {
             맞춤형 커리어 추천 플랫폼 커리어포미
           </span>
         </div>
-        <div className="min-w-max shadow-md text-gray-medium shadow-gray-medium mt-4 border border-l-gray-light"></div>
         {children}
       </div>
     </div>

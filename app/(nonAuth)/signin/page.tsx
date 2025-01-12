@@ -43,6 +43,8 @@ const SignInPage = () => {
       {shouldRender && (
         <>
           <div className="flex flex-col justify-center items-center mb-6">
+            <div className="w-screen shadow-md text-gray-medium shadow-gray-medium mt-4  mb-9 border border-l-gray-light" />
+
             <Link href="/">
               <Image
                 src="/images/logo/career-logo.png"
@@ -51,9 +53,9 @@ const SignInPage = () => {
                 height={150}
               />
             </Link>
-            <p className="text-center mt-2 text-careerForMe-main">
-              맞춤형 커리어 추천 플랫폼, 커리어 포미
-            </p>
+            <span className="text-careerForMe-main font-bold text-xl">
+              맞춤형 커리어 추천 플랫폼 커리어포미
+            </span>
           </div>
 
           <form onSubmit={handleSubmit} className="w-full">
@@ -106,7 +108,6 @@ const SignInPage = () => {
               회원가입하기
             </button>
           </Link>
-
           <div className="flex flex-col items-center mt-6 gap-4 w-full">
             <button
               onClick={() => signIn("google")}
