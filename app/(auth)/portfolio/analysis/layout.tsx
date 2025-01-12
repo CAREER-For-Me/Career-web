@@ -1,23 +1,21 @@
 import Footer from "@/app/components/layouts/Footer";
 import Header from "@/app/components/layouts/Header";
 import Navbar from "@/app/components/layouts/Navber";
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 
-interface PostLayoutProps {
+interface AnalysisLayoutProps {
   children: ReactNode;
 }
 
-const PostLayout = ({ children }: PostLayoutProps) => {
+const AnalysisLayout = ({ children }: AnalysisLayoutProps) => {
   return (
     <>
-      <div>
-        <Header />
-        <Navbar />
-      </div>
-      <main>{children}</main>
+      <Header />
+      <Navbar />
+      {children}
       <Footer />
     </>
   );
 };
 
-export default PostLayout;
+export default AnalysisLayout;

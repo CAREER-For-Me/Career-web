@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 :root {
+  /* --background-color: #f4f4f4; 흰색 배경색 변수 */
+  --background-color: #ffffff; /* 흰색 배경색 변수 */
 }
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background-color); /* 배경색 흰색 설정 */
+  color: #000000; /* 글자 색 검정 */
 }

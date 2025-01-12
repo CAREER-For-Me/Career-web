@@ -1,7 +1,7 @@
-import { useQuery } from "@tanstack/react-query";
 import { QUERY_KEYS } from "./keys.constant";
 import { getJobDetails, getPostingAct } from "@/app/service/activity";
 import { GetPostingActParams } from "@/app/types/posting-types";
+import { useQuery } from "@tanstack/react-query";
 
 // 활동 추천 공고 목록 가져오기
 export const useActivityQuery = ({
