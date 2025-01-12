@@ -1,8 +1,16 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import Sidebar from "../../components/portfolioAnalysis/sidebar";
-import AcademicForm from "../../components/portfolioAnalysis/academicForm";
+import Image from "next/image";
+import InternshipAndActivitiesForm from "@/app/components/portfolioAnalysis/portfolioForms/InternshipAndActivitiesForm";
+import CertificatesForm from "@/app/components/portfolioAnalysis/portfolioForms/CertificatesForm";
+import AwardsForm from "@/app/components/portfolioAnalysis/portfolioForms/AwardsForm";
+import LanguageForm from "@/app/components/portfolioAnalysis/portfolioForms/LanguageForm";
+import TechnicalSkillsForm from "@/app/components/portfolioAnalysis/portfolioForms/TechnicalSkillsForm";
+import SoftSkillsForm from "@/app/components/portfolioAnalysis/portfolioForms/SoftSkillsForm";
+import AcademicForm from "@/app/components/portfolioAnalysis/portfolioForms/AcademicForm";
+import Sidebar from "@/app/components/portfolioAnalysis/Sidebar";
+import { GoChevronRight } from "react-icons/go";
 
 const PortfolioAnalysisPage: React.FC = () => {
   const [selectedSection, setSelectedSection] = useState("학력");
@@ -25,36 +33,36 @@ const PortfolioAnalysisPage: React.FC = () => {
     switch (selectedSection) {
       case "학력":
         return <AcademicForm />;
+      case "인턴/대외활동":
+        return <InternshipAndActivitiesForm />;
+      case "수상":
+        return <AwardsForm />;
+      case "자격증":
+        return <CertificatesForm />;
+      case "어학":
+        return <LanguageForm />;
+      case "보유기술":
+        return <TechnicalSkillsForm />;
+      case "보유스킬":
+        return <SoftSkillsForm />;
       default:
         return <p>준비 중</p>;
     }
   };
 
   return (
-    <div>
-      {/* 헤더 */}
-      <header className="p-6 bg-white shadow-md">
-        <h1 className="text-2xl font-bold flex items-center text-gray-900">
-          내 포트폴리오 정보
-          <span className="ml-2 text-green-500 text-lg">✔️</span>
-        </h1>
-        <p className="text-sm text-gray-500 mt-1">
-          포트폴리오 분석 서비스는 합격자 대비 부족한 역량을 분석해주는
-          서비스입니다.
-          <br />
-          상세한 정보를 입력해주시면 보다 정확한 분석이 가능해요. :)
-        </p>
-      </header>
-
+    <main>
       {/* 메인 */}
-      <div className="flex bg-gray-50 min-h-screen">
+      <div className="flex gap-12">
         {/* 왼쪽 네비게이션 */}
         <Sidebar selected={selectedSection} onSelect={handleSectionChange} />
 
         {/* 선택된 폼 */}
-        <div className="flex-grow p-6">{renderForm()}</div>
+        <div className="flex-grow p-6 shadow-md border-r rounded-xl">
+          {renderForm()}
+        </div>
       </div>
-    </div>
+    </main>
   );
 };
 

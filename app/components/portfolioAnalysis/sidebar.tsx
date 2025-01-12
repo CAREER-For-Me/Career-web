@@ -17,11 +17,11 @@ const Sidebar: React.FC<SidebarProps> = ({ selected, onSelect }) => {
   ];
 
   return (
-    <div className="w-48 bg-white shadow-md border-r border-gray-200 p-4 space-y-4">
+    <div className="w-48 shadow-md border-r rounded-xl p-4 space-y-4">
       {sections.map((section) => (
-        <button
+        <div
           key={section}
-          className={`block text-left px-4 py-2 rounded-lg border-b border-gray-200 last:border-b-0 ${
+          className={`block text-left px-4 py-2 rounded-lg border-b border-gray-200 last:border-b-0 cursor-pointer ${
             selected === section
               ? "text-primary font-bold bg-gray-100"
               : "text-gray-700 hover:text-primary"
@@ -29,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({ selected, onSelect }) => {
           onClick={() => onSelect(section)}
         >
           {section}
-        </button>
+        </div>
       ))}
     </div>
   );
