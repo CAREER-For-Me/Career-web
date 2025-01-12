@@ -8,7 +8,12 @@ const Header = () => {
     <header className="flex items-center ">
       <section className="mr-7">
         <Link href="/">
-          <Image src="/images/logo.png" alt="Logo" width={150} height={150} />
+          <Image
+            src="/images/logo/career-logo.png"
+            alt="Logo"
+            width={150}
+            height={150}
+          />
         </Link>
       </section>
       <SearchBar />
