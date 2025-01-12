@@ -45,7 +45,7 @@ const SignInPage = () => {
           <div className="flex flex-col justify-center items-center mb-6">
             <Link href="/">
               <Image
-                src="/images/logo.png"
+                src="/images/logo/career-logo.png"
                 alt="Logo"
                 width={150}
                 height={150}
@@ -113,21 +113,36 @@ const SignInPage = () => {
               className="p-3 bg-white text-black font-bold rounded-md w-full flex justify-center items-center
               gap-9 border border-gray-300"
             >
-              <Image src="/logo/google.png" alt="Logo" width={40} height={40} />
+              <Image
+                src="/images/logo/google.png"
+                alt="Logo"
+                width={40}
+                height={40}
+              />
               Google로 로그인
             </button>
             <button
               onClick={() => signIn("kakao")}
               className="p-3 bg-yellow-500 text-white font-bold rounded-md w-full flex justify-center items-center gap-9"
             >
-              <Image src="/logo/kakao.png" alt="Logo" width={40} height={50} />
+              <Image
+                src="/images/logo/kakao.png"
+                alt="Logo"
+                width={40}
+                height={50}
+              />
               Kakao로 로그인
             </button>
             <button
               onClick={() => signIn("github")}
               className="p-3 bg-gray-800 text-white font-bold rounded-md w-full flex justify-center items-center gap-9"
             >
-              <Image src="/logo/github.png" alt="Logo" width={40} height={40} />
+              <Image
+                src="/images/logo/github.png"
+                alt="Logo"
+                width={40}
+                height={40}
+              />
               GitHub로 로그인
             </button>
           </div>

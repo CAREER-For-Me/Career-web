@@ -2,27 +2,12 @@
 
 import clsx from "clsx";
 import { useState } from "react";
+import { abilities } from "@/app/constants/constants";
+import { tools } from "@/app/constants/constants";
+import SkillStatusIndicator from "../../SkillStatusIndicator";
 
 const SoftSkillsForm = () => {
   const [selectedAbilities, setSelectedAbilities] = useState<string[]>([]);
-
-  const abilities = [
-    "고객응대",
-    "와이어프레임",
-    "고객지향성",
-    "UX",
-    "네트워킹",
-    "고객지향성",
-  ];
-  const tools = [
-    "Figma",
-    "Notion",
-    "PowerPoint",
-    "Photoshop",
-    "Sketch",
-    "Slack",
-    "Excel",
-  ];
 
   const handleSelect = (params: string) => {
     setSelectedAbilities(
@@ -37,13 +22,10 @@ const SoftSkillsForm = () => {
     <section>
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold">보유 스킬</h1>
-        <div className="flex items-center gap-1">
-          <p className="bg-careerForMe-main rounded-full w-[6px] h-[6px]"></p>
-          <p className="text-careerForMe-main mr-3">내 스킬</p>
-          <p className="bg-gray-medium rounded-full w-[6px] h-[6px]"></p>
-          <p className="text-gray-medium">미보유 스킬</p>
-        </div>
+        <SkillStatusIndicator />
       </div>
+
+      {/* ABILITY */}
       <div className="mt-12 mb-6  flex items-center justify-between">
         <h2 className="font-bold">내 직무 추천 ABILITY</h2>
         <p className="text-sm">ABILITY 전체보기</p>
@@ -66,6 +48,7 @@ const SoftSkillsForm = () => {
         ))}
       </ul>
 
+      {/* TOOL */}
       <div className="mt-20 mb-6 flex items-center justify-between">
         <h2 className="font-bold">내 직무 추천 TOOL</h2>
         <p className="text-sm">TOOL 전체보기</p>

@@ -1,4 +1,4 @@
-import CompetencyChartSection from "./CompetencyChartSection";
+import CompetencyChartSection from "../CompetencyChartSection";
 import CompetencyDetail from "./CompetencyDetail";
 
 const CompetencyStatus = () => {
@@ -7,8 +7,8 @@ const CompetencyStatus = () => {
       <h1 className="text-2xl font-bold mb-5">내 역량 현황이에요📈</h1>
 
       <div className="flex gap-8">
-        <CompetencyChartSection />
-        <CompetencyDetail />
+        <CompetencyChartSection isMain={true} />
+        <CompetencyDetail isMain={true} />
       </div>
     </div>
   );
