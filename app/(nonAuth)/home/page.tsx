@@ -12,10 +12,10 @@ import { GoChevronRight } from "react-icons/go";
 const HomePage = () => {
   const session = useSession();
 
-  console.log("====================================");
-  console.log("session", session);
-  console.log("user", session.data?.user?.name);
-  console.log("====================================");
+  // console.log("====================================");
+  // console.log("session", session);
+  // console.log("user", session.data?.user?.name);
+  // console.log("====================================");
   return (
     <main>
       <section className="flex w-full gap-5">
@@ -43,7 +43,7 @@ const HomePage = () => {
           </Link>
         </div>
 
-        <RecommendationList maxItem={8} main={"main"} />
+        <RecommendationList isHome={true} />
       </div>
 
       {/* 커뮤니티 */}

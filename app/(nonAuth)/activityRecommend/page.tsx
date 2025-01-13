@@ -15,7 +15,7 @@ const ActivityRecommendationPage = () => {
 
       <div className="border-y-[0.1px] my-9" />
       <FieldSelection />
-      <ActivityRecommendationList />
+      <ActivityRecommendationList isHome={false} />
 
       <PageNation />
     </main>

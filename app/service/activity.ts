@@ -39,7 +39,7 @@ export const getPostingAct = async ({
 
 // 활동 공고 상세 조회 (GET 요청)
 export const getSingleAct = async (postingId: string) => {
-  const response = await fetch(`${baseURL}/postings=${postingId}`, {
+  const response = await fetch(`${baseURL}/${postingId}`, {
     method: "GET",
     headers: {
       Authorization: `Bearer ${process.env.JWT_TOKEN}`,

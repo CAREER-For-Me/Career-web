@@ -1,162 +1,282 @@
 {
-  "postings": [
+  "avgspec": [
     {
-      "id": 1,
-      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "fieldIds": [1, 2],
-      "postingGubun": 0,
-      "startAct": "2024-01-01",
-      "endAct": "2024-01-10",
-      "salary": "월급 200만원",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 2,
-      "title": "안녕!!!!!!!!!!",
-      "fieldIds": [1, 2],
-      "postingGubun": 0,
-      "startAct": "2024-01-01",
-      "endAct": "2024-01-10",
-      "salary": "월급 200만원",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 3,
-      "title": "sjfjsdflk",
-      "fieldIds": [1, 2],
-      "postingGubun": 0,
-      "startAct": "2024-01-01",
-      "endAct": "2024-01-10",
-      "salary": "월급 200만원",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 4,
-      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "fieldIds": [1, 2],
-      "postingGubun": 1,
-      "startAct": "2024-01-01",
-      "endAct": "2024-01-10",
-      "salary": "월급 200만원",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 5,
-      "title": "2024년 글로벌 해커톤 참여자 모집",
-      "fieldIds": [1],
-      "postingGubun": 2,
-      "startAct": "2024-02-01",
-      "endAct": "2024-02-10",
-      "salary": "상세 내용",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 6,
-      "title": "2024년 글로벌 해커톤 참여자 모집",
-      "fieldIds": [1],
-      "postingGubun": 3,
-      "startAct": "2024-02-01",
-      "endAct": "2024-02-10",
-      "salary": "상세 내용",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 7,
-      "title": "2024년 글로벌 해커톤 참여자 모집",
-      "fieldIds": [1],
-      "postingGubun": 3,
-      "startAct": "2024-02-01",
-      "endAct": "2024-02-10",
-      "salary": "상세 내용",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 8,
-      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "fieldIds": [1, 2],
-      "postingGubun": 0,
-      "startAct": "2024-01-01",
-      "endAct": "2024-01-10",
-      "salary": "월급 200만원",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 9,
-      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "fieldIds": [1, 2],
-      "postingGubun": 0,
-      "startAct": "2024-01-01",
-      "endAct": "2024-01-10",
-      "salary": "월급 200만원",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 10,
-      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "fieldIds": [1, 2],
-      "postingGubun": 0,
-      "startAct": "2024-01-01",
-      "endAct": "2024-01-10",
-      "salary": "월급 200만원",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 11,
-      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "fieldIds": [1, 2],
-      "postingGubun": 0,
-      "startAct": "2024-01-01",
-      "endAct": "2024-01-10",
-      "salary": "월급 200만원",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 12,
-      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "fieldIds": [1, 2],
-      "postingGubun": 0,
-      "startAct": "2024-01-01",
-      "endAct": "2024-01-10",
-      "salary": "월급 200만원",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
-    },
-    {
-      "id": 13,
-      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
-      "fieldIds": [1, 2],
-      "postingGubun": 0,
-      "startAct": "2024-01-01",
-      "endAct": "2024-01-10",
-      "salary": "월급 200만원",
-      "area": "서울 강남구",
-      "content": "프로젝트 내용",
-      "imageUrl": "./images/dummyImage.png"
+      "_comment": "합격자 평균 역량 조회",
+      "score": 3.7,
+      "internNum": 2.1,
+      "awardNum": 1.2,
+      "langScore": 750.3,
+      "expNum": 2.1,
+      "qualNum": 1.3,
+      "skillNum": 4.5
     }
   ],
+  "myspec/{userId}": [
+    {
+      "_comment": "보유 역량 조회",
+      "isSuccess": true,
+      "code": "COMMON200",
+      "message": "성공입니다.",
+      "result": {
+        "majorScore": 4.2,
+        "toeicScore": 890,
+        "tosLevel": "LV.5",
+        "internCount": 1,
+        "awardCount": 3,
+        "qualCount": 1
+      }
+    }
+  ],
+  "posting": {
+    "admin": [
+      {
+        "_comment": "관리자 페이지 (공고 입력)",
+        "fieldIds": [1, 2],
+        "title": "[카카오뱅크] 신사업 ~ ",
+        "corporateType": "BIG",
+        "postingGubun": "RECRU",
+        "startAct": "2024-10-10",
+        "endAct": "2024-12-12",
+        "startDate": "2024-01-01",
+        "endDate": "2024-01-10",
+        "area": "서울 강남구",
+        "related": "경영/사무",
+        "salary": "월급 200만원",
+        "homepageUrl": "www.asd.asd",
+        "imageUrl": "www.asd.asd",
+        "content": "asdasdasdasdad"
+      }
+    ],
+    "act": [
+      {
+        "_comment": "활동 추천 페이지 공고 목록 조회",
+        "postingList": [
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          }
+        ]
+      }
+    ],
+    "main": [
+      {
+        "_comment": "메인페이지 활동 공고 목록 조회",
+        "postingList": [
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          }
+        ]
+      }
+    ],
+    "serch": [
+      {
+        "_comment": "메인페이지 활동 공고 검색",
+        "postingList": [
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          },
+          {
+            "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+            "imageUrl": "./images/dummyImage.png"
+          }
+        ]
+      }
+    ]
+  },
+
+  "detail": [
+    {
+      "_comment": "활동 공고 상세조회",
+      "title": "제 2회 블레이버스 MVP 개발 해커톤 운영진 모집",
+      "corporateType": "대기업",
+      "startAct": "2024-10-10",
+      "endAct": "2024-12-12",
+      "startDate": "2024-01-01",
+      "endDate": "2024-01-10",
+      "area": "서울 강남구",
+      "related": "경영/사무",
+      "salary": "월급 200만원",
+      "homepageUrl": "https://www.naver.com/",
+      "imageUrl": "/images/공모전.png",
+      "content": "커리어포미 화이팅~  커리어포미 화이팅~커리어포미 화이팅~커리어포미 화이팅~커리어포미 화이팅~커리어포미 화이팅~커리어포미 화이팅~"
+    }
+  ],
+
+  "skill": [
+    {
+      "_comment": "보유 스킬 저장",
+      "skillName": ["Figma", "SPRING"]
+    }
+  ],
+  "lang": [
+    {
+      "_comment": "어학 저장",
+      "skillName": {
+        "lang": [
+          { "type": "토익", "score": "977", "issueDate": "2024-01-01" },
+          { "awardName": "오픽", "instituion": "IL", "issueDate": "2024-01-01" }
+        ]
+      }
+    }
+  ],
+  "qual": [
+    {
+      "_comment": "자격증 저장",
+      "qual": [
+        { "qualName": "컴활", "instituion": "네이버", "issueDate": "2024-01" },
+        { "qualName": "컴알", "instituion": "카카오", "issueDate": "2024-01" }
+      ]
+    }
+  ],
+  "award": [
+    {
+      "_comment": "수상 내역 저장",
+      "award": [
+        { "awardName": "대상", "instituion": "네이버", "issueDate": "2024-01" },
+        {
+          "awardName": "장려상",
+          "instituion": "카카오",
+          "issueDate": "2024-01"
+        }
+      ]
+    }
+  ],
+
+  "exp": [
+    {
+      "_comment": "경력/경험 저장",
+      "exp": [
+        {
+          "gubun": 1,
+          "instituion": "네이버",
+          "startDate": "2024-01",
+          "endDate": "2024-10"
+        },
+        {
+          "gubun": 4,
+          "instituion": "사이드나우",
+          "startDate": "2024-01",
+          "endDate": "2024-10"
+        }
+      ]
+    }
+  ],
+  "edu": [
+    {
+      "_comment": "학력 저장",
+      "edu": [
+        {
+          "gubun": 1,
+          "univName": "서울대",
+          "majorGubun": 1,
+          "majorName": "컴퓨터공학과"
+        },
+        {
+          "gubun": 2,
+          "univName": "카이스트",
+          "majorGubun": 2,
+          "majorName": "컴퓨터공학과"
+        }
+      ]
+    }
+  ],
+  "field": [
+    {
+      "_comment": "세부 분야 선택",
+      "fieldName": "모바일 개발자"
+    }
+  ],
+
   "jobDetails": {
     "웹개발": [
       ".NET 개발자",
