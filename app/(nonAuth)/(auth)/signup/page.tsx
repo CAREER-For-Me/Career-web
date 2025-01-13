@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import SocialLogin from "@/app/components/auth/SocialLogin";
 
 const SignupPage = () => {
   const router = useRouter();
@@ -49,7 +50,7 @@ const SignupPage = () => {
   };
 
   return (
-    <div className="mx-auto max-w-screen-sm p-6">
+    <main className="mx-auto max-w-screen-sm p-6">
       <form onSubmit={handleSubmit}>
         <input
           id="email"
@@ -123,7 +124,9 @@ const SignupPage = () => {
           이미 계정이 있으신가요? 로그인하기
         </Link>
       </div>
-    </div>
+
+      <SocialLogin isSignUpPage={true} />
+    </main>
   );
 };
 
