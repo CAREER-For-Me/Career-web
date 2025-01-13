@@ -1,14 +1,14 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import InternshipAndActivitiesForm from "@/app/components/portfolioAnalysis/portfolioForms/InternshipAndActivitiesForm";
-import CertificatesForm from "@/app/components/portfolioAnalysis/portfolioForms/CertificatesForm";
-import AwardsForm from "@/app/components/portfolioAnalysis/portfolioForms/AwardsForm";
-import LanguageForm from "@/app/components/portfolioAnalysis/portfolioForms/LanguageForm";
-import TechnicalSkillsForm from "@/app/components/portfolioAnalysis/portfolioForms/TechnicalSkillsForm";
-import SoftSkillsForm from "@/app/components/portfolioAnalysis/portfolioForms/SoftSkillsForm";
-import AcademicForm from "@/app/components/portfolioAnalysis/portfolioForms/AcademicForm";
-import Sidebar from "@/app/components/portfolioAnalysis/sidebar";
+import InternshipAndActivitiesForm from "@/app/components/portfolio/portfolioForms/InternshipAndActivitiesForm";
+import CertificatesForm from "@/app/components/portfolio/portfolioForms/CertificatesForm";
+import AwardsForm from "@/app/components/portfolio/portfolioForms/AwardsForm";
+import LanguageForm from "@/app/components/portfolio/portfolioForms/LanguageForm";
+import TechnicalSkillsForm from "@/app/components/portfolio/portfolioForms/TechnicalSkillsForm";
+import SoftSkillsForm from "@/app/components/portfolio/portfolioForms/SoftSkillsForm";
+import AcademicForm from "@/app/components/portfolio/portfolioForms/AcademicForm";
+import Sidebar from "@/app/components/portfolio/sidebar";
 
 const PortfolioInfoPage: React.FC = () => {
   const [selectedSection, setSelectedSection] = useState("학력");

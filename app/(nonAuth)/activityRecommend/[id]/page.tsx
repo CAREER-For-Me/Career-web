@@ -19,7 +19,9 @@ const AtivityDetailPage = () => {
   useEffect(() => {
     const fetchPostingDetail = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/detail`);
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_SERVER_URL}/detail`
+        );
         const postingDetail = response.data[0];
         setPostingDetail(postingDetail);
         console.log(postingDetail);

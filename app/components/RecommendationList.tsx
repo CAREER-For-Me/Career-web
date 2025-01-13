@@ -18,7 +18,9 @@ const RecommendationList = ({ isHome }: RecommendationListProps) => {
   useEffect(() => {
     const fetchPostingMain = async () => {
       try {
-        const response = await axios.get(`http://localhost:4000/posting`);
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_SERVER_URL}/posting`
+        );
         const postingList = response.data.main[0].postingList;
 
         setPosts(postingList);
