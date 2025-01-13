@@ -8,7 +8,7 @@ import LanguageForm from "@/app/components/portfolioAnalysis/portfolioForms/Lang
 import TechnicalSkillsForm from "@/app/components/portfolioAnalysis/portfolioForms/TechnicalSkillsForm";
 import SoftSkillsForm from "@/app/components/portfolioAnalysis/portfolioForms/SoftSkillsForm";
 import AcademicForm from "@/app/components/portfolioAnalysis/portfolioForms/AcademicForm";
-import Sidebar from "@/app/components/portfolioAnalysis/Sidebar";
+import Sidebar from "@/app/components/portfolioAnalysis/sidebar";
 
 const PortfolioInfoPage: React.FC = () => {
   const [selectedSection, setSelectedSection] = useState("학력");
