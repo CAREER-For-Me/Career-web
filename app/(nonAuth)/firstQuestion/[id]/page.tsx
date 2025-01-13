@@ -16,10 +16,10 @@ export default async function FirstQuestionPage({
 
   if (id === "1-2") {
     return (
-      <div>
+      <main className="mb-32">
         {/* 두번째 선택지 (고려중인 진로가 있나요?) */}
         <div className="text-[0.9rem] mt-[3.5rem] text-gray-400 ">
-          <Link href="/firstQuestion/1-2" className="flex flex-row">
+          <Link href="/firstQuestion" className="flex flex-row">
             <img
               src="/images/questionImages/questionImage3.png"
               alt="icon"
@@ -81,11 +81,11 @@ export default async function FirstQuestionPage({
             </Link>
           </div>
         </div>
-      </div>
+      </main>
     );
   } else if (id === "1-3") {
     return (
-      <div>
+      <main className="mb-32">
         {/* 세번째 선택지 (관심있는 직무를 선택해주세요?) */}
         <div className="text-[0.9rem] mt-[3.5rem] text-gray-400  ">
           <Link href="/firstQuestion/1-2" className="flex flex-row">
@@ -212,7 +212,7 @@ export default async function FirstQuestionPage({
             />
           </Link>
         </div>
-      </div>
+      </main>
     );
   } else if (id === "1-4") {
     return <div>Page 1-4</div>;
@@ -222,7 +222,7 @@ export default async function FirstQuestionPage({
     return <div>Page 1-52</div>;
   } else if (id === "1-6") {
     return (
-      <div>
+      <main className="mb-32">
         {/* 마지막 선택지 (희망 직무 선택 안함) */}
         <div className="text-[0.9rem] mt-[3.5rem] text-gray-400  ">
           <Link href="/firstQuestion/1-2" className="flex flex-row">
@@ -253,7 +253,7 @@ export default async function FirstQuestionPage({
             <Link href="/home">메인페이지로 이동하기</Link>
           </div>
         </div>
-      </div>
+      </main>
     );
   }
 
