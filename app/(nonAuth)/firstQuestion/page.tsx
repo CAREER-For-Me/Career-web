@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const FirstQuestion = () => {
   return (
-    <div>
+    <main className="mb-32">
       {/* 첫번째 선택지 */}
       <p className="text-careerForMe-main my-[3.5rem] leading-[2.5]">
         <b>커리어포미</b>에 오신 걸 환영해요 ☺️ <br />
@@ -44,7 +44,7 @@ const FirstQuestion = () => {
           />
         </Link>
       </div>
-    </div>
+    </main>
   );
 };
 
