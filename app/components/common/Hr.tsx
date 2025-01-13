@@ -1,5 +1,5 @@
 interface Hrprops {
-  mt?: number;
+  mt: number;
   my: number;
 }
 

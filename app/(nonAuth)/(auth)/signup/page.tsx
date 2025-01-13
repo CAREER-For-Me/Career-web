@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import Image from "next/image";
 
 const SignupPage = () => {
   const router = useRouter();
@@ -51,103 +50,71 @@ const SignupPage = () => {
 
   return (
     <div className="mx-auto max-w-screen-sm p-6">
-      <div className="flex flex-col justify-center items-center mb-6">
-        <Link href="/">
-          <Image src="/images/logo.png" alt="Logo" width={150} height={150} />
-        </Link>
-        <p className="text-center mt-2 text-careerForMe-main">
-          맞춤형 커리어 추천 플랫폼, 커리어 포미
-        </p>
-      </div>
-
       <form onSubmit={handleSubmit}>
-        <label
-          htmlFor="email"
-          className="block text-sm font-medium text-gray-dark"
-        >
-          아이디 (이메일)
-        </label>
         <input
           id="email"
           type="email"
           name="email"
           value={email}
+          placeholder="아이디 (이메일)"
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full p-3 mt-2 border border-gray-light rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
+          className="w-full p-4 mt-2 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
         />
 
-        <label
-          htmlFor="password1"
-          className="block text-sm font-medium text-gray-dark"
-        >
-          비밀번호
-        </label>
         <input
           id="password1"
           type="password"
           name="password1"
           value={password1}
+          placeholder="비밀번호 (영문, 숫자, 특수문자를 포함한 8~20자)"
           onChange={(e) => setPassword1(e.target.value)}
           required
-          className="w-full p-3 mt-2 border border-gray-light rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
+          minLength={8}
+          maxLength={20}
+          className="w-full p-4 mt-2 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
         />
 
-        <label
-          htmlFor="password2"
-          className="block text-sm font-medium text-gray-dark"
-        >
-          비밀번호 확인
-        </label>
         <input
           id="password2"
           type="password"
           name="password2"
           value={password2}
+          placeholder="비밀번호 확인"
           onChange={(e) => setPassword2(e.target.value)}
           required
-          className="w-full p-3 mt-2 border border-gray-light rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
+          className="w-full p-4 mt-2 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
         />
 
-        <label
-          htmlFor="name"
-          className="block text-sm font-medium text-gray-dark"
-        >
-          이름 (실명)
-        </label>
         <input
           id="name"
           type="text"
           name="name"
           value={name}
+          placeholder="이름 (실명)"
           onChange={(e) => setName(e.target.value)}
           required
-          className="w-full p-3 mt-2 border border-gray-light rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
+          className="w-full p-4 mt-2 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
         />
 
-        <label
-          htmlFor="nickname"
-          className="block text-sm font-medium text-gray-dark"
-        >
-          닉네임
-        </label>
         <input
           id="nickname"
           type="text"
           name="nickname"
           value={nickname}
+          placeholder="닉네임"
           onChange={(e) => setNickname(e.target.value)}
           required
-          className="w-full p-3 mt-2 border border-gray-light rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
+          className="w-full p-4 mt-2 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
         />
 
         {error && <p style={{ color: "red" }}>{error}</p>}
 
         <button
-          className="w-full p-3 bg-careerForMe-main text-white font-bold rounded-md"
+          className="w-full p-4 text-white bg-careerForMe-main font-bold rounded-2xl mt-4 border border-gray-300"
           type="submit"
         >
-          회원가입
+          가입하기
         </button>
       </form>
 

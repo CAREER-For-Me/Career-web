@@ -39,117 +39,106 @@ const SignInPage = () => {
   };
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center mx-auto max-w-screen-sm p-6">
+    <main className="flex  flex-col items-center justify-center mx-auto max-w-screen-sm p-6">
       {shouldRender && (
         <>
-          <div className="flex flex-col justify-center items-center mb-6">
-            <div className="w-screen shadow-md text-gray-medium shadow-gray-medium mt-4  mb-9 border border-l-gray-light" />
-
-            <Link href="/">
-              <Image
-                src="/images/logo/career-logo.png"
-                alt="Logo"
-                width={150}
-                height={150}
-              />
-            </Link>
-            <span className="text-careerForMe-main font-bold text-xl">
-              맞춤형 커리어 추천 플랫폼 커리어포미
-            </span>
-          </div>
-
           <form onSubmit={handleSubmit} className="w-full">
+            {/* 아이디 (이메일) */}
             <div className="mb-4">
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-dark"
-              >
-                이메일
-              </label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 value={email}
                 autoComplete="username"
+                placeholder="아이디 (이메일)"
                 required
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
+                className="w-full p-4 mt-2 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
               />
             </div>
+
+            {/* 비밀번호 */}
             <div className="mb-6">
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-gray-dark"
-              >
-                비밀번호
-              </label>
               <input
                 type="password"
                 id="password"
                 name="password"
                 value={password}
                 autoComplete="current-password"
+                placeholder="비밀번호"
                 required
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full p-3 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
+                className="w-full p-4 mt-2 border border-gray-300 rounded-2xl focus:outline-none focus:ring-2 focus:ring-careerForMe-main"
               />
             </div>
             {error && <div className="text-red-500">{error}</div>}
+
+            {/* 로그인 버튼 */}
             <button
-              className="w-full p-3 bg-careerForMe-main  text-white font-bold rounded-md"
+              className="w-full p-4 bg-careerForMe-main  text-white font-bold rounded-2xl"
               type="submit"
             >
               로그인
             </button>
           </form>
+
+          {/* 회원가입 버튼 */}
           <Link href="/signup" className="w-full">
-            <button className="w-full p-3 text-black font-bold rounded-md mt-4 border border-gray-300">
+            <button className="w-full p-3 text-black font-bold rounded-2xl mt-4 border border-gray-300">
               회원가입하기
             </button>
           </Link>
-          <div className="flex flex-col items-center mt-6 gap-4 w-full">
+
+          {/* 소셜 로그인 */}
+          <div className="flex items-center text-gray-medium w-full my-4 mt-9">
+            <hr className="flex-grow border-t border-gray-light h-0.5" />
+            <span className="mx-4">소셜 아이디로 로그인</span>
+            <hr className="flex-grow border-t border-l-gray-light h-0.5" />
+          </div>
+
+          <div className="flex items-center mt-2 gap-4 w-full">
             <button
               onClick={() => signIn("google")}
-              className="p-3 bg-white text-black font-bold rounded-md w-full flex justify-center items-center
-              gap-9 border border-gray-300"
+              className="px-2 py-4 shadow-lg bg-[#F2F2F2] text-#1F1F1F rounded-full w-full flex justify-center items-center
+              gap-5 border"
             >
               <Image
                 src="/images/logo/google.png"
                 alt="Logo"
-                width={40}
+                width={30}
                 height={40}
               />
-              Google로 로그인
+              with Google
             </button>
             <button
               onClick={() => signIn("kakao")}
-              className="p-3 bg-yellow-500 text-white font-bold rounded-md w-full flex justify-center items-center gap-9"
+              className="px-2 py-4 shadow-lg bg-[#FEE500] text-#1F1F1F rounded-full w-full flex justify-center items-center gap-5"
             >
               <Image
                 src="/images/logo/kakao.png"
                 alt="Logo"
-                width={40}
-                height={50}
+                width={30}
+                height={40}
               />
-              Kakao로 로그인
+              with Kakao
             </button>
             <button
               onClick={() => signIn("github")}
-              className="p-3 bg-gray-800 text-white font-bold rounded-md w-full flex justify-center items-center gap-9"
+              className="px-2 py-4 shadow-lg bg-[#1F2937] text-white rounded-full w-full flex justify-center items-center gap-5"
             >
               <Image
                 src="/images/logo/github.png"
                 alt="Logo"
-                width={40}
+                width={30}
                 height={40}
               />
-              GitHub로 로그인
+              with GitHub
             </button>
           </div>
         </>
       )}
-    </div>
+    </main>
   );
 };
 
