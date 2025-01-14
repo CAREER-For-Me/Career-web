@@ -11,7 +11,6 @@ const PortfolioAnalysisPage = () => {
     <section>
       {/* 1. 직무 역량 */}
       <SkillAnalysis />
-
       {/* 2. 평균 스펙 */}
       <AvgSpecs />
 

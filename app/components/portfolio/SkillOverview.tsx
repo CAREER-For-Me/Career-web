@@ -1,4 +1,3 @@
-import React from "react";
 import BarChart from "../chart/BarChart";
 import { GoChevronRight } from "react-icons/go";
 

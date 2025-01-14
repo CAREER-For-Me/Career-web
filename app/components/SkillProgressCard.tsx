@@ -2,7 +2,7 @@ import DoughnutChart from "./chart/DoughnutChart";
 
 const SkillProgressCard = () => {
   return (
-    <article className=" rounded-md bg-careerForMe-gray01 ">
+    <article className=" rounded-xl bg-careerForMe-gray01 ">
       <div className="mx-6 my-4">
         <div className="flex gap-3 text-white">
           <div className=" bg-careerForMe-main rounded-full px-3 py-1">

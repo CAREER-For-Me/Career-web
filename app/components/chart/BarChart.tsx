@@ -21,45 +21,53 @@ ChartJS.register(
   LinearScale
 );
 
-// 예시 데이터
-const labels = ["학점"];
-const dataValues = [32];
+interface BarChartProps {
+  value: number; // 바 차트에 표시할 값
+  max: number; // 최대 값 (차트의 기준 값)
+}
 
-export const data = {
-  labels: labels,
-  datasets: [
-    {
-      data: dataValues,
-      maxBarThickness: 10,
-      backgroundColor: ["#6D72FF"],
-      hoverBackgroundColor: ["#6D72FF"],
-    },
-  ],
-};
+const BarChart = ({ value, max }: BarChartProps) => {
+  // 데이터 설정
+  const data = {
+    labels: ["학점"], // 라벨
+    datasets: [
+      {
+        data: [value],
+        maxBarThickness: 10,
+        backgroundColor: ["#6D72FF"], // 바 색상
+        hoverBackgroundColor: ["#6D72FF"], // hover 시 바 색상
+        borderRadius: 10,
+      },
+    ],
+  };
 
-const options = {
-  responsive: true,
-  plugins: {
-    legend: {
-      display: false,
-      position: "top" as const,
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        display: false,
+        position: "top" as const,
+      },
+      tooltip: {
+        enabled: false,
+      },
     },
-    tooltip: {
-      enabled: false,
+    indexAxis: "y",
+    scales: {
+      x: {
+        display: false,
+        min: 0, // x축의 최소값을 0으로 설정
+        max: max,
+        ticks: {
+          stepSize: 1, // x축의 간격을 1로 설정
+        },
+      },
+      y: {
+        display: false,
+      },
     },
-  },
-  indexAxis: "y",
-  scales: {
-    x: {
-      display: false,
-    },
-    y: {
-      display: false,
-    },
-  },
-};
+  };
 
-const BarChart = () => {
   return <Bar data={data} options={options} />;
 };
 
