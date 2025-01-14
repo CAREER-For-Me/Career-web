@@ -2,6 +2,7 @@
 
 import { SessionProvider } from "next-auth/react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { AvgSpecProvider } from "./context/AvgspecContext";
 import { UserSpecProvider } from "./context/UserSpecContext";
 const Providers = ({ children }: { children: React.ReactNode }) => {
   const queryClient = new QueryClient();
@@ -9,9 +10,11 @@ const Providers = ({ children }: { children: React.ReactNode }) => {
   return (
     <SessionProvider>
       <UserSpecProvider>
-        <QueryClientProvider client={queryClient}>
-          {children}
-        </QueryClientProvider>
+        <AvgSpecProvider>
+          <QueryClientProvider client={queryClient}>
+            {children}
+          </QueryClientProvider>
+        </AvgSpecProvider>
       </UserSpecProvider>
     </SessionProvider>
   );

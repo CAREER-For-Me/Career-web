@@ -1,39 +1,15 @@
 "use client";
 
 import { credentials } from "@/app/constants/constants";
-import { Avgspec } from "@/app/types/avgspec-types";
-import axios from "axios";
+import { useAvgSpec } from "@/app/context/AvgspecContext";
+
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { GoChevronRight } from "react-icons/go";
 
 const AvgSpecs = () => {
-  const [avgspec, setAvgspec] = useState<Avgspec | null>(null);
   const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const avgspecFetch = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_SERVER_URL}/avgspec`
-        );
-        const data = response.data[0];
-        setAvgspec(data);
-      } catch (error) {
-        console.error("API 호출 오류:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    avgspecFetch();
-  }, []);
-
-  if (loading)
-    return (
-      <div className="flex justify-center p-4">
-        <span className="loading loading-spinner text-careerForMe-main"></span>
-      </div>
-    );
+  const { avgspec, setAvgspec } = useAvgSpec();
 
   const avgSpecsDisplay = avgspec
     ? [

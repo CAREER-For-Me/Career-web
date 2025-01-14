@@ -1,4 +1,24 @@
+import { useAvgSpec } from "@/app/context/AvgspecContext";
+import { useUserSpec } from "@/app/context/UserSpecContext";
+import BarChart from "../../chart/BarChart";
+
 const LangScoreComparison = () => {
+  const { avgspec, setAvgspec } = useAvgSpec();
+  const { myspec, setMyspec } = useUserSpec();
+
+  const mySpecToEicScore = myspec?.toeicScore || 0;
+  const avgToEicScore = avgspec?.langScore || 0;
+
+  let toeicScoreDifference = 0;
+
+  if (mySpecToEicScore > avgToEicScore) {
+    toeicScoreDifference = mySpecToEicScore - avgToEicScore;
+  } else {
+    toeicScoreDifference = avgToEicScore - mySpecToEicScore;
+  }
+
+  toeicScoreDifference = Math.round(toeicScoreDifference);
+
   return (
     <article className="mt-24">
       <h1 className="font-bold text-xl mb-5">어학점수 비교하기📈</h1>
@@ -10,28 +30,57 @@ const LangScoreComparison = () => {
         <div className="flex-1 min-h-36 rounded-r-lg shadow-sm shadow-gray-light relative">
           <div className="flex flex-col gap-4 p-9">
             {/* 내 점수 */}
-            <div className="flex items-center">
-              <div className="bg-careerForMe-main w-1/4 h-9 rounded-lg mr-5">
-                <p className="text-white font-bold my-2 mx-4">내 점수</p>
+            <div className="flex items-center -mt-14 w-9/12">
+              <div className="relative w-full">
+                <BarChart
+                  value={myspec?.toeicScore || 0}
+                  max={990}
+                  maxBarThickness={40}
+                  background="#6D72FF"
+                />
               </div>
-              <span className="text-careerForMe-main font-bold ">820점</span>
+              <p className="text-white font-bold my-2 mx-4 absolute">
+                내 점수 ({myspec?.toeicScore}점)
+              </p>
+              {/* <span
+                className="text-careerForMe-main font-bold text-nowrap absolute"
+                style={{
+                  left: `calc(${myspec?.toeicScore}px)`,
+                }}
+              >
+                {myspec?.toeicScore}점
+              </span> */}
             </div>
 
             {/* 합격자 평균 */}
-            <div className="flex items-center">
-              <div className="bg-[#E3E3E3] w-2/4 h-9 rounded-lg mr-5">
-                <p className="text-gray-dark font-bold my-2 mx-4">
-                  합격자 평균
-                </p>
+            <div className="flex items-center -mt-24 w-9/12">
+              <div className="relative w-full ">
+                <BarChart
+                  value={avgspec?.langScore || 0}
+                  max={990}
+                  maxBarThickness={40}
+                  background="#E3E3E3"
+                />
               </div>
-              <span className="text-gray-light font-bold ">922점</span>
+              <p className="text-gray-dark font-bold my-2 mx-4 absolute">
+                합격자 평균 ({avgspec?.langScore}점)
+              </p>
+              {/* <span
+                className="text-gray-light font-bold text-nowrap absolute"
+                style={{
+                  left: `calc(${avgspec?.langScore}px)`,
+                }}
+              >
+                {avgspec?.langScore}점
+              </span> */}
             </div>
-
             {/* 점수 */}
-            <div>
-              <div className="">
+            <div className="-mt-20">
+              <div>
                 <p className="absolute right-5 top-3 px-6 py-4 text-careerForMe-main text-2xl font-bold border shadow-gray-light shadow-sm inline-block rounded-2xl">
-                  -102점
+                  {mySpecToEicScore > avgToEicScore
+                    ? `+${toeicScoreDifference}점`
+                    : `-${toeicScoreDifference}점`}
                 </p>
               </div>
               <p className="absolute right-5 top-[4.3rem] px-6 py-4 text-gray-light">

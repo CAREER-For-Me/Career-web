@@ -16,9 +16,14 @@ const SkillOverview = () => {
           내 필수 스킬 <span className="text-careerForMe-main">6개</span>
         </div>
         <div className="flex items-center text-nowrap h-14 justify-between mx-5">
-          <div className="bg-gray-light w-[18.8rem] h-[0.6rem] absolute rounded-full" />
+          <div className="bg-gray-light w-[18.8rem] h-[1.3rem] absolute rounded-full" />
           <div className="absolute ">
-            <BarChart value={6} max={20} />
+            <BarChart
+              value={6}
+              max={20}
+              maxBarThickness={20}
+              background="#6D72FF"
+            />
           </div>
 
           <div className="absolute right-6">
