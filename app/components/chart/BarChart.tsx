@@ -23,7 +23,7 @@ ChartJS.register(
 
 interface BarChartProps {
   value: number | string; // 바 차트에 표시할 값
-  max: number; // 최대 값 (차트의 기준 값)
+  max: number | string; // 최대 값 (차트의 기준 값)
   maxBarThickness: number; // 바 두께
   background: string; // 색깔
 }

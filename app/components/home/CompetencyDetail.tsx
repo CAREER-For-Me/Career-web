@@ -64,7 +64,7 @@ const CompetencyDetail = ({ isMain }: CompetencyDetailProps) => {
       </article>
 
       {/* 상위 항목 */}
-      <article className={clsx("", isMain ? "" : "w-2/4")}>
+      <article className={clsx("", isMain ? "mt-3" : "w-2/4")}>
         {isMain ? null : (
           <h1 className="font-bold text-xl mb-4">
             이런 점은 <span className="text-careerForMe-red">충분</span>해요 📈

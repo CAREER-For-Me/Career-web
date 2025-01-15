@@ -3,6 +3,7 @@ import { abilities, tools } from "@/app/constants/constants";
 import SkillStatusIndicator from "../../SkillStatusIndicator";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import BarChart from "../../chart/BarChart";
 
 const EssentialSkills = () => {
   const [loading, setLoading] = useState(true);
@@ -35,30 +36,40 @@ const EssentialSkills = () => {
   return (
     <article className="mt-24">
       <h1 className="font-bold text-xl">필수 스킬 상세 비교하기📈</h1>
-      <div className="bg-careerForMe-gray01 min-w-max h-9 rounded-full mt-24 relative">
-        <div className="bg-careerForMe-main w-1/4 h-9 rounded-l-full mt-16 relative">
-          {/* 내 필수 스킬 */}
-          <p className="absolute left-[14rem] bottom-[4rem] border-2 border-careerForMe-main rounded-lg px-4 py-1 text-nowrap">
-            내 필수 스킬
-            <span className="text-careerForMe-main font-bold ml-1">
-              {userSkill?.length}개
-            </span>
-          </p>
+      <div className="min-w-max h-14 rounded-full mt-24 relative">
+        <p className="absolute left-[3rem] bottom-[4.9rem] border-2 border-careerForMe-main rounded-lg px-4 py-1 text-nowrap">
+          내 필수 스킬
+          <span className="text-careerForMe-main font-bold ml-1">
+            {userSkill?.length}개
+          </span>
+        </p>
+
+        <div className="flex items-center text-nowrap h-24 justify-between mx-5">
+          <div className="bg-gray-200 w-[70rem] h-[3.8rem] absolute rounded-xl" />
+          <div className="absolute w-12/12">
+            <BarChart
+              value={userSkill?.length ?? 0}
+              max={20}
+              maxBarThickness={60}
+              background="#6D72FF"
+            />
+          </div>
         </div>
+
         {/* 평균 필수 스킬 */}
-        <p className="text-gray-dark absolute right-[35rem] top-12">
+        <p className="text-gray-dark absolute right-[27rem] top-19">
           평균 필수 스킬
           <span className="text-careerForMe-main"> 12개</span>
         </p>
 
         {/* 전체 필수 스킬 */}
-        <p className="text-gray-dark absolute right-0 top-12">
+        <p className="text-gray-dark absolute right-9 top-19">
           전체 필수 스킬
           <span className="text-careerForMe-main ml-1">20개</span>
         </p>
       </div>
 
-      <div className="flex mt-28 gap-10">
+      <div className="flex mt-32 gap-10">
         {/* ABILTITY */}
         <div className="w-2/4 bg-careerForMe-gray01 rounded-xl shadow-sm shadow-gray-light">
           <div className="m-8">

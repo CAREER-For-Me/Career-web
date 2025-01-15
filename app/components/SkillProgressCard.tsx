@@ -1,37 +1,92 @@
-import { useAvgSpec } from "../context/AvgspecContext";
-import { useUserSpec } from "../context/UserSpecContext";
+import { useEffect, useState } from "react";
 import DoughnutChart from "./chart/DoughnutChart";
+import axios from "axios";
+import { Avgspec } from "../types/avgspec-types";
 
 const SkillProgressCard = () => {
-  const { avgspec } = useAvgSpec();
-  const { myspec } = useUserSpec();
-  if (!avgspec || !myspec) {
-    return <p>데이터를 불러오는 중...</p>;
+  const [avgspec, setAvgspec] = useState<Avgspec | null>(null);
+  const [myspec, setMyspec] = useState<Myspec | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchAvgspec = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_SERVER_URL}/avgspec`
+        );
+
+        if (response.data && response.data[0]) {
+          setAvgspec(response.data[0]);
+        } else {
+          setError("데이터 형식이 예상과 다릅니다.");
+        }
+      } catch (err) {
+        setError("API 호출 실패");
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchAvgspec();
+  }, []);
+
+  useEffect(() => {
+    const fetchMyspec = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_SERVER_URL}/myspec`
+        );
+
+        if (response.data && response.data[0]?.result) {
+          setMyspec(response.data[0].result);
+        } else {
+          setError("데이터 형식이 예상과 다릅니다.");
+        }
+      } catch (err) {
+        setError("API 호출 실패");
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchMyspec();
+  }, []);
+
+  if (loading) {
+    return (
+      <span className="loading loading-spinner text-careerForMe-main"></span>
+    );
   }
 
-  // 항목별 충족률 계산
+  // 평균 대비 내 항목별 충족률 계산
+  const qualPercent =
+    avgspec && myspec
+      ? Math.min((+myspec.qualCount / +avgspec.qualNum) * 100, 100)
+      : 0;
+
   const majorScorePercent =
-    +myspec.majorScore >= +avgspec.score
-      ? ((myspec.majorScore = +avgspec.score),
-        (myspec.majorScore / +avgspec.score) * 100)
-      : (+avgspec.score / +myspec.majorScore) * 100;
+    avgspec && myspec
+      ? Math.min((+myspec.majorScore / +avgspec.score) * 100, 100)
+      : 0;
 
   const internPercent =
-    +myspec.internCount >= +avgspec.internNum
-      ? ((myspec.internCount = +avgspec.internNum),
-        (myspec.internCount / +avgspec.internNum) * 100)
-      : (+avgspec.internNum / +myspec.internCount) * 100;
+    avgspec && myspec
+      ? Math.min((+myspec.internCount / +avgspec.internNum) * 100, 100)
+      : 0;
 
   const awardPercent =
-    +myspec.awardCount >= +avgspec.awardNum
-      ? ((myspec.awardCount = +avgspec.awardNum),
-        (+myspec.awardCount / +avgspec.awardNum) * 100)
-      : (+avgspec.awardNum / +myspec.awardCount) * 100;
+    avgspec && myspec
+      ? Math.min((+myspec.awardCount / +avgspec.awardNum) * 100, 100)
+      : 0;
 
-  const qualPercent =
-    +myspec.qualCount >= +avgspec.qualNum
-      ? (+myspec.qualCount / +avgspec.qualNum) * 100
-      : (+avgspec.qualNum / +myspec.qualCount) * 100;
+  let overallAverage =
+    (majorScorePercent + internPercent + awardPercent + qualPercent) / 4;
+
+  // 100% 초과 방지
+  if (overallAverage > 100) {
+    overallAverage = 100;
+  }
 
   // 결과 객체로 저장
   const percentages = {
@@ -40,15 +95,6 @@ const SkillProgressCard = () => {
     award: awardPercent.toFixed(2),
     qualification: qualPercent.toFixed(2),
   };
-
-  // 전체 평균 충족률 계산
-  let overallAverage =
-    (majorScorePercent + internPercent + awardPercent + qualPercent) / 4;
-
-  // 전체 평균 충족률이 100을 초과하지 않도록
-  if (overallAverage > 100) {
-    overallAverage = 100;
-  }
 
   // console.log("항목별 충족률:", percentages);
   // console.log("전체 평균 충족률 (%):", overallAverage);

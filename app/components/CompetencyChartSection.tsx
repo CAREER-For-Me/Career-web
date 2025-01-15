@@ -3,13 +3,15 @@ import Hr from "./common/Hr";
 import { GoChevronRight } from "react-icons/go";
 import Link from "next/link";
 import { useUserSpec } from "../context/UserSpecContext";
+import { useAvgSpec } from "../context/AvgspecContext";
 
 interface CompetencyChartSectionProps {
   isMain: boolean;
 }
 
 const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
-  const { myspec, setMyspec } = useUserSpec();
+  const { myspec } = useUserSpec();
+  const { avgspec } = useAvgSpec();
 
   return (
     <div className="bg-careerForMe-gray01 rounded-md w-3/5 relative shadow-sm shadow-gray-light">
@@ -27,7 +29,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
           <div className="absolute left-[10rem]">
             <BarChart
               value={myspec?.majorScore || 0}
-              max={4.5}
+              max={avgspec?.score || 0}
               maxBarThickness={10}
               background="#6D72FF"
             />
@@ -44,7 +46,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
           <div className="absolute left-[10rem]">
             <BarChart
               value={myspec?.internCount || 0}
-              max={5}
+              max={avgspec?.internNum || 0}
               maxBarThickness={10}
               background="#6D72FF"
             />
@@ -61,7 +63,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
           <div className="absolute left-[10rem]">
             <BarChart
               value={myspec?.awardCount || 0}
-              max={5}
+              max={avgspec?.awardNum || 0}
               maxBarThickness={10}
               background="#6D72FF"
             />
@@ -78,7 +80,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
           <div className="absolute left-[10rem]">
             <BarChart
               value={myspec?.qualCount || 0}
-              max={5}
+              max={avgspec?.skillNum || 0}
               maxBarThickness={10}
               background="#6D72FF"
             />
@@ -93,7 +95,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
           <div className="absolute left-[10rem]">
             <BarChart
               value={myspec?.toeicScore || 0}
-              max={990}
+              max={avgspec?.langScore || 0}
               maxBarThickness={10}
               background="#6D72FF"
             />

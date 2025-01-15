@@ -3,18 +3,18 @@ import { useUserSpec } from "@/app/context/UserSpecContext";
 import BarChart from "../../chart/BarChart";
 
 const LangScoreComparison = () => {
-  const { avgspec, setAvgspec } = useAvgSpec();
-  const { myspec, setMyspec } = useUserSpec();
+  const { avgspec } = useAvgSpec();
+  const { myspec } = useUserSpec();
 
   const mySpecToEicScore = myspec?.toeicScore || 0;
   const avgToEicScore = avgspec?.langScore || 0;
 
   let toeicScoreDifference = 0;
 
-  if (mySpecToEicScore > avgToEicScore) {
-    toeicScoreDifference = mySpecToEicScore - avgToEicScore;
+  if (+mySpecToEicScore > +avgToEicScore) {
+    toeicScoreDifference = +mySpecToEicScore - +avgToEicScore;
   } else {
-    toeicScoreDifference = avgToEicScore - mySpecToEicScore;
+    toeicScoreDifference = +avgToEicScore - mySpecToEicScore;
   }
 
   toeicScoreDifference = Math.round(toeicScoreDifference);
@@ -78,7 +78,7 @@ const LangScoreComparison = () => {
             <div className="-mt-20">
               <div>
                 <p className="absolute right-5 top-3 px-6 py-4 text-careerForMe-main text-2xl font-bold border shadow-gray-light shadow-sm inline-block rounded-2xl">
-                  {mySpecToEicScore > avgToEicScore
+                  {+mySpecToEicScore > +avgToEicScore
                     ? `+${toeicScoreDifference}점`
                     : `-${toeicScoreDifference}점`}
                 </p>
