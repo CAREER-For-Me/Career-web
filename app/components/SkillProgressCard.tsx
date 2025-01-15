@@ -80,12 +80,13 @@ const SkillProgressCard = () => {
       ? Math.min((+myspec.awardCount / +avgspec.awardNum) * 100, 100)
       : 0;
 
-  let overallAverage =
-    (majorScorePercent + internPercent + awardPercent + qualPercent) / 4;
+  let overallAverage = (
+    (majorScorePercent + internPercent + awardPercent + qualPercent) /
+    4
+  ).toFixed(0);
 
-  // 100% 초과 방지
-  if (overallAverage > 100) {
-    overallAverage = 100;
+  if (parseInt(overallAverage) > 100) {
+    overallAverage = "100";
   }
 
   // 결과 객체로 저장
