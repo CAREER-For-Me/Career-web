@@ -1,26 +1,23 @@
-import Link from "next/link";
-import { GoChevronRight } from "react-icons/go";
+"use client";
+
 import SkillProgressCard from "../SkillProgressCard";
+import { useSession } from "next-auth/react";
+import EditSkills from "./EditSkills";
+import JobSelectionCard from "./JobSelectionCard";
 
 const MyCompetence = () => {
+  const session = useSession();
+
   return (
     <section className="w-2/5 flex flex-col gap-2">
-      {/* top */}
-      <SkillProgressCard />
-      {/* bottom */}
-      <article>
-        <Link
-          href="/mypage"
-          className="flex rounded-md bg-careerForMe-gray01 text-gray-dark"
-        >
-          <article className="flex justify-between w-full items-center mx-6 my-4 ">
-            <p>내 역량 수정하기</p>
-            <div className="flex items-center">
-              더보기 <GoChevronRight />
-            </div>
-          </article>
-        </Link>
-      </article>
+      {session.status == "unauthenticated" ? (
+        <JobSelectionCard />
+      ) : (
+        <>
+          <SkillProgressCard />
+          <EditSkills />
+        </>
+      )}
     </section>
   );
 };

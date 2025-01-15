@@ -47,7 +47,6 @@ const Footer = () => {
                 <p className="mb-4">이정한</p>
                 <p className="mb-4">박시은</p>
                 <p className="mb-4">박진우</p>
-                <p className="mb-4">조지현</p>
               </td>
               <td className="text-left align-text-top">
                 <p className="mb-4">이건주</p>
