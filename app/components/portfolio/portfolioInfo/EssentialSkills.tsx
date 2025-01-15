@@ -1,7 +1,34 @@
+"use client";
 import { abilities, tools } from "@/app/constants/constants";
 import SkillStatusIndicator from "../../SkillStatusIndicator";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const EssentialSkills = () => {
+  const [loading, setLoading] = useState(true);
+  const [userSkill, setUserSkill] = useState<Skill | null>(null);
+
+  // 보유 스킬
+  useEffect(() => {
+    const fetchSkill = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_SERVER_URL}/skill`
+        );
+        setUserSkill(response.data[0].skillName);
+      } catch (error) {
+        console.error(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchSkill();
+  }, []);
+
+  if (loading) {
+    <div>로딩중...</div>;
+  }
+
   return (
     <article className="mt-24">
       <h1 className="font-bold text-xl">필수 스킬 상세 비교하기📈</h1>
@@ -61,14 +88,16 @@ const EssentialSkills = () => {
             </div>
 
             <ul className="flex gap-4 flex-wrap mt-8">
-              {tools.map((tool, index) => (
-                <li
-                  key={index}
-                  className="px-5 py-2 rounded-full shadow-sm border text-careerForMe-main shadow-careerForMe-main bg-white"
-                >
-                  {tool}
-                </li>
-              ))}
+              {tools
+                // .filter((tool) => !userSkill?.some((skill) => skill === tool))
+                .map((tool, index) => (
+                  <li
+                    key={index}
+                    className="px-5 py-2 rounded-full shadow-sm border text-careerForMe-main shadow-careerForMe-main bg-white"
+                  >
+                    {tool}
+                  </li>
+                ))}
             </ul>
           </div>
         </div>

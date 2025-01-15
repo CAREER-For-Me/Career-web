@@ -27,7 +27,7 @@ const SkillOverview = () => {
           </div>
 
           <div className="absolute right-6">
-            <span className="text-gray-dark">전체</span>
+            <span className="text-gray-dark mr-1">전체</span>
             <span className="text-careerForMe-main">20개</span>
           </div>
         </div>

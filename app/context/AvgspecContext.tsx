@@ -31,7 +31,6 @@ export const AvgSpecProvider = ({ children }: { children: ReactNode }) => {
         const response = await axios.get(
           `${process.env.NEXT_PUBLIC_SERVER_URL}/avgspec`
         );
-        console.log(response.data[0]);
 
         if (response.data && response.data[0]) {
           setAvgspec(response.data[0]);
