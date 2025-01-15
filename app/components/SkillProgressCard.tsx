@@ -119,7 +119,10 @@ const SkillProgressCard = () => {
           </div>
           <div className="w-40 relative">
             <DoughnutChart
-              dataValues={[overallAverage / 100, 1 - overallAverage / 100]}
+              dataValues={[
+                parseFloat(overallAverage) / 100,
+                1 - parseFloat(overallAverage) / 100,
+              ]}
             />
             <p className="absolute w-40 bottom-16 left-[3.8rem] text-careerForMe-main font-bold text-xl">
               {overallAverage}%

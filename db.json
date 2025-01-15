@@ -195,7 +195,7 @@
   "skill": [
     {
       "_comment": "보유 스킬 저장",
-      "skillName": ["Figma", "SPRING"]
+      "skillName": ["Figma", "SPRING", "고객응대", "네트워킹", "Slack"]
     }
   ],
   "lang": [

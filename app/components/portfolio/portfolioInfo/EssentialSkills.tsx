@@ -81,14 +81,21 @@ const EssentialSkills = () => {
             </div>
 
             <ul className="flex gap-4 flex-wrap mt-8">
-              {abilities.map((ability, index) => (
-                <li
-                  key={index}
-                  className="px-5 py-2 rounded-full shadow-sm border text-careerForMe-main shadow-careerForMe-main bg-white"
-                >
-                  {ability}
-                </li>
-              ))}
+              {abilities.map((ability, index) => {
+                const isAbility = userSkill?.includes(ability);
+                return (
+                  <li
+                    key={index}
+                    className={`px-5 py-2 rounded-full shadow-sm border ${
+                      isAbility
+                        ? "text-careerForMe-main shadow-careerForMe-main bg-white"
+                        : "text-gray-medium shadow-gray-medium bg-white"
+                    }`}
+                  >
+                    {ability}
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
@@ -104,16 +111,21 @@ const EssentialSkills = () => {
             </div>
 
             <ul className="flex gap-4 flex-wrap mt-8">
-              {tools
-                // .filter((tool) => !userSkill?.some((skill) => skill === tool))
-                .map((tool, index) => (
+              {tools.map((tool, index) => {
+                const isUserSkill = userSkill?.includes(tool);
+                return (
                   <li
                     key={index}
-                    className="px-5 py-2 rounded-full shadow-sm border text-careerForMe-main shadow-careerForMe-main bg-white"
+                    className={`px-5 py-2 rounded-full shadow-sm border ${
+                      isUserSkill
+                        ? "text-careerForMe-main shadow-careerForMe-main bg-white"
+                        : "text-gray-medium shadow-gray-medium bg-white"
+                    }`}
                   >
                     {tool}
                   </li>
-                ))}
+                );
+              })}
             </ul>
           </div>
         </div>
