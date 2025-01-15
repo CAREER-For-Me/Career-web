@@ -1,3 +1,0 @@
-interface Skill {
-  skill: string[];
-}

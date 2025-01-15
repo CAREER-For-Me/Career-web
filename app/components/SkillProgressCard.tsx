@@ -50,8 +50,8 @@ const SkillProgressCard = () => {
     overallAverage = 100;
   }
 
-  console.log("항목별 충족률:", percentages);
-  console.log("전체 평균 충족률 (%):", overallAverage);
+  // console.log("항목별 충족률:", percentages);
+  // console.log("전체 평균 충족률 (%):", overallAverage);
 
   return (
     <article className=" rounded-xl bg-careerForMe-gray01 ">

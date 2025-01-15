@@ -6,7 +6,7 @@ import axios from "axios";
 
 const EssentialSkills = () => {
   const [loading, setLoading] = useState(true);
-  const [userSkill, setUserSkill] = useState<Skill | null>(null);
+  const [userSkill, setUserSkill] = useState<string[] | null>(null);
 
   // 보유 스킬
   useEffect(() => {
@@ -25,9 +25,12 @@ const EssentialSkills = () => {
     fetchSkill();
   }, []);
 
-  if (loading) {
-    <div>로딩중...</div>;
-  }
+  if (loading)
+    return (
+      <div className="flex justify-center p-4">
+        <span className="loading loading-spinner text-careerForMe-main"></span>
+      </div>
+    );
 
   return (
     <article className="mt-24">
@@ -37,7 +40,9 @@ const EssentialSkills = () => {
           {/* 내 필수 스킬 */}
           <p className="absolute left-[14rem] bottom-[4rem] border-2 border-careerForMe-main rounded-lg px-4 py-1 text-nowrap">
             내 필수 스킬
-            <span className="text-careerForMe-main font-bold ml-1">3개</span>
+            <span className="text-careerForMe-main font-bold ml-1">
+              {userSkill?.length}개
+            </span>
           </p>
         </div>
         {/* 평균 필수 스킬 */}
@@ -49,7 +54,7 @@ const EssentialSkills = () => {
         {/* 전체 필수 스킬 */}
         <p className="text-gray-dark absolute right-0 top-12">
           전체 필수 스킬
-          <span className="text-careerForMe-main"> 20개</span>
+          <span className="text-careerForMe-main ml-1">20개</span>
         </p>
       </div>
 
