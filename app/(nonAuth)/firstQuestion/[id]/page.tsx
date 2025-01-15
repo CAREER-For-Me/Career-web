@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "../../../components/firstQuestion/Header";
 import LargeButton from "../../../components/firstQuestion/LargeButton";
+import SmallButton from "../../../components/firstQuestion/SmallButton";
+
 
 // id를 받고, id값에 따라 다른 페이지 보여주기
 export default async function FirstQuestionPage({
@@ -110,35 +112,35 @@ export default async function FirstQuestionPage({
           나에게 맞는 공고를 추천해드릴게요!
         </p>
         <div className = "grid grid-cols-4 gap-6 max-w-[900px] ">
-                <Link href = "/firstQuestion/1-4" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[1rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
+                <Link href = "/firstQuestion/1-4-programming" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[1rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
                     <p className = "text-center">개발</p>
                     <Image src="/images/questionImages/questionImage7.png" alt="img1" width={120} height={120} className = "mt-[0.5rem]" />
                 </Link>
-                <Link href = "/firstQuestion/1-4" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[1rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
+                <Link href = "/firstQuestion/1-4-management" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[1rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
                     <p className = "text-center">기획</p>
                     <Image src="/images/questionImages/questionImage8.png" alt="img1" width={120} height={120} className = "mt-[0.5rem]" />
                 </Link>
-                <Link href = "/firstQuestion/1-4" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[0.8rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
+                <Link href = "/firstQuestion/1-4-design" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[0.8rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
                     <p className = "text-center">디자인</p>
                     <Image src="/images/questionImages/questionImage9.png" alt="img1" width={120} height={120} className = "mt-[0.5rem]" />
                 </Link>
-                <Link href = "/firstQuestion/1-4" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[0.7rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
+                <Link href = "/firstQuestion/1-4-data" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[0.7rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
                     <p className = "text-center">데이터</p>
                     <Image src="/images/questionImages/questionImage10.png" alt="img1" width={130} height={130} className = "mt-[0.5rem]" />
                 </Link>
-                <Link href = "/firstQuestion/1-4" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[1rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
+                <Link href = "/firstQuestion/1-4-server" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[1rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
                     <p className = "text-center">서버/보안</p>
                     <Image src="/images/questionImages/questionImage11.png" alt="img1" width={120} height={120} className = "mt-[0.5rem]" />
                 </Link>
-                <Link href = "/firstQuestion/1-4" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[1rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
+                <Link href = "/firstQuestion/1-4-games" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[1rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
                     <p className = "text-center">게임</p>
                     <Image src="/images/questionImages/questionImage12.png" alt="img1" width={120} height={120} className = "mt-[0.5rem]" />
                 </Link>
-                <Link href = "/firstQuestion/1-4" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[0.8rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
+                <Link href = "/firstQuestion/1-4-QA" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[0.8rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
                     <p className = "text-center">QA/테스트</p>
                     <Image src="/images/questionImages/questionImage13.png" alt="img1" width={120} height={120} className = "mt-[0.5rem]" />
                 </Link>
-                <Link href = "/firstQuestion/1-4" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[0.5rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
+                <Link href = "/firstQuestion/1-4-etc" className = "flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[0.5rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300">
                     <p className = "text-center">기타</p>
                     <Image src="/images/questionImages/questionImage14.png" alt="img1" width={120} height={120} className = "mt-[0.5rem]" />
                 </Link>
@@ -147,10 +149,9 @@ export default async function FirstQuestionPage({
       </div>
     );
   }
-  else if (id === "1-4")
+  else if (id === "1-4-programming")
   {
-    {/* 세부 분야 선택 페이지입니다! */}
-    {/* 일단 기본적인 형태를 구현했고, 페이지 내용은 이전 선택지에 따라 달라지도록 나중에 구현할 생각입니다! */}
+    {/* 세부 분야 선택 페이지 - 개발 */}
     return (
       <div>
         <Header/>
@@ -167,8 +168,8 @@ export default async function FirstQuestionPage({
         </p>
         
         
-        <div className = "flex flex-col w-fit">
-          <div className = "flex flex-row gap-6 mt-[3rem] mb-[5rem]">
+        <div className = "flex flex-col items-center w-[80%] aspect-[6/1]">
+          <div className = "flex flex-row gap-6 mt-[3rem] mb-[5rem] ">
             <LargeButton url = "/firstQuestion/1-51" text = "DBA/데이터베이스" />
             <LargeButton url = "/firstQuestion/1-51" text = "빅데이터/AI" />
           </div>
@@ -190,11 +191,323 @@ export default async function FirstQuestionPage({
       </div >
     );
   }
+  else if (id === "1-4-management")
+    {
+      {/* 세부 분야 선택 페이지 - 기획 */}
+      return (
+        <div>
+          <Header/>
+          <div className = "text-[0.9rem] mt-[3.5rem] text-gray-400  ">
+            <Link href = "/firstQuestion/1-3" className = "flex flex-row">
+              <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em]" /> 
+              <p>이전으로</p>
+            </Link>
+          </div>
+  
+          <p className = "text-careerForMe-main leading-[2.5] my-[2rem]">
+              <span className = "text-[1.2rem] font-bold">세부 분야를 선택해주세요</span> <br />
+              *희망 분야는 언제든지 변경할 수 있어요 :)
+          </p>
+          
+          
+          <div className = "flex flex-col w-[80%] aspect-[6/1]">
+            <div className = "flex flex-col justify-center gap-5 mt-[3rem] mb-[5rem] ">
+              <div className = "flex flex-row justify-center gap-6">
+                <SmallButton url = "/firstQuestion/1-51" text = "UI 기획" />
+                <SmallButton url = "/firstQuestion/1-51" text = "개발 매니저" />
+                <SmallButton url = "/firstQuestion/1-51" text = "PL/PM/PO" />
+                <SmallButton url = "/firstQuestion/1-51" text = "로그분석" />
+              </div>
+              <div className="flex flex-row justify-center gap-6">
+                <SmallButton url = "/firstQuestion/1-51" text = "모바일기획" />
+                <SmallButton url = "/firstQuestion/1-51" text = "사용자평가" />
+                <SmallButton url = "/firstQuestion/1-51" text = "웹서비스 기획" />
+                <SmallButton url = "/firstQuestion/1-51" text = "제안 및 컨설팅" />
+              </div>
+              <div className="flex flex-row justify-center gap-6">
+                <SmallButton url = "/firstQuestion/1-51" text = "쇼핑몰 기획" />
+                <SmallButton url = "/firstQuestion/1-51" text = "컨텐츠 기획" />
+              </div>
+            </div>
+  
+  
+            <div className="grid grid-cols-3 items-center w-full h-16">
+              <p className="col-start-2 text-center text-[0.9rem] text-gray-300">
+                <u>세부분야까지는 아직 정하지 않았어요</u>
+              </p>
+  
+              <Link href = "/" className="flex flex-row text-careerForMe-main items-center justify-end text-careerForMe-main col-start-3">
+                다음으로
+                <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em] transform rotate-180" />
+              </Link>
+            </div>
+  
+          </div>
+  
+        </div >
+      );
+  }
+  else if (id === "1-4-design")
+  {
+    {/* 세부 분야 선택 페이지 - 디자인 */}
+    return (
+      <div>
+        <Header/>
+        <div className = "text-[0.9rem] mt-[3.5rem] text-gray-400  ">
+          <Link href = "/firstQuestion/1-3" className = "flex flex-row">
+            <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em]" /> 
+            <p>이전으로</p>
+          </Link>
+        </div>
+
+        <p className = "text-careerForMe-main leading-[2.5] my-[2rem]">
+            <span className = "text-[1.2rem] font-bold">세부 분야를 선택해주세요</span> <br />
+            *희망 분야는 언제든지 변경할 수 있어요 :)
+        </p>
+        
+        
+        <div className = "flex flex-col w-[80%] ">
+          <div className = "flex flex-col justify-center gap-5 mt-[3rem] mb-[5rem] aspect-[6/1]">
+            <div className = "flex flex-row justify-center gap-6 ">
+              <SmallButton url = "/firstQuestion/1-51" text = "UI/UX 디자인" />
+              <SmallButton url = "/firstQuestion/1-51" text = "웹 디자인" />
+              <SmallButton url = "/firstQuestion/1-51" text = "모바일 디자인" />
+              <SmallButton url = "/firstQuestion/1-51" text = "웹 퍼블리셔" />
+            </div>
+          </div>
+
+
+          <div className="grid grid-cols-3 items-center w-full h-16">
+            <p className="col-start-2 text-center text-[0.9rem] text-gray-300">
+              <u>세부분야까지는 아직 정하지 않았어요</u>
+            </p>
+
+            <Link href = "/" className="flex flex-row text-careerForMe-main items-center justify-end text-careerForMe-main col-start-3">
+              다음으로
+              <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em] transform rotate-180" />
+            </Link>
+          </div>
+
+        </div>
+
+      </div >
+    );
+  }
+  else if (id === "1-4-data")
+    {
+      {/* 세부 분야 선택 페이지 - 개발 */}
+      return (
+        <div>
+          <Header/>
+          <div className = "text-[0.9rem] mt-[3.5rem] text-gray-400  ">
+            <Link href = "/firstQuestion/1-3" className = "flex flex-row">
+              <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em]" /> 
+              <p>이전으로</p>
+            </Link>
+          </div>
+  
+          <p className = "text-careerForMe-main leading-[2.5] my-[2rem]">
+              <span className = "text-[1.2rem] font-bold">세부 분야를 선택해주세요</span> <br />
+              *희망 분야는 언제든지 변경할 수 있어요 :)
+          </p>
+          
+          
+          <div className = "flex flex-col w-fit">
+            <div className = "flex flex-row gap-6 mt-[3rem] mb-[5rem]">
+              <LargeButton url = "/firstQuestion/1-51" text = "DBA/데이터베이스" />
+              <LargeButton url = "/firstQuestion/1-51" text = "빅데이터/AI" />
+            </div>
+  
+  
+            <div className="grid grid-cols-3 items-center w-full h-16">
+              <p className="col-start-2 text-center text-[0.9rem] text-gray-300">
+                <u>세부분야까지는 아직 정하지 않았어요</u>
+              </p>
+  
+              <Link href = "/" className="flex flex-row text-careerForMe-main items-center justify-end text-careerForMe-main col-start-3">
+                다음으로
+                <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em] transform rotate-180" />
+              </Link>
+            </div>
+  
+          </div>
+  
+        </div >
+      );
+  }
+  else if (id === "1-4-server")
+    {
+      {/* 세부 분야 선택 페이지 - 개발 */}
+      return (
+        <div>
+          <Header/>
+          <div className = "text-[0.9rem] mt-[3.5rem] text-gray-400  ">
+            <Link href = "/firstQuestion/1-3" className = "flex flex-row">
+              <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em]" /> 
+              <p>이전으로</p>
+            </Link>
+          </div>
+  
+          <p className = "text-careerForMe-main leading-[2.5] my-[2rem]">
+              <span className = "text-[1.2rem] font-bold">세부 분야를 선택해주세요</span> <br />
+              *희망 분야는 언제든지 변경할 수 있어요 :)
+          </p>
+          
+          
+          <div className = "flex flex-col w-fit">
+            <div className = "flex flex-row gap-6 mt-[3rem] mb-[5rem]">
+              <LargeButton url = "/firstQuestion/1-51" text = "DBA/데이터베이스" />
+              <LargeButton url = "/firstQuestion/1-51" text = "빅데이터/AI" />
+            </div>
+  
+  
+            <div className="grid grid-cols-3 items-center w-full h-16">
+              <p className="col-start-2 text-center text-[0.9rem] text-gray-300">
+                <u>세부분야까지는 아직 정하지 않았어요</u>
+              </p>
+  
+              <Link href = "/" className="flex flex-row text-careerForMe-main items-center justify-end text-careerForMe-main col-start-3">
+                다음으로
+                <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em] transform rotate-180" />
+              </Link>
+            </div>
+  
+          </div>
+  
+        </div >
+      );
+  }
+  else if (id === "1-4-games")
+    {
+      {/* 세부 분야 선택 페이지 - 개발 */}
+      return (
+        <div>
+          <Header/>
+          <div className = "text-[0.9rem] mt-[3.5rem] text-gray-400  ">
+            <Link href = "/firstQuestion/1-3" className = "flex flex-row">
+              <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em]" /> 
+              <p>이전으로</p>
+            </Link>
+          </div>
+  
+          <p className = "text-careerForMe-main leading-[2.5] my-[2rem]">
+              <span className = "text-[1.2rem] font-bold">세부 분야를 선택해주세요</span> <br />
+              *희망 분야는 언제든지 변경할 수 있어요 :)
+          </p>
+          
+          
+          <div className = "flex flex-col w-fit">
+            <div className = "flex flex-row gap-6 mt-[3rem] mb-[5rem]">
+              <LargeButton url = "/firstQuestion/1-51" text = "DBA/데이터베이스" />
+              <LargeButton url = "/firstQuestion/1-51" text = "빅데이터/AI" />
+            </div>
+  
+  
+            <div className="grid grid-cols-3 items-center w-full h-16">
+              <p className="col-start-2 text-center text-[0.9rem] text-gray-300">
+                <u>세부분야까지는 아직 정하지 않았어요</u>
+              </p>
+  
+              <Link href = "/" className="flex flex-row text-careerForMe-main items-center justify-end text-careerForMe-main col-start-3">
+                다음으로
+                <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em] transform rotate-180" />
+              </Link>
+            </div>
+  
+          </div>
+  
+        </div >
+      );
+  }
+  else if (id === "1-4-QA")
+    {
+      {/* 세부 분야 선택 페이지 - 개발 */}
+      return (
+        <div>
+          <Header/>
+          <div className = "text-[0.9rem] mt-[3.5rem] text-gray-400  ">
+            <Link href = "/firstQuestion/1-3" className = "flex flex-row">
+              <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em]" /> 
+              <p>이전으로</p>
+            </Link>
+          </div>
+  
+          <p className = "text-careerForMe-main leading-[2.5] my-[2rem]">
+              <span className = "text-[1.2rem] font-bold">세부 분야를 선택해주세요</span> <br />
+              *희망 분야는 언제든지 변경할 수 있어요 :)
+          </p>
+          
+          
+          <div className = "flex flex-col w-fit">
+            <div className = "flex flex-row gap-6 mt-[3rem] mb-[5rem]">
+              <LargeButton url = "/firstQuestion/1-51" text = "DBA/데이터베이스" />
+              <LargeButton url = "/firstQuestion/1-51" text = "빅데이터/AI" />
+            </div>
+  
+  
+            <div className="grid grid-cols-3 items-center w-full h-16">
+              <p className="col-start-2 text-center text-[0.9rem] text-gray-300">
+                <u>세부분야까지는 아직 정하지 않았어요</u>
+              </p>
+  
+              <Link href = "/" className="flex flex-row text-careerForMe-main items-center justify-end text-careerForMe-main col-start-3">
+                다음으로
+                <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em] transform rotate-180" />
+              </Link>
+            </div>
+  
+          </div>
+  
+        </div >
+      );
+  }
+  else if (id === "1-4-etc")
+    {
+      {/* 세부 분야 선택 페이지 - 개발 */}
+      return (
+        <div>
+          <Header/>
+          <div className = "text-[0.9rem] mt-[3.5rem] text-gray-400  ">
+            <Link href = "/firstQuestion/1-3" className = "flex flex-row">
+              <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em]" /> 
+              <p>이전으로</p>
+            </Link>
+          </div>
+  
+          <p className = "text-careerForMe-main leading-[2.5] my-[2rem]">
+              <span className = "text-[1.2rem] font-bold">세부 분야를 선택해주세요</span> <br />
+              *희망 분야는 언제든지 변경할 수 있어요 :)
+          </p>
+          
+          
+          <div className = "flex flex-col w-fit">
+            <div className = "flex flex-row gap-6 mt-[3rem] mb-[5rem]">
+              <LargeButton url = "/firstQuestion/1-51" text = "DBA/데이터베이스" />
+              <LargeButton url = "/firstQuestion/1-51" text = "빅데이터/AI" />
+            </div>
+  
+  
+            <div className="grid grid-cols-3 items-center w-full h-16">
+              <p className="col-start-2 text-center text-[0.9rem] text-gray-300">
+                <u>세부분야까지는 아직 정하지 않았어요</u>
+              </p>
+  
+              <Link href = "/" className="flex flex-row text-careerForMe-main items-center justify-end text-careerForMe-main col-start-3">
+                다음으로
+                <img src="/images/questionImages/questionImage3.png" alt = "icon" className = "h-[1.4em] w-[1.4em] transform rotate-180" />
+              </Link>
+            </div>
+  
+          </div>
+  
+        </div >
+      );
+  }
   else if (id === "1-51")
   {
     return (
       <div>
-        Page 1-51
+        
       </div>
     );
   }
