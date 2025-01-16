@@ -33,6 +33,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
               maxBarThickness={10}
               background="#6D72FF"
               indexAxis="y"
+              showLabels={false}
             />
           </div>
 
@@ -51,6 +52,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
               maxBarThickness={10}
               background="#6D72FF"
               indexAxis="y"
+              showLabels={false}
             />
           </div>
 
@@ -69,6 +71,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
               maxBarThickness={10}
               background="#6D72FF"
               indexAxis="y"
+              showLabels={false}
             />
           </div>
 
@@ -87,6 +90,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
               maxBarThickness={10}
               background="#6D72FF"
               indexAxis="y"
+              showLabels={false}
             />
           </div>
 
@@ -103,6 +107,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
               maxBarThickness={10}
               background="#6D72FF"
               indexAxis="y"
+              showLabels={false}
             />
           </div>
 

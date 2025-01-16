@@ -49,7 +49,7 @@ const BarChart = ({
 }: BarChartProps) => {
   // 데이터 설정
   const data = {
-    labels: ["학점"], // 라벨
+    labels: ["data"], // 라벨
     datasets: [
       {
         data: [value],
@@ -101,6 +101,11 @@ const BarChart = ({
       },
       y: {
         display: false,
+        min: 0, // y축의 최소값을 0으로 설정
+        max: max,
+        ticks: {
+          stepSize: 1, // y축의 간격을 1로 설정
+        },
       },
     },
   };

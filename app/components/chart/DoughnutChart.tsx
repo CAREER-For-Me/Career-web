@@ -29,8 +29,11 @@ const DoughnutChart = ({ dataValues }: DoughnutChartProps) => {
         display: false,
         position: "top" as const,
       },
+      datalabels: {
+        display: false, // 데이터 레이블 활성화
+      },
       tooltip: {
-        enabled: true,
+        enabled: false,
       },
     },
     cutout: "85%", // 도넛 두께 조절

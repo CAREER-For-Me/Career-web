@@ -38,11 +38,12 @@ const LangScoreComparison = () => {
                   maxBarThickness={40}
                   background="#6D72FF"
                   indexAxis="y"
+                  showLabels={true}
+                  labelsColor="#6D72FF"
+                  lablesSize="20"
                 />
               </div>
-              <p className="text-white font-bold my-2 mx-4 absolute">
-                내 점수 ({myspec?.toeicScore}점)
-              </p>
+              <p className="text-white font-bold my-2 mx-4 absolute">내 점수</p>
               {/* <span
                 className="text-careerForMe-main font-bold text-nowrap absolute"
                 style={{
@@ -62,10 +63,13 @@ const LangScoreComparison = () => {
                   maxBarThickness={40}
                   background="#E3E3E3"
                   indexAxis="y"
+                  showLabels={true}
+                  labelsColor="#E3E3E3"
+                  lablesSize="20"
                 />
               </div>
               <p className="text-gray-dark font-bold my-2 mx-4 absolute">
-                합격자 평균 ({avgspec?.langScore}점)
+                합격자 평균
               </p>
               {/* <span
                 className="text-gray-light font-bold text-nowrap absolute"

@@ -53,6 +53,7 @@ const SkillOverview = () => {
               maxBarThickness={20}
               background="#6D72FF"
               indexAxis="y"
+              showLabels={false}
             />
           </div>
 
