@@ -37,18 +37,6 @@ const Navbar = () => {
           >
             활동 추천
           </Link>
-          <Link
-            href="/firstQuestion"
-            className={clsx(
-              "hover:text-careerForMe-main transition-colors duration-300 ease-in-out",
-              {
-                "text-careerForMe-main font-bold":
-                  pathname === "/firstQuestion",
-              }
-            )}
-          >
-            질의 응답
-          </Link>
 
           <div
             className="relative"

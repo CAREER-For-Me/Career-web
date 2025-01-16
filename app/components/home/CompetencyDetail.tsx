@@ -56,14 +56,14 @@ const CompetencyDetail = ({ isMain }: CompetencyDetailProps) => {
   return (
     <div
       className={clsx(
-        "justify-between gap-5",
+        "justify-between gap-5 mt-36",
         isMain ? "flex-1 flex-col" : "flex"
       )}
     >
       {/* 하위 항목 */}
       <article className={clsx("", isMain ? "" : "w-2/4")}>
         {isMain ? null : (
-          <h1 className="font-bold text-xl mb-4">
+          <h1 className="font-bold text-2xl mb-4">
             이런 점은 <span className="text-careerForMe-main">부족</span>해요 📉
           </h1>
         )}
@@ -89,7 +89,7 @@ const CompetencyDetail = ({ isMain }: CompetencyDetailProps) => {
       {/* 상위 항목 */}
       <article className={clsx("", isMain ? "mt-3" : "w-2/4")}>
         {isMain ? null : (
-          <h1 className="font-bold text-xl mb-4">
+          <h1 className="font-bold text-2xl mb-4">
             이런 점은 <span className="text-careerForMe-red">충분</span>해요 📈
           </h1>
         )}

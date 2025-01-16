@@ -121,7 +121,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
       ) : (
         <>
           <Link
-            href="/"
+            href="/portfolio/info"
             className="flex items-center justify-end mr-9 mb-6 -mt-4 text-gray-medium"
           >
             내 포트폴리오 수정하기 <GoChevronRight />

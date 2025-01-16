@@ -35,7 +35,7 @@ const EssentialSkills = () => {
 
   return (
     <article className="mt-24">
-      <h1 className="font-bold text-xl">필수 스킬 상세 비교하기📈</h1>
+      <h1 className="font-bold text-2xl">필수 스킬 상세 비교하기📈</h1>
       <div className="min-w-max h-14 rounded-full mt-24 relative">
         <p className="absolute left-[3rem] bottom-[4.9rem] border-2 border-careerForMe-main rounded-lg px-4 py-1 text-nowrap">
           내 필수 스킬

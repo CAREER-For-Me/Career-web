@@ -6,6 +6,8 @@ import { Avgspec } from "../types/avgspec-types";
 const SkillProgressCard = () => {
   const [avgspec, setAvgspec] = useState<Avgspec | null>(null);
   const [myspec, setMyspec] = useState<Myspec | null>(null);
+  const [detailedJob, setDetailedJob] = useState<string | null>(null);
+
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -51,6 +53,23 @@ const SkillProgressCard = () => {
       }
     };
     fetchMyspec();
+  }, []);
+
+  useEffect(() => {
+    const fetchAvgspec = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_SERVER_URL}/field`
+        );
+        setDetailedJob(response.data[0].fieldName);
+      } catch (err) {
+        setError("API 호출 실패");
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchAvgspec();
   }, []);
 
   if (loading) {
@@ -105,9 +124,9 @@ const SkillProgressCard = () => {
       <div className="mx-6 my-4">
         <div className="flex gap-3 text-white">
           <div className=" bg-careerForMe-main rounded-full px-3 py-1">
-            IT 서비스 기획자
+            {detailedJob}
           </div>
-          <div className=" bg-careerForMe-main rounded-full px-3 py-1">PM</div>
+          {/* <div className=" bg-careerForMe-main rounded-full px-3 py-1">PM</div> */}
         </div>
         <div className="flex justify-between">
           <div>

@@ -9,7 +9,7 @@ const SkillAnalysis = () => {
 
   return (
     <article>
-      <h1 className="font-bold text-xl">
+      <h1 className="font-bold text-2xl">
         <span className="text-careerForMe-main underline">
           {session.data?.user?.name}
         </span>
