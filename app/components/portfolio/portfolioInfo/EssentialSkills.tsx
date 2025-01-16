@@ -52,6 +52,7 @@ const EssentialSkills = () => {
               max={20}
               maxBarThickness={60}
               background="#6D72FF"
+              indexAxis="y"
             />
           </div>
         </div>

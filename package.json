@@ -15,6 +15,7 @@
     "@tanstack/react-query-devtools": "^5.62.12",
     "axios": "^1.7.9",
     "chart.js": "4.0.1",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "clsx": "^2.1.1",
     "daisyui": "^4.12.23",
     "next": "15.1.3",

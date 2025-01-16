@@ -37,6 +37,7 @@ const LangScoreComparison = () => {
                   max={990}
                   maxBarThickness={40}
                   background="#6D72FF"
+                  indexAxis="y"
                 />
               </div>
               <p className="text-white font-bold my-2 mx-4 absolute">
@@ -60,6 +61,7 @@ const LangScoreComparison = () => {
                   max={990}
                   maxBarThickness={40}
                   background="#E3E3E3"
+                  indexAxis="y"
                 />
               </div>
               <p className="text-gray-dark font-bold my-2 mx-4 absolute">

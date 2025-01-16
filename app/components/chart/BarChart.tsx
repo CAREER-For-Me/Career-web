@@ -1,4 +1,5 @@
 import { Bar } from "react-chartjs-2";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 
 // 필요한 요소 불러오기
 import {
@@ -18,7 +19,8 @@ ChartJS.register(
   Legend,
   BarElement,
   CategoryScale,
-  LinearScale
+  LinearScale,
+  ChartDataLabels
 );
 
 interface BarChartProps {
@@ -26,6 +28,12 @@ interface BarChartProps {
   max: number | string; // 최대 값 (차트의 기준 값)
   maxBarThickness: number; // 바 두께
   background: string; // 색깔
+  indexAxis: string; // 축
+
+  showLabels: boolean; // 데이터 레이블 표시 여부
+  labelsColor?: string; // 레이블 색상
+  lablesSize?: string; // 레이블 크기
+  layoutPadding?: string;
 }
 
 const BarChart = ({
@@ -33,6 +41,11 @@ const BarChart = ({
   max,
   maxBarThickness,
   background,
+  indexAxis,
+  showLabels,
+  labelsColor,
+  lablesSize,
+  layoutPadding,
 }: BarChartProps) => {
   // 데이터 설정
   const data = {
@@ -52,6 +65,9 @@ const BarChart = ({
   const options = {
     responsive: true,
     maintainAspectRatio: false, // 비율 유지 비활성화
+    layout: {
+      padding: { top: layoutPadding },
+    },
     plugins: {
       legend: {
         display: false,
@@ -60,8 +76,20 @@ const BarChart = ({
       tooltip: {
         enabled: false,
       },
+      datalabels: {
+        display: showLabels, // 데이터 레이블 활성화
+        color: labelsColor, // 텍스트 색상
+        clip: false, // 잘리지 않도록 설정
+        align: "end", // 텍스트 정렬
+        anchor: "end", // 텍스트 위치
+        formatter: (value: number | string) => value, // 레이블 포맷
+        font: {
+          weight: "bold", // 텍스트 굵기
+          size: lablesSize, // 텍스트 크기
+        },
+      },
     },
-    indexAxis: "y",
+    indexAxis: indexAxis,
     scales: {
       x: {
         display: false,

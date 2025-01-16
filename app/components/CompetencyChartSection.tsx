@@ -32,6 +32,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
               max={avgspec?.score || 0}
               maxBarThickness={10}
               background="#6D72FF"
+              indexAxis="y"
             />
           </div>
 
@@ -49,6 +50,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
               max={avgspec?.internNum || 0}
               maxBarThickness={10}
               background="#6D72FF"
+              indexAxis="y"
             />
           </div>
 
@@ -66,6 +68,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
               max={avgspec?.awardNum || 0}
               maxBarThickness={10}
               background="#6D72FF"
+              indexAxis="y"
             />
           </div>
 
@@ -83,6 +86,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
               max={avgspec?.qualNum || 0}
               maxBarThickness={10}
               background="#6D72FF"
+              indexAxis="y"
             />
           </div>
 
@@ -98,6 +102,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
               max={avgspec?.langScore || 0}
               maxBarThickness={10}
               background="#6D72FF"
+              indexAxis="y"
             />
           </div>
 
