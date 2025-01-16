@@ -56,7 +56,7 @@ const CompetencyDetail = ({ isMain }: CompetencyDetailProps) => {
   return (
     <div
       className={clsx(
-        "justify-between gap-5 mt-36",
+        "justify-between gap-5",
         isMain ? "flex-1 flex-col" : "flex"
       )}
     >

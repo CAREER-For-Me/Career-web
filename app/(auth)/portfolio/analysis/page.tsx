@@ -19,8 +19,9 @@ const PortfolioAnalysisPage = () => {
       <SpecsComparison />
 
       {/* 4. 스펙 부족/충분 */}
-      <CompetencyDetail isMain={false} />
-
+      <article className="mt-36">
+        <CompetencyDetail isMain={false} />
+      </article>
       {/* 5. 어학 점수 비교 */}
       <LangScoreComparison />
 
