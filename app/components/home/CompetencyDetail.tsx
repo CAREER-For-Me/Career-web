@@ -3,16 +3,8 @@ import { BiSolidDownArrow, BiSolidUpArrow } from "react-icons/bi";
 import { useAvgSpec } from "@/app/context/AvgspecContext";
 import { useUserSpec } from "@/app/context/UserSpecContext";
 
-export const competencyData = [
-  { name: "대외활동", status: "하위 33%" },
-  { name: "인턴", status: "하위 33%" },
-  { name: "자격증", status: "하위 33%" },
-  { name: "수상내역", status: "상위 33%" },
-  { name: "학점", status: "상위 33%" },
-];
-
 interface CompetencyDetailProps {
-  isMain?: boolean;
+  isMain: boolean;
 }
 
 const CompetencyDetail = ({ isMain }: CompetencyDetailProps) => {
@@ -23,12 +15,43 @@ const CompetencyDetail = ({ isMain }: CompetencyDetailProps) => {
     return <p>데이터를 불러오는 중...</p>;
   }
 
-  const lowerStatus = competencyData.filter((item) =>
-    item.status.includes("하위")
-  );
-  const higherStatus = competencyData.filter((item) =>
-    item.status.includes("상위")
-  );
+  // 백분율 차이 계산 함수
+  const calculateDifference = (userValue: number, avgValue: number) => {
+    if (avgValue === 0) return 0; // 평균 값이 0일 때는 0으로 처리
+    return (((userValue - avgValue) / avgValue) * 100).toFixed(1);
+  };
+
+  const competencyData = [
+    {
+      name: "학점",
+      difference: calculateDifference(myspec.majorScore, +avgspec.score),
+      status: myspec.majorScore >= +avgspec.score ? "상위" : "하위",
+    },
+    {
+      name: "인턴",
+      difference: calculateDifference(myspec.internCount, +avgspec.internNum),
+      status: myspec.internCount >= +avgspec.internNum ? "상위" : "하위",
+    },
+    {
+      name: "수상",
+      difference: calculateDifference(myspec.awardCount, +avgspec.awardNum),
+      status: myspec.awardCount >= +avgspec.awardNum ? "상위" : "하위",
+    },
+    {
+      name: "자격증",
+      difference: calculateDifference(myspec.qualCount, +avgspec.qualNum),
+      status: myspec.qualCount >= +avgspec.qualNum ? "상위" : "하위",
+    },
+    {
+      name: "어학점수",
+      difference: calculateDifference(myspec.toeicScore, +avgspec.langScore),
+      status: myspec.toeicScore >= +avgspec.langScore ? "상위" : "하위",
+    },
+  ];
+
+  // 상위/하위 항목 필터링
+  const lowerStatus = competencyData.filter((item) => item.status === "하위");
+  const higherStatus = competencyData.filter((item) => item.status === "상위");
 
   return (
     <div
@@ -52,7 +75,7 @@ const CompetencyDetail = ({ isMain }: CompetencyDetailProps) => {
                 <p className="font-bold">{item.name}</p>
                 <p className="flex items-center gap-2 text-careerForMe-main">
                   <BiSolidDownArrow />
-                  {item.status}
+                  {item.status} ({item.difference}%)
                 </p>
               </div>
               {index < lowerStatus.length - 1 && (
@@ -78,7 +101,7 @@ const CompetencyDetail = ({ isMain }: CompetencyDetailProps) => {
                 <p className="font-bold">{item.name}</p>
                 <p className="flex items-center gap-2 text-careerForMe-red">
                   <BiSolidUpArrow />
-                  {item.status}
+                  {item.status} ({item.difference}%)
                 </p>
               </div>
               {index < higherStatus.length - 1 && (

@@ -80,7 +80,7 @@ const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
           <div className="absolute left-[10rem]">
             <BarChart
               value={myspec?.qualCount || 0}
-              max={avgspec?.skillNum || 0}
+              max={avgspec?.qualNum || 0}
               maxBarThickness={10}
               background="#6D72FF"
             />
