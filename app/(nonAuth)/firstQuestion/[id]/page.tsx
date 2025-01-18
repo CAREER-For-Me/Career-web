@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // id를 받고, id값에 따라 다른 페이지 보여주기
-export default async function FirstQuestionPage({
+export default function FirstQuestionPage({
   params,
 }: {
   params: { id: string };
@@ -147,19 +147,6 @@ export default async function FirstQuestionPage({
               alt="img1"
               width={120}
               height={120}
-              className="mt-[0.5rem]"
-            />
-          </Link>
-          <Link
-            href="/firstQuestion/1-3"
-            className="flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[0.7rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300"
-          >
-            <p className="text-center">데이터</p>
-            <Image
-              src="/images/questionImages/questionImage10.png"
-              alt="img1"
-              width={130}
-              height={130}
               className="mt-[0.5rem]"
             />
           </Link>
