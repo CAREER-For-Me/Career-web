@@ -2,12 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 // id를 받고, id값에 따라 다른 페이지 보여주기
-export default function FirstQuestionPage({
-  params,
-}: {
+interface PageProps {
   params: { id: string };
-}) {
-  const { id } = params; // 비동기 처리 제거, 바로 사용
+}
+
+// id를 받고, id값에 따라 다른 페이지 보여주기
+export default function FirstQuestionPage({ params }: PageProps) {
+  const { id } = params;
 
   /*
     id값은 와이어프레임을 참고했습니다
