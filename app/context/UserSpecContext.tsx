@@ -25,27 +25,27 @@ export const UserSpecProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchMyspec = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_SERVER_URL}/myspec`
-        );
+  // useEffect(() => {
+  //   const fetchMyspec = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `${process.env.NEXT_PUBLIC_SERVER_URL}/myspec`
+  //       );
 
-        if (response.data && response.data[0]?.result) {
-          setMyspec(response.data[0].result);
-        } else {
-          setError("데이터 형식이 예상과 다릅니다.");
-        }
-      } catch (err) {
-        setError("API 호출 실패");
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchMyspec();
-  }, []);
+  //       if (response.data && response.data[0]?.result) {
+  //         setMyspec(response.data[0].result);
+  //       } else {
+  //         setError("데이터 형식이 예상과 다릅니다.");
+  //       }
+  //     } catch (err) {
+  //       setError("API 호출 실패");
+  //       console.error(err);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //   fetchMyspec();
+  // }, []);
 
   return (
     <UserSpecContext.Provider value={{ myspec, setMyspec, loading, error }}>

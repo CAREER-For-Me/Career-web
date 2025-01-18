@@ -15,23 +15,23 @@ const RecommendationList = ({ isHome }: RecommendationListProps) => {
   const [loading, setLoading] = useState(true);
   const [posts, setPosts] = useState<Post[] | null>(null);
 
-  useEffect(() => {
-    const fetchPostingMain = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_SERVER_URL}/posting`
-        );
-        const postingList = response.data.main[0].postingList;
+  // useEffect(() => {
+  //   const fetchPostingMain = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         `${process.env.NEXT_PUBLIC_SERVER_URL}/posting`
+  //       );
+  //       const postingList = response.data.main[0].postingList;
 
-        setPosts(postingList);
-      } catch (error) {
-        console.error(error);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchPostingMain();
-  }, []);
+  //       setPosts(postingList);
+  //     } catch (error) {
+  //       console.error(error);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //   fetchPostingMain();
+  // }, []);
 
   if (loading)
     return (
