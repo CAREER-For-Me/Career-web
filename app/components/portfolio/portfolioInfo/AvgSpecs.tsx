@@ -4,11 +4,9 @@ import { credentials } from "@/app/constants/constants";
 import { useAvgSpec } from "@/app/context/AvgspecContext";
 
 import Link from "next/link";
-import { useState } from "react";
 import { GoChevronRight } from "react-icons/go";
 
 const AvgSpecs = () => {
-  const [loading, setLoading] = useState(true);
   const { avgspec, setAvgspec } = useAvgSpec();
 
   const avgSpecsDisplay = avgspec

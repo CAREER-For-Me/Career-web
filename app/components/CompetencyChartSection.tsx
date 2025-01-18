@@ -5,18 +5,18 @@ import { GoChevronRight } from "react-icons/go";
 import Link from "next/link";
 import { useUserSpec } from "../context/UserSpecContext";
 import { useAvgSpec } from "../context/AvgspecContext";
+import { useSession } from "next-auth/react";
 
 interface CompetencyChartSectionProps {
   isMain: boolean;
-  exp?: null;
 }
 
-const CompetencyChartSection = ({
-  isMain,
-  exp,
-}: CompetencyChartSectionProps) => {
+const CompetencyChartSection = ({ isMain }: CompetencyChartSectionProps) => {
   const { myspec } = useUserSpec();
   const { avgspec } = useAvgSpec();
+
+  const { status } = useSession();
+  const isLogin = status === "authenticated";
 
   return (
     <div className="bg-careerForMe-gray01 rounded-md w-3/5 relative shadow-sm shadow-gray-light">
@@ -31,7 +31,7 @@ const CompetencyChartSection = ({
         <div className="flex mb-4 items-center h-6 relative">
           <p className="w-40">학점</p>
           <div className="bg-gray-light w-[18.8rem] h-[0.6rem] absolute left-[10rem] rounded-full" />
-          {exp ? (
+          {isLogin ? (
             <>
               <div className="absolute left-[10rem]">
                 <BarChart
@@ -69,7 +69,7 @@ const CompetencyChartSection = ({
           <p className="w-40">인턴</p>
           <div className="bg-gray-light w-[18.8rem] h-[0.6rem] absolute left-[10rem] rounded-full" />
 
-          {exp ? (
+          {isLogin ? (
             <>
               <div className="absolute left-[10rem]">
                 <BarChart
@@ -105,7 +105,7 @@ const CompetencyChartSection = ({
         <div className="flex mb-4 items-center h-6 relative">
           <p className="w-40">수상내역</p>
           <div className="bg-gray-light w-[18.8rem] h-[0.6rem] absolute left-[10rem] rounded-full" />
-          {exp ? (
+          {isLogin ? (
             <>
               <div className="absolute left-[10rem]">
                 <BarChart
@@ -144,7 +144,7 @@ const CompetencyChartSection = ({
           <p className="w-40">자격증</p>
           <div className="bg-gray-light w-[18.8rem] h-[0.6rem] absolute left-[10rem] rounded-full" />
 
-          {exp ? (
+          {isLogin ? (
             <>
               <div className="absolute left-[10rem]">
                 <BarChart
@@ -181,7 +181,7 @@ const CompetencyChartSection = ({
           <p className="w-40">토익</p>
           <div className="bg-gray-light w-[18.8rem] h-[0.6rem] absolute left-[10rem] rounded-full" />
 
-          {exp ? (
+          {isLogin ? (
             <>
               <div className="absolute left-[10rem]">
                 <BarChart

@@ -77,8 +77,8 @@ const RecommendationList = ({ isHome }: RecommendationListProps) => {
                           {post.title}
                         </p>
                         <div>
-                          <p>api 명세서에 없는 데이터</p>
-                          <div className="flex gap-3 mb-7">
+                          {/* <p>api 명세서에 없는 데이터</p> */}
+                          <div className="flex gap-3 mb-7 mt-3">
                             <p className="text-careerForMe-red font-bold">
                               D-1
                             </p>

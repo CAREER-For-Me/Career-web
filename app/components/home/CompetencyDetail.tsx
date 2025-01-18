@@ -1,7 +1,9 @@
+"use client";
 import clsx from "clsx";
 import { BiSolidDownArrow, BiSolidUpArrow } from "react-icons/bi";
 import { useAvgSpec } from "@/app/context/AvgspecContext";
 import { useUserSpec } from "@/app/context/UserSpecContext";
+import { useSession } from "next-auth/react";
 
 interface CompetencyDetailProps {
   isMain: boolean;
@@ -10,6 +12,9 @@ interface CompetencyDetailProps {
 const CompetencyDetail = ({ isMain }: CompetencyDetailProps) => {
   const { avgspec } = useAvgSpec();
   const { myspec } = useUserSpec();
+
+  const { status } = useSession();
+  const isLogin = status === "authenticated";
 
   if (!avgspec || !myspec) {
     return <p>데이터를 불러오는 중...</p>;
@@ -75,7 +80,13 @@ const CompetencyDetail = ({ isMain }: CompetencyDetailProps) => {
                 <p className="font-bold">{item.name}</p>
                 <p className="flex items-center gap-2 text-careerForMe-main">
                   <BiSolidDownArrow />
-                  {item.status} ({item.difference}%)
+                  {isLogin ? (
+                    <>
+                      {item.status} ({item.difference}%)
+                    </>
+                  ) : (
+                    <>{item.status} (??%)</>
+                  )}
                 </p>
               </div>
               {index < lowerStatus.length - 1 && (
@@ -101,7 +112,13 @@ const CompetencyDetail = ({ isMain }: CompetencyDetailProps) => {
                 <p className="font-bold">{item.name}</p>
                 <p className="flex items-center gap-2 text-careerForMe-red">
                   <BiSolidUpArrow />
-                  {item.status} ({item.difference}%)
+                  {isLogin ? (
+                    <>
+                      {item.status} ({item.difference}%)
+                    </>
+                  ) : (
+                    <>{item.status} (??%)</>
+                  )}
                 </p>
               </div>
               {index < higherStatus.length - 1 && (

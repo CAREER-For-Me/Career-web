@@ -3,11 +3,7 @@ import DoughnutChart from "./chart/DoughnutChart";
 import { Avgspec } from "../types/avgspec-types";
 import axios from "axios";
 
-interface skillProgressCardProps {
-  exp?: null;
-}
-
-const SkillProgressCard = ({ exp }: skillProgressCardProps) => {
+const SkillProgressCard = () => {
   const [avgspec, setAvgspec] = useState<Avgspec | null>(null);
   const [myspec, setMyspec] = useState<Myspec | null>(null);
   const [detailedJob, setDetailedJob] = useState<string | null>(null);
@@ -136,9 +132,7 @@ const SkillProgressCard = ({ exp }: skillProgressCardProps) => {
           <div>
             <p className="text-gray-dark mt-14">평균역량 대비</p>
             <div className="flex font-bold text-xl gap-3">
-              <p className="text-careerForMe-main">
-                {exp ? <>{overallAverage}%</> : <>???%</>}
-              </p>
+              <p className="text-careerForMe-main">{overallAverage}%</p>
 
               <p>충족했어요.</p>
             </div>
@@ -152,7 +146,7 @@ const SkillProgressCard = ({ exp }: skillProgressCardProps) => {
             />
 
             <p className="absolute w-40 bottom-16 left-[3.8rem] text-careerForMe-main font-bold text-xl">
-              {exp ? <> {overallAverage}%</> : <>???%</>}
+              {overallAverage}%
             </p>
           </div>
         </div>

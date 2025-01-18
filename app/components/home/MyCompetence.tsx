@@ -32,7 +32,7 @@ const MyCompetence = () => {
         <JobSelectionCard />
       ) : (
         <>
-          <SkillProgressCard exp={exp} />
+          <SkillProgressCard />
           <EditSkills exp={exp} />
         </>
       )}
