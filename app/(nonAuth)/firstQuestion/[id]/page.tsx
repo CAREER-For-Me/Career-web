@@ -7,7 +7,7 @@ export default async function FirstQuestionPage({
 }: {
   params: { id: string };
 }) {
-  const { id } = await params;
+  const { id } = params; // 비동기 처리 제거, 바로 사용
 
   /*
     id값은 와이어프레임을 참고했습니다
@@ -23,6 +23,8 @@ export default async function FirstQuestionPage({
             <Image
               src="/images/questionImages/questionImage3.png"
               alt="icon"
+              width={160}
+              height={180}
               className="h-[1.4em] w-[1.4em]"
             />
             <p>이전으로</p>
@@ -92,6 +94,8 @@ export default async function FirstQuestionPage({
             <Image
               src="/images/questionImages/questionImage3.png"
               alt="icon"
+              width={160}
+              height={180}
               className="h-[1.4em] w-[1.4em]"
             />
             <p>이전으로</p>
@@ -159,67 +163,9 @@ export default async function FirstQuestionPage({
               className="mt-[0.5rem]"
             />
           </Link>
-          <Link
-            href="/firstQuestion/1-6"
-            className="flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[1rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300"
-          >
-            <p className="text-center">서버/보안</p>
-            <Image
-              src="/images/questionImages/questionImage11.png"
-              alt="img1"
-              width={120}
-              height={120}
-              className="mt-[0.5rem]"
-            />
-          </Link>
-          <Link
-            href="/firstQuestion/1-6"
-            className="flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[1rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300"
-          >
-            <p className="text-center">게임</p>
-            <Image
-              src="/images/questionImages/questionImage12.png"
-              alt="img1"
-              width={120}
-              height={120}
-              className="mt-[0.5rem]"
-            />
-          </Link>
-          <Link
-            href="/firstQuestion/1-3"
-            className="flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[0.8rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300"
-          >
-            <p className="text-center">QA/테스트</p>
-            <Image
-              src="/images/questionImages/questionImage13.png"
-              alt="img1"
-              width={120}
-              height={120}
-              className="mt-[0.5rem]"
-            />
-          </Link>
-          <Link
-            href="/firstQuestion/1-6"
-            className="flex flex-col items-center aspect-square border-[1.4px] border-[rgb(109,114,255)] justify-center text-[rgb(109,114,255)] bg-white rounded-2xl font-semibold shadow-[0px_0px_5px_rgba(109,114,255,0.5)] pt-[0.5rem] hover:bg-[rgb(109,114,255)] hover:text-white transition duration-300"
-          >
-            <p className="text-center">기타</p>
-            <Image
-              src="/images/questionImages/questionImage14.png"
-              alt="img1"
-              width={120}
-              height={120}
-              className="mt-[0.5rem]"
-            />
-          </Link>
         </div>
       </main>
     );
-  } else if (id === "1-4") {
-    return <div>Page 1-4</div>;
-  } else if (id === "1-51") {
-    return <div>Page 1-51</div>;
-  } else if (id === "1-52") {
-    return <div>Page 1-52</div>;
   } else if (id === "1-6") {
     return (
       <main className="mb-32">
@@ -229,6 +175,8 @@ export default async function FirstQuestionPage({
             <img
               src="/images/questionImages/questionImage3.png"
               alt="icon"
+              width={160}
+              height={180}
               className="h-[1.4em] w-[1.4em]"
             />
             <p>이전으로</p>
