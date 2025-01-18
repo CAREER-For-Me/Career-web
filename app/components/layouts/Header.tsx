@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className="flex items-center ">
       <section className="mr-7">
-        <Link href="/">
+        <Link href="/home">
           <Image
             src="/images/logo/career-logo.png"
             alt="Logo"

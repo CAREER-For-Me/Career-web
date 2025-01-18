@@ -11,7 +11,7 @@ const FirstQuestionLayout = ({ children }: firstQuestionLayoutProps) => {
       <div className="w-screen shadow-md text-gray-medium shadow-gray-medium mt-4 border border-l-gray-light absolute top-[7rem]" />
       <div className="mx-auto max-w-screen-xl min-h-screen p-6">
         <div className="flex items-center gap-3 ">
-          <Link href="/">
+          <Link href="/home">
             <Image
               src="/images/logo/career-logo.png"
               alt="Logo"

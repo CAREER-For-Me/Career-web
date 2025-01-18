@@ -41,7 +41,7 @@ const JobSelectionComplete = () => {
             다시 선택하기
           </Link>
           <Link
-            href="/"
+            href="/home"
             className="transition-all duration-300 bg-careerForMe-main text-white text-lg shadow-careerForMe-main inline-block border px-5 py-3 rounded-full shadow-sm cursor-pointer hover:text-white hover:font-bold"
           >
             메인 페이지로 이동하기

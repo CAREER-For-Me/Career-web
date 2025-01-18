@@ -18,7 +18,7 @@ const SignInPage = () => {
 
   useEffect(() => {
     if (session.status === "authenticated") {
-      router.replace("/"); // 인증된 경우 홈으로 리디렉션
+      router.replace("/home"); // 인증된 경우 홈으로 리디렉션
     } else {
       setShouldRender(true);
     }
