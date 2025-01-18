@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaCheck } from "react-icons/fa";
 
 const JobSelectionComplete = () => {
   const [checked, setChecked] = useState(false);
@@ -14,13 +13,22 @@ const JobSelectionComplete = () => {
 
   return (
     <main className="flex items-center justify-center">
-      <div className="text-center mt-28">
-        <div className="flex justify-center mb-14">
+      <div className="text-center mt-28 flex flex-col items-center">
+        <div className="relative h-36 w-36 flex items-center justify-center mb-14">
           <div
-            className={`bg-gradient-to-r from-[#6d72ff] to-[#89a4ff] h-36 w-36 rounded-full flex items-center justify-center transition-all duration-500`}
-          >
-            <FaCheck className="text-white text-4xl" />
-          </div>
+            className="absolute inset-0 opacity-1 bg-cover bg-center animate-revealBackground transition-all duration-500"
+            style={{ backgroundImage: "url('/images/questionImages/checkmark-bg.png')" }}
+          ></div>
+
+
+          <img
+            src="/images/questionImages/checkmark.png"
+            className="absolute z-10 animate-growAndRotate filter brightness-0 invert"
+            height={80}
+            width={80}
+            alt="checkmark"
+          />
+          
         </div>
         <h1 className="text-2xl font-bold text-careerForMe-main">
           직무 선택이 완료되었어요 :)
