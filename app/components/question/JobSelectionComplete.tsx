@@ -1,25 +1,17 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
 
 const JobSelectionComplete = () => {
-  const [checked, setChecked] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setChecked(true);
-    }, 500);
-  }, []);
-
   return (
     <main className="flex items-center justify-center">
       <div className="text-center mt-28 flex flex-col items-center">
         <div className="relative h-36 w-36 flex items-center justify-center mb-14">
           <div
             className="absolute inset-0 opacity-1 bg-cover bg-center animate-revealBackground transition-all duration-500"
-            style={{ backgroundImage: "url('/images/questionImages/checkmark-bg.png')" }}
+            style={{
+              backgroundImage: "url('/images/questionImages/checkmark-bg.png')",
+            }}
           ></div>
-
 
           <img
             src="/images/questionImages/checkmark.png"
@@ -28,7 +20,6 @@ const JobSelectionComplete = () => {
             width={80}
             alt="checkmark"
           />
-          
         </div>
         <h1 className="text-2xl font-bold text-careerForMe-main">
           직무 선택이 완료되었어요 :)

@@ -1,9 +1,13 @@
 import { useEffect, useState } from "react";
 import DoughnutChart from "./chart/DoughnutChart";
-import axios from "axios";
 import { Avgspec } from "../types/avgspec-types";
+import axios from "axios";
 
-const SkillProgressCard = () => {
+interface skillProgressCardProps {
+  exp?: null;
+}
+
+const SkillProgressCard = ({ exp }: skillProgressCardProps) => {
   const [avgspec, setAvgspec] = useState<Avgspec | null>(null);
   const [myspec, setMyspec] = useState<Myspec | null>(null);
   const [detailedJob, setDetailedJob] = useState<string | null>(null);
@@ -11,66 +15,66 @@ const SkillProgressCard = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // useEffect(() => {
-  //   const fetchAvgspec = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         `${process.env.NEXT_PUBLIC_SERVER_URL}/avgspec`
-  //       );
+  useEffect(() => {
+    const fetchAvgspec = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_SERVER_URL}/avgspec`
+        );
 
-  //       if (response.data && response.data[0]) {
-  //         setAvgspec(response.data[0]);
-  //       } else {
-  //         setError("데이터 형식이 예상과 다릅니다.");
-  //       }
-  //     } catch (err) {
-  //       setError("API 호출 실패");
-  //       console.error(err);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchAvgspec();
-  // }, []);
+        if (response.data && response.data[0]) {
+          setAvgspec(response.data[0]);
+        } else {
+          setError("데이터 형식이 예상과 다릅니다.");
+        }
+      } catch (err) {
+        setError("API 호출 실패");
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchAvgspec();
+  }, []);
 
-  // useEffect(() => {
-  //   const fetchMyspec = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         `${process.env.NEXT_PUBLIC_SERVER_URL}/myspec`
-  //       );
+  useEffect(() => {
+    const fetchMyspec = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_SERVER_URL}/myspec`
+        );
 
-  //       if (response.data && response.data[0]?.result) {
-  //         setMyspec(response.data[0].result);
-  //       } else {
-  //         setError("데이터 형식이 예상과 다릅니다.");
-  //       }
-  //     } catch (err) {
-  //       setError("API 호출 실패");
-  //       console.error(err);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchMyspec();
-  // }, []);
+        if (response.data && response.data[0]?.result) {
+          setMyspec(response.data[0].result);
+        } else {
+          setError("데이터 형식이 예상과 다릅니다.");
+        }
+      } catch (err) {
+        setError("API 호출 실패");
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchMyspec();
+  }, []);
 
-  // useEffect(() => {
-  //   const fetchAvgspec = async () => {
-  //     try {
-  //       const response = await axios.get(
-  //         `${process.env.NEXT_PUBLIC_SERVER_URL}/field`
-  //       );
-  //       setDetailedJob(response.data[0].fieldName);
-  //     } catch (err) {
-  //       setError("API 호출 실패");
-  //       console.error(err);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  //   fetchAvgspec();
-  // }, []);
+  useEffect(() => {
+    const fetchAvgspec = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_SERVER_URL}/field`
+        );
+        setDetailedJob(response.data[0].fieldName);
+      } catch (err) {
+        setError("API 호출 실패");
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchAvgspec();
+  }, []);
 
   if (loading) {
     return (
@@ -132,7 +136,10 @@ const SkillProgressCard = () => {
           <div>
             <p className="text-gray-dark mt-14">평균역량 대비</p>
             <div className="flex font-bold text-xl gap-3">
-              <p className="text-careerForMe-main">{overallAverage}%</p>
+              <p className="text-careerForMe-main">
+                {exp ? <>{overallAverage}%</> : <>???%</>}
+              </p>
+
               <p>충족했어요.</p>
             </div>
           </div>
@@ -143,8 +150,9 @@ const SkillProgressCard = () => {
                 1 - parseFloat(overallAverage) / 100,
               ]}
             />
+
             <p className="absolute w-40 bottom-16 left-[3.8rem] text-careerForMe-main font-bold text-xl">
-              {overallAverage}%
+              {exp ? <> {overallAverage}%</> : <>???%</>}
             </p>
           </div>
         </div>

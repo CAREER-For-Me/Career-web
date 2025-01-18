@@ -1,8 +1,10 @@
 "use client";
+
 import clsx from "clsx";
 import Link from "next/link";
 import React, { useState } from "react";
 import { GoChevronRight } from "react-icons/go";
+import axios from "axios"; // axios import
 
 const SelectedJob = ({
   categoryData,
@@ -11,8 +13,21 @@ const SelectedJob = ({
 }) => {
   const [selectedAbility, setSelectedAbility] = useState<string | null>(null);
 
-  const handleSelect = (job: string) => {
+  const handleSelect = async (job: string) => {
     setSelectedAbility((prev) => (prev === job ? null : job));
+
+    try {
+      const updatedField = {
+        fieldName: job,
+      };
+
+      await axios.put(
+        `${process.env.NEXT_PUBLIC_SERVER_URL}/field/6c89`,
+        updatedField
+      );
+    } catch (error) {
+      console.error("error:", error);
+    }
   };
 
   return (

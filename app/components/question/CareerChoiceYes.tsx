@@ -29,14 +29,6 @@ const CareerChoiceYes = () => {
     setSelectedCategoryData({ category, jobs });
   };
 
-  const handleBack = () => {
-    if (selectedCategoryData) {
-      setSelectedCategoryData(null);
-    } else {
-      setSelectedCategory(null);
-    }
-  };
-
   return (
     <main className="mb-32">
       {!selectedCategory && !selectedCategoryData && (
