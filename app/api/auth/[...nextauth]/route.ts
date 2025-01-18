@@ -61,11 +61,11 @@ const handler = NextAuth({
   pages: {
     signIn: "/signin",
   },
-  callbacks: {
-    async redirect({ url, baseUrl }) {
-      return "/"; // 로그인 성공 후 리다이렉트
-    },
-  },
+  // callbacks: {
+  //   async redirect({ url, baseUrl }) {
+  //     return "/"; // 로그인 성공 후 리다이렉트
+  //   },
+  // },
   secret: process.env.JWT_SECRET, // 보안 위함
 });
 

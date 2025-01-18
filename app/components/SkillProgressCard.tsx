@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import DoughnutChart from "./chart/DoughnutChart";
-import axios from "axios";
+//import axios from "axios";
 import { Avgspec } from "../types/avgspec-types";
 
 const SkillProgressCard = () => {
-  const [avgspec, setAvgspec] = useState<Avgspec | null>(null);
-  const [myspec, setMyspec] = useState<Myspec | null>(null);
-  const [detailedJob, setDetailedJob] = useState<string | null>(null);
+  const [avgspec] = useState<Avgspec | null>(null);
+  const [myspec] = useState<Myspec | null>(null);
+  const [detailedJob] = useState<string | null>(null);
 
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [loading] = useState(true);
+  //const [error, setError] = useState<string | null>(null);
 
   // useEffect(() => {
   //   const fetchAvgspec = async () => {

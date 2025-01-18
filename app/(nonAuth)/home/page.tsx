@@ -5,12 +5,12 @@ import Community from "@/app/components/home/Community";
 import CompetencyStatus from "@/app/components/home/CompetencyStatus";
 import MyCompetence from "@/app/components/home/MyCompetence";
 import RecommendationList from "@/app/components/RecommendationList";
-import { useSession } from "next-auth/react";
+//import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { GoChevronRight } from "react-icons/go";
 
 const HomePage = () => {
-  const session = useSession();
+  //const session = useSession();
 
   // console.log("====================================");
   // console.log("session", session);

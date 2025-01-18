@@ -1,10 +1,10 @@
-// 추천 공고
 "use client";
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { BsBookmarkFill } from "react-icons/bs";
 import axios from "axios";
+import Image from "next/image";
 
 interface RecommendationListProps {
   isHome: boolean;
@@ -39,7 +39,14 @@ const RecommendationList = ({ isHome }: RecommendationListProps) => {
         <span className="loading loading-spinner text-careerForMe-main"></span>
       </div>
     );
-  const handleClipping = (title: string) => {};
+
+  // handleClipping에서 clipping 상태를 업데이트
+  const handleClipping = (title: string) => {
+    setClipping((prevClipping) => ({
+      ...prevClipping,
+      [title]: !prevClipping[title], // 북마크 상태 토글
+    }));
+  };
 
   const limitedPosts = isHome ? posts?.slice(0, 8) : posts;
 
@@ -64,7 +71,7 @@ const RecommendationList = ({ isHome }: RecommendationListProps) => {
                   </div>
                   <Link href={`activityRecommend/${post.title}`}>
                     <figure>
-                      <img
+                      <Image
                         src={post.imageUrl}
                         alt={post.title}
                         width={300}
