@@ -43,7 +43,7 @@ const SpecsComparison = () => {
 
   return (
     <article className="mt-24">
-      <h1 className="font-bold text-xl">합격자 스펙과 내 스펙 비교하기📈</h1>
+      <h1 className="font-bold text-2xl">합격자 스펙과 내 스펙 비교하기📈</h1>
       <div className="flex gap-10 justify-center">
         {/* 학점 */}
         {specData.map((spec, index) => (

@@ -23,7 +23,7 @@ const AvgSpecs = () => {
 
   return (
     <article className="mt-24">
-      <h1 className="font-bold text-xl mb-4">합격자 평균 스펙📈</h1>
+      <h1 className="font-bold text-2xl mb-4">합격자 평균 스펙📈</h1>
       <div className="overflow-hidden rounded-2xl border border-gray-300 shadow-md">
         <table className="table-auto border-collapse w-full text-center">
           <thead className="bg-careerForMe-main text-white">

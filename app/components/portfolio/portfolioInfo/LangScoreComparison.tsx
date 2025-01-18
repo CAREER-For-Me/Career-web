@@ -21,7 +21,7 @@ const LangScoreComparison = () => {
 
   return (
     <article className="mt-24">
-      <h1 className="font-bold text-xl mb-5">어학점수 비교하기📈</h1>
+      <h1 className="font-bold text-2xl mb-5">어학점수 비교하기📈</h1>
 
       <div className="flex">
         <div className="min-h-36 flex items-center justify-center w-52 text-white bg-careerForMe-main rounded-l-lg shadow-sm shadow-gray-light">
