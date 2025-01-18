@@ -4,7 +4,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react"; //useclient 선언 필요. 브라우저에서 실행됨.
 
-const authLayout = ({ children }: { children: React.ReactNode }) => {
+const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   //타입지정. react.racctnode는 렌더링 가능한 모든 요소 포함.null, undefined 제외
   const sesstion = useSession();
   const router = useRouter();
@@ -23,4 +23,4 @@ const authLayout = ({ children }: { children: React.ReactNode }) => {
   return <div>{shouldRender && children}</div>;
 };
 
-export default authLayout;
+export default AuthLayout;

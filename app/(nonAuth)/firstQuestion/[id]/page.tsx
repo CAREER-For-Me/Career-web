@@ -20,7 +20,7 @@ export default async function FirstQuestionPage({
         {/* 두번째 선택지 (고려중인 진로가 있나요?) */}
         <div className="text-[0.9rem] mt-[3.5rem] text-gray-400 ">
           <Link href="/firstQuestion" className="flex flex-row">
-            <img
+            <Image
               src="/images/questionImages/questionImage3.png"
               alt="icon"
               className="h-[1.4em] w-[1.4em]"
@@ -89,7 +89,7 @@ export default async function FirstQuestionPage({
         {/* 세번째 선택지 (관심있는 직무를 선택해주세요?) */}
         <div className="text-[0.9rem] mt-[3.5rem] text-gray-400  ">
           <Link href="/firstQuestion/1-2" className="flex flex-row">
-            <img
+            <Image
               src="/images/questionImages/questionImage3.png"
               alt="icon"
               className="h-[1.4em] w-[1.4em]"
