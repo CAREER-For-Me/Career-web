@@ -2,7 +2,6 @@
 import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Hr from "../common/Hr";
 import { useSession } from "next-auth/react";
 import { FiUser } from "react-icons/fi";
 import { useState } from "react";

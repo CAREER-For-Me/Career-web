@@ -50,7 +50,7 @@ const AvgSpecs = () => {
         2022~2024 대졸신입공채 최종합격자 N명의 데이터를 기반으로 한 통계
         자료입니다.
         <div className="underline ml-2">
-          <Link href="/" className="flex items-center">
+          <Link href="/home" className="flex items-center">
             상세보기
             <GoChevronRight />
           </Link>

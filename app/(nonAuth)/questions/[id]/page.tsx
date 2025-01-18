@@ -3,7 +3,6 @@ import CareerChoiceYes from "@/app/components/question/CareerChoiceYes";
 import CareerRecommendation from "@/app/components/question/CareerRecommendation";
 import JobSelectionComplete from "@/app/components/question/JobSelectionComplete";
 import JobSelectionSkipped from "@/app/components/question/JobSelectionSkipped";
-import SelectedJob from "@/app/components/question/SelectedJob";
 
 interface QuesionsPageProps {
   params: Promise<{ id: string }>;

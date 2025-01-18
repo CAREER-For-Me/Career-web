@@ -27,7 +27,7 @@ const Questions = () => {
           />
         </Link>
         <Link
-          href="/"
+          href="/home"
           className="flex flex-col items-center justify-center text-white bg-[rgb(109,114,255)] rounded-2xl w-[25rem] h-[21rem] shadow-[0_0_15px_rgba(109,114,255,0.7)] hover:bg-opacity-60 transition duration-300"
         >
           <p className="text-center">

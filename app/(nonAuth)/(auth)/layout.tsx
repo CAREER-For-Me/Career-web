@@ -12,7 +12,7 @@ const AuthLayout = ({ children }: AuthLayoutProps) => {
     <div>
       <div className="flex flex-col justify-center items-center mb-3">
         <Link
-          href="/"
+          href="/home"
           className="flex item-end ml-[50rem] pt-24 text-gray-dark items-center gap-2"
         >
           <TbHome2 className="text-xl" />
@@ -20,7 +20,7 @@ const AuthLayout = ({ children }: AuthLayoutProps) => {
         </Link>
         <div className="w-screen shadow-md text-gray-medium shadow-gray-medium mt-3 border border-l-gray-light" />
 
-        <Link href="/" className="mt-9">
+        <Link href="/home" className="mt-9">
           <Image
             src="/images/logo/career-logo.png"
             alt="Logo"

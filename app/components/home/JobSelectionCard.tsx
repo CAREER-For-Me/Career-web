@@ -20,7 +20,7 @@ const JobSelectionCard = () => {
           className="mx-auto"
         />
         <Link
-          href="/"
+          href="/home"
           className="flex items-center justify-end underline text-[#696969] text-sm mr-6 mt-5"
         >
           희망 직무 선택하기 <GoChevronRight />
@@ -43,7 +43,7 @@ const JobSelectionCard = () => {
         />
 
         <Link
-          href="/"
+          href="/home"
           className="flex items-center justify-end underline text-[#696969] text-sm mr-6 mt-5"
         >
           내 역량 입력하기 <GoChevronRight />
