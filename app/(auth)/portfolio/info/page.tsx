@@ -39,8 +39,6 @@ const PortfolioInfoPage: React.FC = () => {
         return <CertificatesForm />;
       case "어학":
         return <LanguageForm />;
-      case "보유기술":
-        return <TechnicalSkillsForm />;
       case "보유스킬":
         return <SoftSkillsForm />;
       default:
