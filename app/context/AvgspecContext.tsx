@@ -25,27 +25,25 @@ export const AvgSpecProvider = ({ children }: { children: ReactNode }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchAvgspec = async () => {
-      try {
-        const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_SERVER_URL}/avgspec`
-        );
+  // useEffect(() => {
+  //   const fetchAvgspec = async () => {
+  //     try {
+  //       const response = await axios.get(`http://15.164.48.23:8080/avgspec`);
 
-        if (response.data && response.data[0]) {
-          setAvgspec(response.data[0]);
-        } else {
-          setError("데이터 형식이 예상과 다릅니다.");
-        }
-      } catch (err) {
-        setError("API 호출 실패");
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchAvgspec();
-  }, []);
+  //       if (response.data && response.data[0]) {
+  //         setAvgspec(response.data[0]);
+  //       } else {
+  //         setError("데이터 형식이 예상과 다릅니다.");
+  //       }
+  //     } catch (err) {
+  //       setError("API 호출 실패");
+  //       console.error(err);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
+  //   fetchAvgspec();
+  // }, []);
 
   return (
     <AvgspecContext.Provider value={{ avgspec, setAvgspec, loading, error }}>

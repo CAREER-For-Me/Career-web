@@ -12,7 +12,6 @@ const Sidebar: React.FC<SidebarProps> = ({ selected, onSelect }) => {
     "수상",
     "자격증",
     "어학",
-    "보유기술",
     "보유스킬",
   ];
 
