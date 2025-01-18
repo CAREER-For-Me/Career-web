@@ -76,6 +76,7 @@ const RecommendationList = ({ isHome }: RecommendationListProps) => {
                         <p className="text-wrap w-full font-bold text-lg break-keep truncate mt-5">
                           {post.title}
                         </p>
+
                         <div>
                           {/* <p>api 명세서에 없는 데이터</p> */}
                           <div className="flex gap-3 mb-7 mt-3">
