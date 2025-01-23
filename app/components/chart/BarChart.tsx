@@ -10,6 +10,7 @@ import {
   BarElement,
   CategoryScale,
   LinearScale,
+  ChartOptions,
 } from "chart.js";
 
 // Chart.js 설정
@@ -32,8 +33,8 @@ interface BarChartProps {
 
   showLabels: boolean; // 데이터 레이블 표시 여부
   labelsColor?: string; // 레이블 색상
-  lablesSize?: string; // 레이블 크기
-  layoutPadding?: string;
+  lablesSize?: number; // 레이블 크기
+  layoutPadding?: number; // 패딩 값
 }
 
 const BarChart = ({
@@ -61,17 +62,15 @@ const BarChart = ({
       },
     ],
   };
-
-  const options = {
+  const options: ChartOptions<"bar"> = {
     responsive: true,
     maintainAspectRatio: false, // 비율 유지 비활성화
     layout: {
-      padding: { top: layoutPadding },
+      padding: layoutPadding || 0,
     },
     plugins: {
       legend: {
         display: false,
-        position: "top" as const,
       },
       tooltip: {
         enabled: false,
@@ -85,16 +84,16 @@ const BarChart = ({
         formatter: (value: number | string) => value, // 레이블 포맷
         font: {
           weight: "bold", // 텍스트 굵기
-          size: lablesSize, // 텍스트 크기
+          size: lablesSize || 12, // 텍스트 크기
         },
       },
     },
-    indexAxis: indexAxis,
+    indexAxis: indexAxis as "x" | "y", // 명시적으로 타입 선언
     scales: {
       x: {
         display: false,
         min: 0, // x축의 최소값을 0으로 설정
-        max: max,
+        max: typeof max === "number" ? max : parseFloat(max),
         ticks: {
           stepSize: 1, // x축의 간격을 1로 설정
         },
@@ -102,7 +101,7 @@ const BarChart = ({
       y: {
         display: false,
         min: 0, // y축의 최소값을 0으로 설정
-        max: max,
+        max: typeof max === "number" ? max : parseFloat(max),
         ticks: {
           stepSize: 1, // y축의 간격을 1로 설정
         },
